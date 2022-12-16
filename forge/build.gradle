@@ -17,13 +17,17 @@ configurations {
 dependencies {
     forge "net.minecraftforge:forge:${rootProject.forge_version}"
 
+    modCompileOnly "mezz.jei:jei-$rootProject.minecraft_version-forge-api:$rootProject.jei_version"
+    modLocalRuntime ("mezz.jei:jei-$rootProject.minecraft_version-forge:$rootProject.jei_version") { transitive = false }
+
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
 
-    modImplementation "earth.terrarium:botarium-forge-${minecraft_version}:${botarium_version}"
+    modImplementation "earth.terrarium:botarium-forge-${rootProject.minecraft_version}:${rootProject.botarium_version}"
 }
 
 processResources {
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
     inputs.property "version", project.version
 
     filesMatching("META-INF/mods.toml") {
@@ -46,6 +50,7 @@ remapJar {
 
 jar {
     classifier "dev"
+    archivesBaseName = "$mod_id-forge-$minecraft_version"
 }
 
 sourcesJar {
