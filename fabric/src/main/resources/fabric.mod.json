@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "rustic",
+  "version": "${version}",
+  "name": "Rustic",
+  "description": "Rustic mod for the Rustic thingy in Minecraft 1.19.2",
+  "authors": [
+    "AlexNijjar",
+    "CodexAdrian",
+    "Facu",
+    "Kekie6"
+  ],
+  "contact": {
+    "website": "https://github.com/terrarium-earth/Rustic",
+    "repo": "https://github.com/terrarium-earth/Rustic",
+    "issues": "https://github.com/terrarium-earth/Rustic/issues"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "earth.terrarium.rustic.fabric.RusticFabric"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.11",
+    "minecraft": ">=1.19.2"
+  }
+}
