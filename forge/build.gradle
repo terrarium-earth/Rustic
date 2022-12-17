@@ -6,6 +6,28 @@ architectury {
     forge()
 }
 
+sourceSets {
+    main {
+        resources {
+            srcDirs += 'src/generated/resources'
+            exclude '.cache'
+        }
+    }
+}
+
+loom {
+    forge {
+        dataGen {
+            mod project.mod_id
+        }
+    }
+    runs {
+        data {
+            programArgs "--existing", project(":common").file("src/main/resources").absolutePath
+        }
+    }
+}
+
 configurations {
     common
     shadowCommon // Don't use shadow from the shadow plugin because we don't want IDEA to index this.
@@ -27,7 +49,7 @@ dependencies {
 }
 
 processResources {
-    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     inputs.property "version", project.version
 
     filesMatching("META-INF/mods.toml") {

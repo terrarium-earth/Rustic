@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "rustic:block/olivewood_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "rustic:block/olivewood_log"
+    },
+    "axis=z": {
+      "model": "rustic:block/olivewood_log_horizontal",
+      "x": 90
+    }
+  }
+}

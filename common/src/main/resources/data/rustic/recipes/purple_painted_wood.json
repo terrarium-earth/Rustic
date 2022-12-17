@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "painted_wood",
+  "key": {
+    "#": {
+      "item": "minecraft:purple_dye"
+    },
+    "/": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    "///",
+    "/#/",
+    "///"
+  ],
+  "result": {
+    "count": 8,
+    "item": "rustic:purple_painted_wood"
+  }
+}

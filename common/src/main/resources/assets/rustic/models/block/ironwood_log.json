@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "all": "rustic:block/ironwood_log",
+    "end": "rustic:block/ironwood_log_top",
+    "side": "rustic:block/ironwood_log"
+  }
+}

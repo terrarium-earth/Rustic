@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "painted_wood",
+  "key": {
+    "#": {
+      "item": "minecraft:lime_dye"
+    },
+    "/": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    "///",
+    "/#/",
+    "///"
+  ],
+  "result": {
+    "count": 8,
+    "item": "rustic:lime_painted_wood"
+  }
+}
