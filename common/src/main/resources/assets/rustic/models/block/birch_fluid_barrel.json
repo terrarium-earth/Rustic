@@ -1,0 +1,6 @@
+{
+  "parent": "rustic:block/fluid_barrel",
+  "textures": {
+    "all": "rustic:block/birch_fluid_barrel"
+  }
+}

@@ -1,9 +1,6 @@
 package earth.terrarium.rustic;
 
-import earth.terrarium.rustic.common.registry.ModBlockEntities;
-import earth.terrarium.rustic.common.registry.ModBlocks;
-import earth.terrarium.rustic.common.registry.ModFluids;
-import earth.terrarium.rustic.common.registry.ModItems;
+import earth.terrarium.rustic.common.registry.*;
 
 public class Rustic {
     public static final String MOD_ID = "rustic";
@@ -13,5 +10,7 @@ public class Rustic {
         ModBlocks.init();
         ModBlockEntities.init();
         ModItems.init();
+        ModRecipeTypes.init();
+        ModRecipeSerializers.init();
     }
 }

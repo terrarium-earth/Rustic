@@ -35,6 +35,20 @@ public class ModItems {
     public static final Supplier<Item> IRONWOOD_LOG = ITEMS.register("ironwood_log", () -> new BlockItem(ModBlocks.IRONWOOD_LOG.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final Supplier<Item> OLIVEWOOD_LOG = ITEMS.register("olivewood_log", () -> new BlockItem(ModBlocks.OLIVEWOOD_LOG.get(), new Item.Properties().tab(ITEM_GROUP)));
 
+    public static final Supplier<Item> CRUSHING_TUB = ITEMS.register("crushing_tub", () -> new BlockItem(ModBlocks.CRUSHING_TUB.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> ACACIA_BARREL = ITEMS.register("acacia_fluid_barrel", () -> new BlockItem(ModBlocks.ACACIA_BARREL.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> BIRCH_BARREL = ITEMS.register("birch_fluid_barrel", () -> new BlockItem(ModBlocks.BIRCH_BARREL.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> CRIMSON_BARREL = ITEMS.register("crimson_fluid_barrel", () -> new BlockItem(ModBlocks.CRIMSON_BARREL.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> DARK_OAK_BARREL = ITEMS.register("dark_oak_fluid_barrel", () -> new BlockItem(ModBlocks.DARK_OAK_BARREL.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> JUNGLE_BARREL = ITEMS.register("jungle_fluid_barrel", () -> new BlockItem(ModBlocks.JUNGLE_BARREL.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> MANGROVE_BARREL = ITEMS.register("mangrove_fluid_barrel", () -> new BlockItem(ModBlocks.MANGROVE_BARREL.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> OAK_BARREL = ITEMS.register("oak_fluid_barrel", () -> new BlockItem(ModBlocks.OAK_BARREL.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> IRONWOOD_BARREL = ITEMS.register("ironwood_fluid_barrel", () -> new BlockItem(ModBlocks.IRONWOOD_BARREL.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> OLIVEWOOD_BARREL = ITEMS.register("olivewood_fluid_barrel", () -> new BlockItem(ModBlocks.OLIVEWOOD_BARREL.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> SPRUCE_BARREL = ITEMS.register("spruce_fluid_barrel", () -> new BlockItem(ModBlocks.SPRUCE_BARREL.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> WARPED_BARREL = ITEMS.register("warped_fluid_barrel", () -> new BlockItem(ModBlocks.WARPED_BARREL.get(), new Item.Properties().tab(ITEM_GROUP)));
+
+
     public static void init() {
         ITEMS.initialize();
     }

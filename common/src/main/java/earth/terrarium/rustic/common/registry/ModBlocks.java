@@ -2,6 +2,8 @@ package earth.terrarium.rustic.common.registry;
 
 import earth.terrarium.botarium.api.registry.RegistryHolder;
 import earth.terrarium.rustic.Rustic;
+import earth.terrarium.rustic.common.blocks.CrushingTubBlock;
+import earth.terrarium.rustic.common.blocks.FluidBarrelBlock;
 import net.minecraft.core.Registry;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -36,6 +38,18 @@ public class ModBlocks {
     public static final Supplier<Block> IRONWOOD_LOG = BLOCKS.register("ironwood_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final Supplier<Block> OLIVEWOOD_LOG = BLOCKS.register("olivewood_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
 
+    public static final Supplier<Block> CRUSHING_TUB = BLOCKS.register("crushing_tub", () -> new CrushingTubBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+    public static final Supplier<Block> ACACIA_BARREL = BLOCKS.register("acacia_fluid_barrel", () -> new FluidBarrelBlock(BlockBehaviour.Properties.copy(Blocks.ACACIA_PLANKS)));
+    public static final Supplier<Block> BIRCH_BARREL = BLOCKS.register("birch_fluid_barrel", () -> new FluidBarrelBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_PLANKS)));
+    public static final Supplier<Block> CRIMSON_BARREL = BLOCKS.register("crimson_fluid_barrel", () -> new FluidBarrelBlock(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)));
+    public static final Supplier<Block> DARK_OAK_BARREL = BLOCKS.register("dark_oak_fluid_barrel", () -> new FluidBarrelBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_PLANKS)));
+    public static final Supplier<Block> IRONWOOD_BARREL = BLOCKS.register("ironwood_fluid_barrel", () -> new FluidBarrelBlock(BlockBehaviour.Properties.copy(IRONWOOD_PLANKS.get())));
+    public static final Supplier<Block> JUNGLE_BARREL = BLOCKS.register("jungle_fluid_barrel", () -> new FluidBarrelBlock(BlockBehaviour.Properties.copy(Blocks.JUNGLE_PLANKS)));
+    public static final Supplier<Block> MANGROVE_BARREL = BLOCKS.register("mangrove_fluid_barrel", () -> new FluidBarrelBlock(BlockBehaviour.Properties.copy(Blocks.MANGROVE_PLANKS)));
+    public static final Supplier<Block> OAK_BARREL = BLOCKS.register("oak_fluid_barrel", () -> new FluidBarrelBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+    public static final Supplier<Block> OLIVEWOOD_BARREL = BLOCKS.register("olivewood_fluid_barrel", () -> new FluidBarrelBlock(BlockBehaviour.Properties.copy(OLIVEWOOD_PLANKS.get())));
+    public static final Supplier<Block> SPRUCE_BARREL = BLOCKS.register("spruce_fluid_barrel", () -> new FluidBarrelBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_PLANKS)));
+    public static final Supplier<Block> WARPED_BARREL = BLOCKS.register("warped_fluid_barrel", () -> new FluidBarrelBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_PLANKS)));
 
     public static void init() {
         BLOCKS.initialize();

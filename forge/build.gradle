@@ -46,6 +46,7 @@ dependencies {
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
 
     modImplementation "earth.terrarium:botarium-forge-${rootProject.minecraft_version}:${rootProject.botarium_version}"
+    modApi ("com.teamresourceful.resourcefullib:resourcefullib-forge-$resourcefullib_version")
 }
 
 processResources {

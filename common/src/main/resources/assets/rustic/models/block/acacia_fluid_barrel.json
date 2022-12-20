@@ -1,0 +1,6 @@
+{
+  "parent": "rustic:block/fluid_barrel",
+  "textures": {
+    "all": "rustic:block/acacia_fluid_barrel"
+  }
+}

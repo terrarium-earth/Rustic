@@ -21,6 +21,9 @@
   "entrypoints": {
     "main": [
       "earth.terrarium.rustic.fabric.RusticFabric"
+    ],
+    "client": [
+      "earth.terrarium.rustic.fabric.RusticFabricClient"
     ]
   },
   "depends": {

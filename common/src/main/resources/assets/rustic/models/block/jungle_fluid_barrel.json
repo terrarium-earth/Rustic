@@ -1,0 +1,6 @@
+{
+  "parent": "rustic:block/fluid_barrel",
+  "textures": {
+    "all": "rustic:block/jungle_fluid_barrel"
+  }
+}
