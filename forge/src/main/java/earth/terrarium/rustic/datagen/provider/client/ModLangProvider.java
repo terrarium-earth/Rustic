@@ -22,7 +22,7 @@ public class ModLangProvider extends LanguageProvider {
         ModBlocks.BLOCKS.getRegistries().forEach(block -> {
             ResourceLocation blockId = ForgeRegistries.BLOCKS.getKey(block.get());
             if (blockId.getNamespace().equals(Rustic.MOD_ID)) {
-                addBlock(block, StringUtils.capitalise(blockId.getPath().replace("_", " ")));
+                addBlock(block, StringUtils.capitaliseAllWords(blockId.getPath().replace("_", " ")));
             }
         });
 
