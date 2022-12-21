@@ -1,0 +1,15 @@
+{
+  "type": "rustic:crushing",
+  "ingredient": {
+    "item": "minecraft:sugar_cane"
+  },
+  "presses": 2,
+  "product": {
+    "count": 2,
+    "id": "minecraft:sugar"
+  },
+  "result": {
+    "buckets": 0.25,
+    "fluid": "minecraft:water"
+  }
+}

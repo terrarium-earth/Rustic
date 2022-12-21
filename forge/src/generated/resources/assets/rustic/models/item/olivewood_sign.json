@@ -1,3 +1,6 @@
 {
-  "parent": "rustic:block/olivewood_sign"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "rustic:item/olivewood_sign"
+  }
 }

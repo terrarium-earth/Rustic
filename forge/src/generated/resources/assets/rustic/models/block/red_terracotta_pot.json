@@ -1,0 +1,6 @@
+{
+  "parent": "rustic:block/pot",
+  "textures": {
+    "all": "rustic:block/red_terracotta_pot"
+  }
+}

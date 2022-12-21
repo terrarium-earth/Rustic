@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "black_terracotta_pot",
+  "ingredients": [
+    {
+      "item": "rustic:terracotta_pot"
+    },
+    {
+      "item": "minecraft:black_dye"
+    }
+  ],
+  "result": {
+    "count": 6,
+    "item": "rustic:black_terracotta_pot"
+  }
+}

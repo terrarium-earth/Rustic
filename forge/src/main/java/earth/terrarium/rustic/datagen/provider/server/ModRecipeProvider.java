@@ -149,6 +149,38 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("## ")
                 .pattern("## "));
 
+        createSimple(consumer, ModItems.TERRACOTTA_POT, 6, r -> r
+                .unlockedBy("has_terracotta", has(Items.TERRACOTTA))
+                .define('#', Items.TERRACOTTA)
+                .pattern(" # ")
+                .pattern("# #")
+                .pattern("###"));
+
+        createSimpleShapeless(consumer, ModItems.WHITE_TERRACOTTA_POT, 6, r -> r
+                .unlockedBy("has_terracotta_pot", has(ModItems.TERRACOTTA_POT.get()))
+                .requires(ModItems.TERRACOTTA_POT.get())
+                .requires(Items.WHITE_DYE));
+
+        createSimpleShapeless(consumer, ModItems.RED_TERRACOTTA_POT, 6, r -> r
+                .unlockedBy("has_terracotta_pot", has(ModItems.TERRACOTTA_POT.get()))
+                .requires(ModItems.TERRACOTTA_POT.get())
+                .requires(Items.RED_DYE));
+
+        createSimpleShapeless(consumer, ModItems.GREEN_TERRACOTTA_POT, 6, r -> r
+                .unlockedBy("has_terracotta_pot", has(ModItems.TERRACOTTA_POT.get()))
+                .requires(ModItems.TERRACOTTA_POT.get())
+                .requires(Items.GREEN_DYE));
+
+        createSimpleShapeless(consumer, ModItems.BLUE_TERRACOTTA_POT, 6, r -> r
+                .unlockedBy("has_terracotta_pot", has(ModItems.TERRACOTTA_POT.get()))
+                .requires(ModItems.TERRACOTTA_POT.get())
+                .requires(Items.BLUE_DYE));
+
+        createSimpleShapeless(consumer, ModItems.BLACK_TERRACOTTA_POT, 6, r -> r
+                .unlockedBy("has_terracotta_pot", has(ModItems.TERRACOTTA_POT.get()))
+                .requires(ModItems.TERRACOTTA_POT.get())
+                .requires(Items.BLACK_DYE));
+
         stonecutterResultFromBase(consumer, ModItems.STONE_PILLAR.get(), Items.STONE);
         stonecutterResultFromBase(consumer, ModItems.ANDESITE_PILLAR.get(), Items.ANDESITE);
         stonecutterResultFromBase(consumer, ModItems.DIORITE_PILLAR.get(), Items.DIORITE);

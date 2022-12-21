@@ -15,7 +15,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class ModBlockStateProvider extends BlockStateProvider {
 
     private static final ResourceLocation BARREL = new ResourceLocation(Rustic.MOD_ID, "block/fluid_barrel");
-    private static final ResourceLocation CRUSHING_TUB = new ResourceLocation(Rustic.MOD_ID, "block/tub");
+    private static final ResourceLocation TERRACOTTA_POT = new ResourceLocation(Rustic.MOD_ID, "block/pot");
 
     public ModBlockStateProvider(DataGenerator pGenerator, ExistingFileHelper exFileHelper) {
         super(pGenerator, Rustic.MOD_ID, exFileHelper);
@@ -91,9 +91,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
         block(ModBlocks.OLIVEWOOD_BARREL.get(), BARREL, "all");
         block(ModBlocks.SPRUCE_BARREL.get(), BARREL, "all");
         block(ModBlocks.WARPED_BARREL.get(), BARREL, "all");
-        block(ModBlocks.CRUSHING_TUB.get(), CRUSHING_TUB);
+        block(ModBlocks.CRUSHING_TUB.get(), new ResourceLocation(Rustic.MOD_ID, "block/tub"));
         block(ModBlocks.IRONWOOD_SAPLING.get(), new ResourceLocation("block/cross"), "cross");
         block(ModBlocks.OLIVEWOOD_SAPLING.get(), new ResourceLocation("block/cross"), "cross");
+
+        block(ModBlocks.TERRACOTTA_POT.get(), TERRACOTTA_POT, "all");
+        block(ModBlocks.WHITE_TERRACOTTA_POT.get(), TERRACOTTA_POT, "all");
+        block(ModBlocks.RED_TERRACOTTA_POT.get(), TERRACOTTA_POT, "all");
+        block(ModBlocks.GREEN_TERRACOTTA_POT.get(), TERRACOTTA_POT, "all");
+        block(ModBlocks.BLUE_TERRACOTTA_POT.get(), TERRACOTTA_POT, "all");
+        block(ModBlocks.BLACK_TERRACOTTA_POT.get(), TERRACOTTA_POT, "all");
 
         ModItems.ITEMS.getRegistries().forEach(item -> {
             if (item.get() instanceof BlockItem blockItem) {
@@ -106,6 +113,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
                     // Door model is an item
                 } else if (block instanceof SaplingBlock) {
                     // Sapling model is an item
+                } else if (block instanceof SignBlock) {
+                    // Sign model is an item
                 } else {
                     simpleBlockItem(block, new ModelFile.UncheckedModelFile(blockTexture(block)));
                 }

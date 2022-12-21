@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "white_terracotta_pot",
+  "ingredients": [
+    {
+      "item": "rustic:terracotta_pot"
+    },
+    {
+      "item": "minecraft:white_dye"
+    }
+  ],
+  "result": {
+    "count": 6,
+    "item": "rustic:white_terracotta_pot"
+  }
+}

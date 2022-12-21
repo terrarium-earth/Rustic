@@ -2,10 +2,14 @@ package earth.terrarium.rustic.common.registry;
 
 import earth.terrarium.botarium.api.registry.RegistryHolder;
 import earth.terrarium.rustic.Rustic;
+import earth.terrarium.rustic.common.blocks.PotBlock;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 
 import java.util.function.Supplier;
 
@@ -35,7 +39,6 @@ public class ModItems {
     public static final Supplier<Item> OLIVES = ITEMS.register("olives", () -> new Item(new Item.Properties().tab(ITEM_GROUP).food(Foods.SWEET_BERRIES)));
     public static final Supplier<Item> TOMATO = ITEMS.register("tomato", () -> new Item(new Item.Properties().tab(ITEM_GROUP).food(Foods.SWEET_BERRIES)));
     public static final Supplier<Item> CHILI_PEPPER = ITEMS.register("chili_pepper", () -> new Item(new Item.Properties().tab(ITEM_GROUP).food(Foods.SWEET_BERRIES)));
-    public static final Supplier<Item> WILDBERRIES = ITEMS.register("wildberries", () -> new Item(new Item.Properties().tab(ITEM_GROUP).food(Foods.SWEET_BERRIES)));
     public static final Supplier<Item> GRAPES = ITEMS.register("grapes", () -> new Item(new Item.Properties().tab(ITEM_GROUP).food(Foods.SWEET_BERRIES)));
     public static final Supplier<Item> ALMANAC = ITEMS.register("almanac", () -> new Item(new Item.Properties().tab(ITEM_GROUP).stacksTo(1)));
 
@@ -63,8 +66,8 @@ public class ModItems {
     public static final Supplier<Item> OLIVEWOOD_DOOR = ITEMS.register("olivewood_door", () -> new BlockItem(ModBlocks.OLIVEWOOD_DOOR.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final Supplier<Item> IRONWOOD_TRAPDOOR = ITEMS.register("ironwood_trapdoor", () -> new BlockItem(ModBlocks.IRONWOOD_TRAPDOOR.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final Supplier<Item> OLIVEWOOD_TRAPDOOR = ITEMS.register("olivewood_trapdoor", () -> new BlockItem(ModBlocks.OLIVEWOOD_TRAPDOOR.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final Supplier<Item> IRONWOOD_SIGN = ITEMS.register("ironwood_sign", () -> new BlockItem(ModBlocks.IRONWOOD_SIGN.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final Supplier<Item> OLIVEWOOD_SIGN = ITEMS.register("olivewood_sign", () -> new BlockItem(ModBlocks.OLIVEWOOD_SIGN.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> IRONWOOD_SIGN = ITEMS.register("ironwood_sign", () -> new SignItem(new Item.Properties().tab(ITEM_GROUP), ModBlocks.IRONWOOD_SIGN.get(), ModBlocks.IRONWOOD_WALL_SIGN.get()));
+    public static final Supplier<Item> OLIVEWOOD_SIGN = ITEMS.register("olivewood_sign", () -> new SignItem(new Item.Properties().tab(ITEM_GROUP), ModBlocks.OLIVEWOOD_SIGN.get(), ModBlocks.OLIVEWOOD_WALL_SIGN.get()));
     public static final Supplier<Item> IRONWOOD_WOOD = ITEMS.register("ironwood_wood", () -> new BlockItem(ModBlocks.IRONWOOD_WOOD.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final Supplier<Item> OLIVEWOOD_WOOD = ITEMS.register("olivewood_wood", () -> new BlockItem(ModBlocks.OLIVEWOOD_WOOD.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final Supplier<Item> IRONWOOD_STRIPPED_LOG = ITEMS.register("ironwood_stripped_log", () -> new BlockItem(ModBlocks.IRONWOOD_STRIPPED_LOG.get(), new Item.Properties().tab(ITEM_GROUP)));
@@ -93,6 +96,13 @@ public class ModItems {
     public static final Supplier<Item> OLIVEWOOD_BARREL = ITEMS.register("olivewood_fluid_barrel", () -> new BlockItem(ModBlocks.OLIVEWOOD_BARREL.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final Supplier<Item> SPRUCE_BARREL = ITEMS.register("spruce_fluid_barrel", () -> new BlockItem(ModBlocks.SPRUCE_BARREL.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final Supplier<Item> WARPED_BARREL = ITEMS.register("warped_fluid_barrel", () -> new BlockItem(ModBlocks.WARPED_BARREL.get(), new Item.Properties().tab(ITEM_GROUP)));
+
+    public static final Supplier<Item> TERRACOTTA_POT = ITEMS.register("terracotta_pot", () -> new BlockItem(ModBlocks.TERRACOTTA_POT.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> WHITE_TERRACOTTA_POT = ITEMS.register("white_terracotta_pot", () -> new BlockItem(ModBlocks.WHITE_TERRACOTTA_POT.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> RED_TERRACOTTA_POT = ITEMS.register("red_terracotta_pot", () -> new BlockItem(ModBlocks.RED_TERRACOTTA_POT.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> GREEN_TERRACOTTA_POT = ITEMS.register("green_terracotta_pot", () -> new BlockItem(ModBlocks.GREEN_TERRACOTTA_POT.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> BLUE_TERRACOTTA_POT = ITEMS.register("blue_terracotta_pot", () -> new BlockItem(ModBlocks.BLUE_TERRACOTTA_POT.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> BLACK_TERRACOTTA_POT = ITEMS.register("black_terracotta_pot", () -> new BlockItem(ModBlocks.BLACK_TERRACOTTA_POT.get(), new Item.Properties().tab(ITEM_GROUP)));
 
     public static void init() {
         ITEMS.initialize();

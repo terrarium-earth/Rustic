@@ -5,8 +5,8 @@ import earth.terrarium.botarium.api.registry.RegistryHolder;
 import earth.terrarium.rustic.Rustic;
 import earth.terrarium.rustic.common.blocks.CrushingTubBlock;
 import earth.terrarium.rustic.common.blocks.FluidBarrelBlock;
-import earth.terrarium.rustic.common.world.level.block.grower.IronwoodTreeGrower;
-import earth.terrarium.rustic.common.world.level.block.grower.OlivewoodTreeGrower;
+import earth.terrarium.rustic.common.blocks.PotBlock;
+import earth.terrarium.rustic.common.world.level.block.grower.ModTreeGrower;
 import earth.terrarium.rustic.mixin.WoodTypeInvoker;
 import net.minecraft.core.Registry;
 import net.minecraft.world.level.block.*;
@@ -18,7 +18,7 @@ import java.util.function.Supplier;
 
 public class ModBlocks {
     public static final RegistryHolder<Block> BLOCKS = new RegistryHolder<>(Registry.BLOCK, Rustic.MOD_ID);
-    public static final WoodType IRONWOOD_SIGN_TYPE = WoodTypeInvoker.invokeRegister(WoodTypeInvoker.init(ArchitecturyTarget.getCurrentTarget().equals("forge") ? "rustic:ironwood" : "glacian"));
+    public static final WoodType IRONWOOD_SIGN_TYPE = WoodTypeInvoker.invokeRegister(WoodTypeInvoker.init(ArchitecturyTarget.getCurrentTarget().equals("forge") ? "rustic:ironwood" : "ironwood"));
     public static final WoodType OLIVEWOOD_SIGN_TYPE = WoodTypeInvoker.invokeRegister(WoodTypeInvoker.init(ArchitecturyTarget.getCurrentTarget().equals("forge") ? "rustic:olivewood" : "olive"));
 
     public static final Supplier<Block> BLACK_PAINTED_WOOD = BLOCKS.register("black_painted_wood", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).color(MaterialColor.COLOR_BLACK)));
@@ -44,9 +44,9 @@ public class ModBlocks {
     public static final Supplier<Block> OLIVEWOOD_LOG = BLOCKS.register("olivewood_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final Supplier<Block> IRONWOOD_LEAVES = BLOCKS.register("ironwood_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final Supplier<Block> OLIVEWOOD_LEAVES = BLOCKS.register("olivewood_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
-    public static final Supplier<Block> IRONWOOD_SAPLING = BLOCKS.register("ironwood_sapling", () -> new SaplingBlock(new IronwoodTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)) {
+    public static final Supplier<Block> IRONWOOD_SAPLING = BLOCKS.register("ironwood_sapling", () -> new SaplingBlock(new ModTreeGrower(ModFeatures.IRONWOOD_KEY), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)) {
     });
-    public static final Supplier<Block> OLIVEWOOD_SAPLING = BLOCKS.register("olivewood_sapling", () -> new SaplingBlock(new OlivewoodTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)) {
+    public static final Supplier<Block> OLIVEWOOD_SAPLING = BLOCKS.register("olivewood_sapling", () -> new SaplingBlock(new ModTreeGrower(ModFeatures.OLIVEWOOD_KEY), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)) {
     });
     public static final Supplier<Block> IRONWOOD_STAIRS = BLOCKS.register("ironwood_stairs", () -> new StairBlock(IRONWOOD_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)) {
     });
@@ -106,6 +106,13 @@ public class ModBlocks {
     public static final Supplier<Block> OLIVEWOOD_BARREL = BLOCKS.register("olivewood_fluid_barrel", () -> new FluidBarrelBlock(BlockBehaviour.Properties.copy(OLIVEWOOD_PLANKS.get())));
     public static final Supplier<Block> SPRUCE_BARREL = BLOCKS.register("spruce_fluid_barrel", () -> new FluidBarrelBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_PLANKS)));
     public static final Supplier<Block> WARPED_BARREL = BLOCKS.register("warped_fluid_barrel", () -> new FluidBarrelBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_PLANKS)));
+
+    public static final Supplier<Block> TERRACOTTA_POT = BLOCKS.register("terracotta_pot", () -> new PotBlock(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA)));
+    public static final Supplier<Block> WHITE_TERRACOTTA_POT = BLOCKS.register("white_terracotta_pot", () -> new PotBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_TERRACOTTA)));
+    public static final Supplier<Block> RED_TERRACOTTA_POT = BLOCKS.register("red_terracotta_pot", () -> new PotBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_TERRACOTTA)));
+    public static final Supplier<Block> GREEN_TERRACOTTA_POT = BLOCKS.register("green_terracotta_pot", () -> new PotBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_TERRACOTTA)));
+    public static final Supplier<Block> BLUE_TERRACOTTA_POT = BLOCKS.register("blue_terracotta_pot", () -> new PotBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_TERRACOTTA)));
+    public static final Supplier<Block> BLACK_TERRACOTTA_POT = BLOCKS.register("black_terracotta_pot", () -> new PotBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_TERRACOTTA)));
 
     public static void init() {
         BLOCKS.initialize();
