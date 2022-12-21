@@ -12,5 +12,10 @@ public class Rustic {
         ModItems.init();
         ModRecipeTypes.init();
         ModRecipeSerializers.init();
+        ModFeatures.init();
+    }
+
+    public static void postInit() {
+        ModBlockEntities.postInit();
     }
 }

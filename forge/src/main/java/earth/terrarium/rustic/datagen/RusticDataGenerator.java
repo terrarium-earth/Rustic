@@ -34,7 +34,5 @@ public final class RusticDataGenerator {
         ModBlockTagProvider blockTagProvider = new ModBlockTagProvider(generator, existingFileHelper);
         generator.addProvider(event.includeServer(), blockTagProvider);
         generator.addProvider(event.includeServer(), new ModItemTagProvider(generator, blockTagProvider, existingFileHelper));
-
-        System.out.println("Finished Rustic Datagen");
     }
 }

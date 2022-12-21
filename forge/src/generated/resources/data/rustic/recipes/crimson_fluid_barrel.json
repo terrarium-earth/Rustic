@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "fluid_barrel",
+  "key": {
+    "#": {
+      "item": "minecraft:crimson_planks"
+    },
+    "/": {
+      "tag": "minecraft:slabs"
+    },
+    "@": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "#/#",
+    "@ @",
+    "#/#"
+  ],
+  "result": {
+    "item": "rustic:crimson_fluid_barrel"
+  }
+}

@@ -9,7 +9,7 @@ version = "${version}"
 displayName = "Rustic"
 displayURL = "https://github.com/terrarium-earth/Rustic"
 logoFile = "icon.png"
-authors = "Alex Nijjar, CodexAdrian, Facu, Kekie6"
+authors = "Alex Nijjar, CodexAdrian, Facu, Kekie6, ThatGravyBoat"
 description = '''
 Rustic mod for the Rustic thingy in Minecraft 1.19.2
 '''
@@ -31,6 +31,13 @@ side = "BOTH"
 [[dependencies.rustic]]
 modId = "botarium"
 mandatory = true
-versionRange = "[1.7.13,)"
+versionRange = "[1.7.17,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.rustic]]
+modId = "resourcefullib"
+mandatory = true
+versionRange = "[1.1.18,)"
 ordering = "NONE"
 side = "BOTH"

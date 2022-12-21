@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "fluid_barrel",
+  "key": {
+    "#": {
+      "item": "minecraft:oak_planks"
+    },
+    "/": {
+      "tag": "minecraft:slabs"
+    },
+    "@": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "#/#",
+    "@ @",
+    "#/#"
+  ],
+  "result": {
+    "item": "rustic:oak_fluid_barrel"
+  }
+}

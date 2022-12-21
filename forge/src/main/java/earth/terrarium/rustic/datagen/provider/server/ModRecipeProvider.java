@@ -2,23 +2,25 @@ package earth.terrarium.rustic.datagen.provider.server;
 
 import earth.terrarium.rustic.Rustic;
 import earth.terrarium.rustic.common.registry.ModBlocks;
+import earth.terrarium.rustic.common.registry.ModItems;
 import earth.terrarium.rustic.common.registry.ModTags;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.ShapedRecipeBuilder;
-import net.minecraft.data.recipes.ShapelessRecipeBuilder;
+import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
+import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 @MethodsReturnNonnullByDefault
 public class ModRecipeProvider extends RecipeProvider {
@@ -36,24 +38,139 @@ public class ModRecipeProvider extends RecipeProvider {
 
         planksFromLog(consumer, ModBlocks.IRONWOOD_PLANKS.get(), ModTags.Items.IRONWOOD_LOGS);
         planksFromLog(consumer, ModBlocks.OLIVEWOOD_PLANKS.get(), ModTags.Items.OLIVEWOOD_LOGS);
+
+        woodFromLogs(consumer, ModBlocks.IRONWOOD_WOOD.get(), ModBlocks.OLIVEWOOD_LOG.get());
+        woodFromLogs(consumer, ModBlocks.OLIVEWOOD_WOOD.get(), ModBlocks.OLIVEWOOD_LOG.get());
+
+        createBuilder(consumer, ModItems.IRONWOOD_STAIRS, ModItems.IRONWOOD_PLANKS, RecipeProvider::stairBuilder);
+        createBuilder(consumer, ModItems.OLIVEWOOD_STAIRS, ModItems.OLIVEWOOD_PLANKS, RecipeProvider::stairBuilder);
+        createBuilder(consumer, ModItems.IRONWOOD_SLAB, ModItems.IRONWOOD_PLANKS, RecipeProvider::slabBuilder);
+        createBuilder(consumer, ModItems.OLIVEWOOD_SLAB, ModItems.OLIVEWOOD_PLANKS, RecipeProvider::slabBuilder);
+        createBuilder(consumer, ModItems.IRONWOOD_FENCE, ModItems.IRONWOOD_PLANKS, RecipeProvider::fenceBuilder);
+        createBuilder(consumer, ModItems.OLIVEWOOD_FENCE, ModItems.OLIVEWOOD_PLANKS, RecipeProvider::fenceBuilder);
+        createBuilder(consumer, ModItems.IRONWOOD_FENCE_GATE, ModItems.IRONWOOD_PLANKS, RecipeProvider::fenceGateBuilder);
+        createBuilder(consumer, ModItems.OLIVEWOOD_FENCE_GATE, ModItems.OLIVEWOOD_PLANKS, RecipeProvider::fenceGateBuilder);
+        createBuilder(consumer, ModItems.IRONWOOD_DOOR, ModItems.IRONWOOD_PLANKS, RecipeProvider::doorBuilder);
+        createBuilder(consumer, ModItems.OLIVEWOOD_DOOR, ModItems.OLIVEWOOD_PLANKS, RecipeProvider::doorBuilder);
+        createBuilder(consumer, ModItems.IRONWOOD_TRAPDOOR, ModItems.IRONWOOD_PLANKS, RecipeProvider::trapdoorBuilder);
+        createBuilder(consumer, ModItems.OLIVEWOOD_TRAPDOOR, ModItems.OLIVEWOOD_PLANKS, RecipeProvider::trapdoorBuilder);
+        createBuilder(consumer, ModItems.IRONWOOD_BUTTON, ModItems.IRONWOOD_PLANKS, RecipeProvider::buttonBuilder);
+        createBuilder(consumer, ModItems.OLIVEWOOD_BUTTON, ModItems.OLIVEWOOD_PLANKS, RecipeProvider::buttonBuilder);
+        createBuilder(consumer, ModItems.IRONWOOD_PRESSURE_PLATE, ModItems.IRONWOOD_PLANKS, RecipeProvider::pressurePlateBuilder);
+        createBuilder(consumer, ModItems.OLIVEWOOD_PRESSURE_PLATE, ModItems.OLIVEWOOD_PLANKS, RecipeProvider::pressurePlateBuilder);
+        createBuilder(consumer, ModItems.IRONWOOD_SIGN, ModItems.IRONWOOD_PLANKS, RecipeProvider::signBuilder);
+        createBuilder(consumer, ModItems.OLIVEWOOD_SIGN, ModItems.OLIVEWOOD_PLANKS, RecipeProvider::signBuilder);
+
+        createSimple(consumer, ModItems.CRUSHING_TUB, 1, r -> r
+                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
+                .define('#', ItemTags.PLANKS)
+                .define('/', ItemTags.SLABS)
+                .define('@', Items.IRON_INGOT)
+                .pattern("# #")
+                .pattern("@ @")
+                .pattern("///"));
+
+        createSimple(consumer, ModItems.CLAY_WALL, 8, r -> r
+                .unlockedBy("has_clay", has(Items.CLAY))
+                .define('#', Items.CLAY)
+                .define('/', ItemTags.PLANKS)
+                .pattern(" / ")
+                .pattern("/#/")
+                .pattern(" / "));
+
+        createSimple(consumer, ModItems.CLAY_CROSS_WALL, 1, r -> r
+                .unlockedBy("has_clay", has(Items.CLAY))
+                .define('#', ModItems.CLAY_WALL.get())
+                .define('/', ItemTags.PLANKS)
+                .pattern("/ /")
+                .pattern(" # ")
+                .pattern("/ /"));
+
+        createSimple(consumer, ModItems.CLAY_DIAGONAL_LEFT_CROSS_WALL, 1, r -> r
+                .unlockedBy("has_clay", has(Items.CLAY))
+                .define('#', ModItems.CLAY_WALL.get())
+                .define('/', ItemTags.PLANKS)
+                .pattern("/  ")
+                .pattern(" # ")
+                .pattern("  /"));
+
+        createSimple(consumer, ModItems.CLAY_DIAGONAL_RIGHT_CROSS_WALL, 1, r -> r
+                .unlockedBy("has_clay", has(Items.CLAY))
+                .define('#', ModItems.CLAY_WALL.get())
+                .define('/', ItemTags.PLANKS)
+                .pattern("  /")
+                .pattern(" # ")
+                .pattern("/  "));
+
+        createWoodSetRecipe(consumer, "fluid_barrel", 1, r -> r
+                .define('/', ItemTags.SLABS)
+                .define('@', Items.IRON_INGOT)
+                .pattern("#/#")
+                .pattern("@ @")
+                .pattern("#/#"));
+
+        createSimple(consumer, ModItems.STONE_PILLAR, 6, r -> r
+                .unlockedBy("has_stone", has(Items.STONE))
+                .define('#', Items.STONE)
+                .pattern("## ")
+                .pattern("## ")
+                .pattern("## "));
+
+        createSimple(consumer, ModItems.ANDESITE_PILLAR, 6, r -> r
+                .unlockedBy("has_andesite", has(Items.ANDESITE))
+                .define('#', Items.ANDESITE)
+                .pattern("## ")
+                .pattern("## ")
+                .pattern("## "));
+
+        createSimple(consumer, ModItems.DIORITE_PILLAR, 6, r -> r
+                .unlockedBy("has_diorite", has(Items.DIORITE))
+                .define('#', Items.DIORITE)
+                .pattern("## ")
+                .pattern("## ")
+                .pattern("## "));
+
+        createSimple(consumer, ModItems.GRANITE_PILLAR, 6, r -> r
+                .unlockedBy("has_granite", has(Items.GRANITE))
+                .define('#', Items.GRANITE)
+                .pattern("## ")
+                .pattern("## ")
+                .pattern("## "));
+
+        createSimple(consumer, ModItems.DEEPSLATE_PILLAR, 6, r -> r
+                .unlockedBy("has_deepslate", has(Items.DEEPSLATE))
+                .define('#', Items.DEEPSLATE)
+                .pattern("## ")
+                .pattern("## ")
+                .pattern("## "));
+
+        stonecutterResultFromBase(consumer, ModItems.STONE_PILLAR.get(), Items.STONE);
+        stonecutterResultFromBase(consumer, ModItems.ANDESITE_PILLAR.get(), Items.ANDESITE);
+        stonecutterResultFromBase(consumer, ModItems.DIORITE_PILLAR.get(), Items.DIORITE);
+        stonecutterResultFromBase(consumer, ModItems.GRANITE_PILLAR.get(), Items.GRANITE);
+        stonecutterResultFromBase(consumer, ModItems.DEEPSLATE_PILLAR.get(), Items.DEEPSLATE);
     }
 
-    public static void createSimple(Consumer<FinishedRecipe> consumer, Item output, int count, Function<ShapedRecipeBuilder, ShapedRecipeBuilder> func) {
-        String name = Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(output)).getPath();
-        func.apply(ShapedRecipeBuilder.shaped(output, count))
+    public static void createBuilder(Consumer<FinishedRecipe> consumer, Supplier<Item> output, Supplier<Item> input, BiFunction<ItemLike, Ingredient, RecipeBuilder> func) {
+        func.apply(output.get(), Ingredient.of(input.get())).unlockedBy(getHasName(input.get()), has(input.get())).save(consumer);
+    }
+
+    public static void createSimple(Consumer<FinishedRecipe> consumer, Supplier<Item> output, int count, Function<ShapedRecipeBuilder, ShapedRecipeBuilder> func) {
+        String name = Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(output.get())).getPath();
+        func.apply(ShapedRecipeBuilder.shaped(output.get(), count))
                 .group(name)
                 .save(consumer);
     }
 
-    public static void createSimpleShapeless(Consumer<FinishedRecipe> consumer, Item output, int count, Function<ShapelessRecipeBuilder, ShapelessRecipeBuilder> func) {
-        String name = Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(output)).getPath();
-        func.apply(ShapelessRecipeBuilder.shapeless(output, count))
+    public static void createSimpleShapeless(Consumer<FinishedRecipe> consumer, Supplier<Item> output, int count, Function<ShapelessRecipeBuilder, ShapelessRecipeBuilder> func) {
+        String name = Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(output.get())).getPath();
+        func.apply(ShapelessRecipeBuilder.shapeless(output.get(), count))
                 .group(name)
                 .save(consumer);
     }
 
     public static void createWoodSetRecipe(Consumer<FinishedRecipe> consumer, String suffix, int count, Function<ShapedRecipeBuilder, ShapedRecipeBuilder> func) {
-        for (Item wood : new Item[]{Items.ACACIA_PLANKS, Items.BIRCH_PLANKS, Items.DARK_OAK_PLANKS, Items.JUNGLE_PLANKS, Items.MANGROVE_PLANKS, Items.OAK_PLANKS, Items.SPRUCE_PLANKS, Items.CRIMSON_PLANKS, Items.WARPED_PLANKS}) {
+        for (Item wood : new Item[]{Items.ACACIA_PLANKS, Items.BIRCH_PLANKS, Items.DARK_OAK_PLANKS, Items.JUNGLE_PLANKS, Items.MANGROVE_PLANKS, Items.OAK_PLANKS, Items.SPRUCE_PLANKS, Items.CRIMSON_PLANKS, Items.WARPED_PLANKS, ModItems.IRONWOOD_PLANKS.get(), ModItems.OLIVEWOOD_PLANKS.get()}) {
             String woodName = Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(wood)).getPath().replace("_planks", "");
             Item output = ForgeRegistries.ITEMS.getValue(new ResourceLocation(Rustic.MOD_ID, woodName + "_" + suffix));
 

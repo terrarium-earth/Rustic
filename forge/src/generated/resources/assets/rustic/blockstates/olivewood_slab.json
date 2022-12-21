@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "rustic:block/olivewood_slab"
+    },
+    "type=double": {
+      "model": "rustic:block/olivewood_planks"
+    },
+    "type=top": {
+      "model": "rustic:block/olivewood_slab_top"
+    }
+  }
+}

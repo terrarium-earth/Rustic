@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "clay_diagonal_left_cross_wall",
+  "key": {
+    "#": {
+      "item": "rustic:clay_wall"
+    },
+    "/": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    "/  ",
+    " # ",
+    "  /"
+  ],
+  "result": {
+    "item": "rustic:clay_diagonal_left_cross_wall"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "rustic:olivewood_planks"
+    }
+  ],
+  "result": {
+    "item": "rustic:olivewood_button"
+  }
+}

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "all": "rustic:block/olivewood_log",
-    "end": "rustic:block/olivewood_log_top",
-    "side": "rustic:block/olivewood_log"
-  }
-}

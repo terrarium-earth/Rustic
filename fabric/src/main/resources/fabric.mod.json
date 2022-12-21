@@ -8,7 +8,8 @@
     "Alex Nijjar",
     "CodexAdrian",
     "Facu",
-    "Kekie6"
+    "Kekie6",
+    "ThatGravyBoat"
   ],
   "contact": {
     "website": "https://www.curseforge.com/minecraft/mc-mods/rustic",
@@ -20,15 +21,20 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "earth.terrarium.rustic.fabric.RusticFabric"
+      "earth.terrarium.rustic.fabric.RusticFabric",
+      "earth.terrarium.rustic.Rustic::postInit"
     ],
     "client": [
       "earth.terrarium.rustic.fabric.RusticFabricClient"
     ]
   },
+  "mixins": [
+    "rustic-common.mixins.json"
+  ],
   "depends": {
     "fabricloader": ">=0.14.11",
     "minecraft": ">=1.19.2",
-    "botarium": ">=1.7.13"
+    "botarium": ">=1.7.17",
+    "resourcefullib": ">=1.1.18"
   }
 }
