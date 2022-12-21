@@ -1,18 +1,23 @@
 package earth.terrarium.rustic.datagen.provider.server;
 
+import earth.terrarium.botarium.api.fluid.FluidHooks;
 import earth.terrarium.rustic.Rustic;
 import earth.terrarium.rustic.common.registry.ModBlocks;
 import earth.terrarium.rustic.common.registry.ModItems;
 import earth.terrarium.rustic.common.registry.ModTags;
+import earth.terrarium.rustic.datagen.builders.CrushingTubRecipeBuilder;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.material.Fluid;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.NotNull;
 
@@ -149,6 +154,8 @@ public class ModRecipeProvider extends RecipeProvider {
         stonecutterResultFromBase(consumer, ModItems.DIORITE_PILLAR.get(), Items.DIORITE);
         stonecutterResultFromBase(consumer, ModItems.GRANITE_PILLAR.get(), Items.GRANITE);
         stonecutterResultFromBase(consumer, ModItems.DEEPSLATE_PILLAR.get(), Items.DEEPSLATE);
+
+        createSimpleCrushing(consumer, Items.SUGAR_CANE, Fluids.WATER, 0.25f, new ItemStack(Items.SUGAR, 2), 2);
     }
 
     public static void createBuilder(Consumer<FinishedRecipe> consumer, Supplier<Item> output, Supplier<Item> input, BiFunction<ItemLike, Ingredient, RecipeBuilder> func) {
@@ -167,6 +174,15 @@ public class ModRecipeProvider extends RecipeProvider {
         func.apply(ShapelessRecipeBuilder.shapeless(output.get(), count))
                 .group(name)
                 .save(consumer);
+    }
+
+    public static void createSimpleCrushing(Consumer<FinishedRecipe> consumer, ItemLike input, Fluid output, float buckets, ItemStack byProduct, int presses) {
+        ResourceLocation id = Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(input.asItem()));
+        CrushingTubRecipeBuilder builder = new CrushingTubRecipeBuilder(Ingredient.of(input), FluidHooks.newFluidHolder(output, FluidHooks.buckets(buckets), null))
+                .unlockedBy("has_" + id.getPath(), has(input))
+                .byProduct(byProduct)
+                .presses(presses);
+        builder.save(consumer, new ResourceLocation(id.getNamespace(), id.getPath() + "_crushing"));
     }
 
     public static void createWoodSetRecipe(Consumer<FinishedRecipe> consumer, String suffix, int count, Function<ShapedRecipeBuilder, ShapedRecipeBuilder> func) {

@@ -4,6 +4,7 @@ import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.teamresourceful.resourcefullib.common.codecs.recipes.IngredientCodec;
 import com.teamresourceful.resourcefullib.common.codecs.recipes.ItemStackCodec;
+import com.teamresourceful.resourcefullib.common.item.OptionalItemStack;
 import com.teamresourceful.resourcefullib.common.recipe.CodecRecipe;
 import earth.terrarium.botarium.api.fluid.FluidHolder;
 import earth.terrarium.botarium.api.fluid.FluidHooks;
@@ -27,8 +28,13 @@ public record CrushingRecipe(ResourceLocation id, int presses, Ingredient ingred
                 Codec.INT.fieldOf("presses").orElse(4).forGetter(CrushingRecipe::presses),
                 IngredientCodec.CODEC.fieldOf("ingredient").forGetter(CrushingRecipe::ingredient),
                 FluidHolder.CODEC.fieldOf("result").orElse(FluidHooks.emptyFluid()).forGetter(CrushingRecipe::output),
-                ItemStackCodec.CODEC.fieldOf("product").orElse(ItemStack.EMPTY).forGetter(CrushingRecipe::result)
-        ).apply(instance, CrushingRecipe::new));
+                ItemStackCodec.CODEC.optionalFieldOf("product").forGetter(recipe -> OptionalItemStack.of(recipe.result()))
+        ).apply(instance, CrushingRecipe::of));
+    }
+
+    @SuppressWarnings("OptionalUsedAsFieldOrParameterType")
+    public static CrushingRecipe of(ResourceLocation id, int presses, Ingredient ingredient, FluidHolder output, Optional<ItemStack> result) {
+        return new CrushingRecipe(id, presses, ingredient, output, result.orElse(ItemStack.EMPTY));
     }
 
     public static Optional<CrushingRecipe> getRecipe(Level level, Container container) {

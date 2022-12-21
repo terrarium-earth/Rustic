@@ -1,4 +1,5 @@
-// 1.19.2	2022-12-20T20:33:21.113454	Recipes
+// 1.19.2	2022-12-21T11:06:33.7436204	Recipes
+f432e79ab6f104a190b457be211af8cfbc453aef data/minecraft/advancements/recipes/crushing_tub/sugar_cane_crushing.json
 177fa183f8799b246137cc77f29d1022672c5032 data/minecraft/advancements/recipes/rustic.main/andesite_pillar_from_andesite_stonecutting.json
 be26f589e3a05da16cc327ee37c1780a9a3179f6 data/minecraft/advancements/recipes/rustic.main/deepslate_pillar_from_deepslate_stonecutting.json
 a6892f9a1370a9e189f7060365c182c4bae192cd data/minecraft/advancements/recipes/rustic.main/diorite_pillar_from_diorite_stonecutting.json
@@ -9,6 +10,7 @@ a9fbe883eb85e42bfb28fee10943e30acf4c04f7 data/minecraft/recipes/deepslate_pillar
 87a97912ce312a6f5a3d9852c42ebbc054cb815e data/minecraft/recipes/diorite_pillar_from_diorite_stonecutting.json
 d87e84e7fa592dda3004ddc2e8941fc3fe566a35 data/minecraft/recipes/granite_pillar_from_granite_stonecutting.json
 8d65532be63b337e1e2c17f466560d4396c4d4d0 data/minecraft/recipes/stone_pillar_from_stone_stonecutting.json
+e19a8218bcfc3362eaacd36f37e9915d0f09a9d6 data/minecraft/recipes/sugar_cane_crushing.json
 a671e66dec15c572ea1809e84816dfc7b2d5d961 data/rustic/advancements/recipes/rustic.main/acacia_fluid_barrel.json
 fae0a3643c8fa64c4ceca3173782123817667141 data/rustic/advancements/recipes/rustic.main/andesite_pillar.json
 d08abbed58e411728192b2fa01c4ca2db71bbbf2 data/rustic/advancements/recipes/rustic.main/birch_fluid_barrel.json
