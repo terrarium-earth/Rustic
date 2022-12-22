@@ -181,6 +181,26 @@ public class ModRecipeProvider extends RecipeProvider {
                 .requires(ModItems.TERRACOTTA_POT.get())
                 .requires(Items.BLACK_DYE));
 
+        createSimpleShapeless(consumer, ModItems.GOLD_CHAIN, 1, r -> r
+                .unlockedBy("has_chain", has(Items.CHAIN))
+                .requires(Items.CHAIN)
+                .requires(Items.GOLD_INGOT));
+
+        createSimpleShapeless(consumer, ModItems.COPPER_CHAIN, 1, r -> r
+                .unlockedBy("has_chain", has(Items.CHAIN))
+                .requires(Items.CHAIN)
+                .requires(Items.COPPER_INGOT));
+
+        createSimpleShapeless(consumer, ModItems.GOLD_LANTERN, 1, r -> r
+                .unlockedBy("has_lantern", has(Items.LANTERN))
+                .requires(Items.LANTERN)
+                .requires(Items.GOLD_INGOT));
+
+        createSimpleShapeless(consumer, ModItems.COPPER_LANTERN, 1, r -> r
+                .unlockedBy("has_lantern", has(Items.LANTERN))
+                .requires(Items.LANTERN)
+                .requires(Items.COPPER_INGOT));
+
         stonecutterResultFromBase(consumer, ModItems.STONE_PILLAR.get(), Items.STONE);
         stonecutterResultFromBase(consumer, ModItems.ANDESITE_PILLAR.get(), Items.ANDESITE);
         stonecutterResultFromBase(consumer, ModItems.DIORITE_PILLAR.get(), Items.DIORITE);

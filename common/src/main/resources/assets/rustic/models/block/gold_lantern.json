@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_lantern",
+  "textures": {
+    "lantern": "rustic:block/gold_lantern",
+    "particle": "rustic:block/gold_lantern"
+  }
+}

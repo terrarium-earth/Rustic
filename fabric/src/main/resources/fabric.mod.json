@@ -34,7 +34,7 @@
   "depends": {
     "fabricloader": ">=0.14.11",
     "minecraft": ">=1.19.2",
-    "botarium": ">=1.7.17",
+    "botarium": ">=1.8.0",
     "resourcefullib": ">=1.1.18"
   }
 }

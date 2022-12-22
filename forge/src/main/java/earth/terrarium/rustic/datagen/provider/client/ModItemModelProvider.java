@@ -7,9 +7,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SignItem;
-import net.minecraft.world.level.block.DoorBlock;
-import net.minecraft.world.level.block.SaplingBlock;
-import net.minecraft.world.level.block.SignBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -30,6 +28,10 @@ public class ModItemModelProvider extends ItemModelProvider {
                 if (blockItem.getBlock() instanceof SaplingBlock) {
                     basicBlockItem(item.get());
                 } else if (blockItem.getBlock() instanceof DoorBlock) {
+                    basicItem(item.get());
+                } else if (blockItem.getBlock() instanceof ChainBlock) {
+                    basicItem(item.get());
+                } else if (blockItem.getBlock() instanceof LanternBlock) {
                     basicItem(item.get());
                 } else if (blockItem.getBlock() instanceof SignBlock) {
                     basicItem(item.get());

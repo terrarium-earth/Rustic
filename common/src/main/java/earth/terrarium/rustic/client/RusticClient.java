@@ -11,8 +11,11 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.resources.model.Material;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.material.Fluid;
 import org.apache.logging.log4j.util.TriConsumer;
+
+import java.util.function.Consumer;
 
 public class RusticClient {
 
@@ -27,6 +30,10 @@ public class RusticClient {
         ClientHooks.setRenderLayer(ModBlocks.OLIVEWOOD_DOOR.get(), RenderType.cutout());
         ClientHooks.setRenderLayer(ModBlocks.IRONWOOD_TRAPDOOR.get(), RenderType.cutout());
         ClientHooks.setRenderLayer(ModBlocks.OLIVEWOOD_TRAPDOOR.get(), RenderType.cutout());
+        ClientHooks.setRenderLayer(ModBlocks.GOLD_CHAIN.get(), RenderType.cutout());
+        ClientHooks.setRenderLayer(ModBlocks.COPPER_CHAIN.get(), RenderType.cutout());
+        ClientHooks.setRenderLayer(ModBlocks.GOLD_LANTERN.get(), RenderType.cutout());
+        ClientHooks.setRenderLayer(ModBlocks.COPPER_LANTERN.get(), RenderType.cutout());
 
         Sheets.SIGN_MATERIALS.put(ModBlocks.IRONWOOD_SIGN_TYPE, new Material(Sheets.SIGN_SHEET, new ResourceLocation(Rustic.MOD_ID, "entity/signs/ironwood")));
         Sheets.SIGN_MATERIALS.put(ModBlocks.OLIVEWOOD_SIGN_TYPE, new Material(Sheets.SIGN_SHEET, new ResourceLocation(Rustic.MOD_ID, "entity/signs/olivewood")));
@@ -51,5 +58,10 @@ public class RusticClient {
         register.accept(RenderType.translucent(), ModFluids.VODKA.get(), ModFluids.FLOWING_VODKA.get());
         register.accept(RenderType.translucent(), ModFluids.WHISKEY.get(), ModFluids.FLOWING_WHISKEY.get());
         register.accept(RenderType.translucent(), ModFluids.TOMATO_JUICE.get(), ModFluids.FLOWING_TOMATO_JUICE.get());
+    }
+
+    public static void onRegisterTints(Consumer<Block> register) {
+        register.accept(ModBlocks.IRONWOOD_LEAVES.get());
+        register.accept(ModBlocks.OLIVEWOOD_LEAVES.get());
     }
 }

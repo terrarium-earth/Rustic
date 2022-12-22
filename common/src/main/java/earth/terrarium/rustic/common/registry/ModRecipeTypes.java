@@ -10,12 +10,6 @@ import net.minecraft.world.item.crafting.RecipeType;
 import java.util.function.Supplier;
 
 public class ModRecipeTypes {
-
     public static final RegistryHolder<RecipeType<?>> RECIPES = new RegistryHolder<>(Registry.RECIPE_TYPE, Rustic.MOD_ID);
-
     public static final Supplier<RecipeType<CrushingRecipe>> CRUSHING = RECIPES.register("crushing", () -> CodecRecipeType.of("crushing"));
-
-    public static void init() {
-        RECIPES.initialize();
-    }
 }

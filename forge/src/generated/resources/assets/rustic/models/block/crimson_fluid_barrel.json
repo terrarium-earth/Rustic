@@ -1,6 +1,7 @@
 {
   "parent": "rustic:block/fluid_barrel",
   "textures": {
-    "all": "rustic:block/crimson_fluid_barrel"
+    "all": "rustic:block/crimson_fluid_barrel",
+    "particle": "rustic:block/crimson_fluid_barrel"
   }
 }

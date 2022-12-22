@@ -9,13 +9,14 @@ public class Rustic {
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public static void init() {
-        ModFluids.init();
-        ModBlocks.init();
-        ModBlockEntities.init();
-        ModItems.init();
-        ModRecipeTypes.init();
-        ModRecipeSerializers.init();
-        ModFeatures.init();
+        ModFluids.FLUIDS.initialize();
+        ModFluidProperties.FLUID_PROPERTIES.initialize();
+        ModBlocks.BLOCKS.initialize();
+        ModBlockEntities.BLOCK_ENTITIES.initialize();
+        ModItems.ITEMS.initialize();
+        ModRecipeTypes.RECIPES.initialize();
+        ModRecipeSerializers.SERIALIZERS.initialize();
+        ModFeatures.FEATURES.initialize();
     }
 
     public static void postInit() {

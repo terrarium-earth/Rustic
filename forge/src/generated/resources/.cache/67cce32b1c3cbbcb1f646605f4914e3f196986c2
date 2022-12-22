@@ -1,4 +1,4 @@
-// 1.19.2	2022-12-21T18:02:07.167781	LootTables
+// 1.19.2	2022-12-21T22:04:45.790347	LootTables
 8ffda52433eac658f557014abee6f286775c14cd data/rustic/loot_tables/blocks/acacia_fluid_barrel.json
 2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/rustic/loot_tables/blocks/ale.json
 4fe5701a3b190dff2168cc7adc704295616c09ea data/rustic/loot_tables/blocks/andesite_pillar.json
@@ -14,12 +14,16 @@ a5c953e4431a53282965ea955a32ddf63e02045c data/rustic/loot_tables/blocks/clay_cro
 499f61fd346c2956cb4ea19540a880fea64e408a data/rustic/loot_tables/blocks/clay_diagonal_left_cross_wall.json
 22ecf9bdbf652e158fce9333498620d00a985c2b data/rustic/loot_tables/blocks/clay_diagonal_right_cross_wall.json
 c1fdff0b1dfb63b9faa3fa2792cbc170ebbd8ffb data/rustic/loot_tables/blocks/clay_wall.json
+52f793aa0d44f0f0ca0c0a7f5763ceac42b7c8b8 data/rustic/loot_tables/blocks/copper_chain.json
+dae45e36a5e79953fe0504f73ad256ebb4e5cf28 data/rustic/loot_tables/blocks/copper_lantern.json
 9c8d55f0aa0634730a8b836caf9281827f819e1a data/rustic/loot_tables/blocks/crimson_fluid_barrel.json
 339c45c74b5e58e9f90c281e7ab90f7a803b02cb data/rustic/loot_tables/blocks/crushing_tub.json
 e360255cf556787537bd04fe6498dcc646108f92 data/rustic/loot_tables/blocks/cyan_painted_wood.json
 f11b2dbced7a5e2c2ae772c8dce85edae4c0d497 data/rustic/loot_tables/blocks/dark_oak_fluid_barrel.json
 9fb30952a522cb175cb9a4a50bede1f8b370d68f data/rustic/loot_tables/blocks/deepslate_pillar.json
 63961bfa847f6e4a182bc4f8aaeeb307ad6bbcd6 data/rustic/loot_tables/blocks/diorite_pillar.json
+2c832ddaff0e78816c026f59555afe7865d5ec2e data/rustic/loot_tables/blocks/gold_chain.json
+f77069e46b8b052162c4bbf1445fcdef64b9f95f data/rustic/loot_tables/blocks/gold_lantern.json
 2597a6ca54f73448b06ff5b6d9c2b5b22c48ef73 data/rustic/loot_tables/blocks/granite_pillar.json
 2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/rustic/loot_tables/blocks/grape_juice.json
 887015facb278b606a1eab189fc8cb86f1e83304 data/rustic/loot_tables/blocks/gray_painted_wood.json

@@ -66,8 +66,4 @@ public class ModFluids {
 
     public static final Supplier<FlowingFluid> TOMATO_JUICE = FLUIDS.register("tomato_juice", () -> new BotariumSourceFluid(ModFluidProperties.TOMATO_JUICE));
     public static final Supplier<FlowingFluid> FLOWING_TOMATO_JUICE = FLUIDS.register("flowing_tomato_juice", () -> new BotariumFlowingFluid(ModFluidProperties.TOMATO_JUICE));
-
-    public static void init() {
-        FLUIDS.initialize();
-    }
 }

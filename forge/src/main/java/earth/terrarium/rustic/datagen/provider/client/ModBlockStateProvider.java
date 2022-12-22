@@ -16,6 +16,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     private static final ResourceLocation BARREL = new ResourceLocation(Rustic.MOD_ID, "block/fluid_barrel");
     private static final ResourceLocation TERRACOTTA_POT = new ResourceLocation(Rustic.MOD_ID, "block/pot");
+    private static final ResourceLocation LEAVES = new ResourceLocation("block/leaves");
+    private static final ResourceLocation WATER_STILL = new ResourceLocation("block/water_still");
 
     public ModBlockStateProvider(DataGenerator pGenerator, ExistingFileHelper exFileHelper) {
         super(pGenerator, Rustic.MOD_ID, exFileHelper);
@@ -48,8 +50,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         logBlock((RotatedPillarBlock) ModBlocks.OLIVEWOOD_STRIPPED_LOG.get());
         axisBlock((RotatedPillarBlock) ModBlocks.IRONWOOD_WOOD.get(), blockTexture(ModBlocks.IRONWOOD_LOG.get()), blockTexture(ModBlocks.IRONWOOD_LOG.get()));
         axisBlock((RotatedPillarBlock) ModBlocks.OLIVEWOOD_WOOD.get(), blockTexture(ModBlocks.OLIVEWOOD_LOG.get()), blockTexture(ModBlocks.OLIVEWOOD_LOG.get()));
-        simpleBlock(ModBlocks.IRONWOOD_LEAVES.get());
-        simpleBlock(ModBlocks.OLIVEWOOD_LEAVES.get());
         stairsBlock((StairBlock) ModBlocks.IRONWOOD_STAIRS.get(), blockTexture(ModBlocks.IRONWOOD_PLANKS.get()));
         stairsBlock((StairBlock) ModBlocks.OLIVEWOOD_STAIRS.get(), blockTexture(ModBlocks.OLIVEWOOD_PLANKS.get()));
         slabBlock((SlabBlock) ModBlocks.IRONWOOD_SLAB.get(), blockTexture(ModBlocks.IRONWOOD_PLANKS.get()), blockTexture(ModBlocks.IRONWOOD_PLANKS.get()));
@@ -68,6 +68,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         buttonBlock((WoodButtonBlock) ModBlocks.OLIVEWOOD_BUTTON.get(), blockTexture(ModBlocks.OLIVEWOOD_PLANKS.get()));
         pressurePlateBlock((PressurePlateBlock) ModBlocks.IRONWOOD_PRESSURE_PLATE.get(), blockTexture(ModBlocks.IRONWOOD_PLANKS.get()));
         pressurePlateBlock((PressurePlateBlock) ModBlocks.OLIVEWOOD_PRESSURE_PLATE.get(), blockTexture(ModBlocks.OLIVEWOOD_PLANKS.get()));
+
+        block(ModBlocks.IRONWOOD_LEAVES.get(), LEAVES, "all");
+        block(ModBlocks.OLIVEWOOD_LEAVES.get(), LEAVES, "all");
 
         logBlock((RotatedPillarBlock) ModBlocks.STONE_PILLAR.get());
         axisBlock((RotatedPillarBlock) ModBlocks.ANDESITE_PILLAR.get(), blockTexture(ModBlocks.ANDESITE_PILLAR.get()), blockTexture(Blocks.POLISHED_ANDESITE));
@@ -102,24 +105,24 @@ public class ModBlockStateProvider extends BlockStateProvider {
         block(ModBlocks.BLUE_TERRACOTTA_POT.get(), TERRACOTTA_POT, "all");
         block(ModBlocks.BLACK_TERRACOTTA_POT.get(), TERRACOTTA_POT, "all");
 
-        block(ModBlocks.SWEET_BERRY_JUICE.get(), "particle", "minecraft:block/water_still");
-        block(ModBlocks.SWEET_BERRY_WINE.get(), "particle", "minecraft:block/water_still");
-        block(ModBlocks.SUGAR_WATER.get(), "particle", "minecraft:block/water_still");
-        block(ModBlocks.IRON_BERRY_JUICE.get(), "particle", "minecraft:block/water_still");
-        block(ModBlocks.IRON_BERRY_WINE.get(), "particle", "minecraft:block/water_still");
-        block(ModBlocks.GRAPE_JUICE.get(), "particle", "minecraft:block/water_still");
-        block(ModBlocks.RED_WINE.get(), "particle", "minecraft:block/water_still");
-        block(ModBlocks.APPLE_JUICE.get(), "particle", "minecraft:block/water_still");
-        block(ModBlocks.OLIVE_OIL.get(), "particle", "minecraft:block/water_still");
-        block(ModBlocks.HONEY.get(), "particle", "minecraft:block/water_still");
-        block(ModBlocks.CIDER.get(), "particle", "minecraft:block/water_still");
-        block(ModBlocks.RUM.get(), "particle", "minecraft:block/water_still");
-        block(ModBlocks.STARCHY_WATER.get(), "particle", "minecraft:block/water_still");
-        block(ModBlocks.ALE.get(), "particle", "minecraft:block/water_still");
-        block(ModBlocks.MEAD.get(), "particle", "minecraft:block/water_still");
-        block(ModBlocks.VODKA.get(), "particle", "minecraft:block/water_still");
-        block(ModBlocks.WHISKEY.get(), "particle", "minecraft:block/water_still");
-        block(ModBlocks.TOMATO_JUICE.get(), "particle", "minecraft:block/water_still");
+        block(ModBlocks.SWEET_BERRY_JUICE.get(), "particle", WATER_STILL.toString());
+        block(ModBlocks.SWEET_BERRY_WINE.get(), "particle", WATER_STILL.toString());
+        block(ModBlocks.SUGAR_WATER.get(), "particle", WATER_STILL.toString());
+        block(ModBlocks.IRON_BERRY_JUICE.get(), "particle", WATER_STILL.toString());
+        block(ModBlocks.IRON_BERRY_WINE.get(), "particle", WATER_STILL.toString());
+        block(ModBlocks.GRAPE_JUICE.get(), "particle", WATER_STILL.toString());
+        block(ModBlocks.RED_WINE.get(), "particle", WATER_STILL.toString());
+        block(ModBlocks.APPLE_JUICE.get(), "particle", WATER_STILL.toString());
+        block(ModBlocks.OLIVE_OIL.get(), "particle", WATER_STILL.toString());
+        block(ModBlocks.HONEY.get(), "particle", WATER_STILL.toString());
+        block(ModBlocks.CIDER.get(), "particle", WATER_STILL.toString());
+        block(ModBlocks.RUM.get(), "particle", WATER_STILL.toString());
+        block(ModBlocks.STARCHY_WATER.get(), "particle", WATER_STILL.toString());
+        block(ModBlocks.ALE.get(), "particle", WATER_STILL.toString());
+        block(ModBlocks.MEAD.get(), "particle", WATER_STILL.toString());
+        block(ModBlocks.VODKA.get(), "particle", WATER_STILL.toString());
+        block(ModBlocks.WHISKEY.get(), "particle", WATER_STILL.toString());
+        block(ModBlocks.TOMATO_JUICE.get(), "particle", WATER_STILL.toString());
 
         ModItems.ITEMS.getRegistries().forEach(item -> {
             if (item.get() instanceof BlockItem blockItem) {
@@ -129,11 +132,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 } else if (block instanceof FenceBlock) {
                     simpleBlockItem(block, new ModelFile.UncheckedModelFile(extend(blockTexture(block), "_inventory")));
                 } else if (block instanceof DoorBlock) {
-                    // Door model is an item
                 } else if (block instanceof SaplingBlock) {
-                    // Sapling model is an item
                 } else if (block instanceof SignBlock) {
-                    // Sign model is an item
+                } else if (block instanceof ChainBlock) {
+                } else if (block instanceof LanternBlock) {
                 } else {
                     simpleBlockItem(block, new ModelFile.UncheckedModelFile(blockTexture(block)));
                 }
@@ -157,7 +159,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     // references a parent model with a texture
     private void block(Block block, ResourceLocation parent, String texture) {
-        simpleBlock(block, models().getBuilder(name(block)).texture(texture, blockTexture(block)).parent(models().getExistingFile(parent)));
+        simpleBlock(block, models().getBuilder(name(block)).texture(texture, blockTexture(block)).texture("particle", blockTexture(block)).parent(models().getExistingFile(parent)));
     }
 
     // creates a model with a texture and no parent

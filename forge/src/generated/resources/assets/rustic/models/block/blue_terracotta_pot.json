@@ -1,6 +1,7 @@
 {
   "parent": "rustic:block/pot",
   "textures": {
-    "all": "rustic:block/blue_terracotta_pot"
+    "all": "rustic:block/blue_terracotta_pot",
+    "particle": "rustic:block/blue_terracotta_pot"
   }
 }

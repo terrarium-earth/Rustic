@@ -20,8 +20,4 @@ public class ModFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> IRONWOOD_KEY = ResourceKey.create(Registry.CONFIGURED_FEATURE_REGISTRY, new ResourceLocation(Rustic.MOD_ID, "ironwood"));
     public static final ResourceKey<ConfiguredFeature<?, ?>> OLIVEWOOD_KEY = ResourceKey.create(Registry.CONFIGURED_FEATURE_REGISTRY, new ResourceLocation(Rustic.MOD_ID, "olivewood"));
-
-    public static void init() {
-        FEATURES.initialize();
-    }
 }

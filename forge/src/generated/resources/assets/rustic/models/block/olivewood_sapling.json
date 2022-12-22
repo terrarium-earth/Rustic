@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "rustic:block/olivewood_sapling"
+    "cross": "rustic:block/olivewood_sapling",
+    "particle": "rustic:block/olivewood_sapling"
   }
 }

@@ -3,17 +3,14 @@ package earth.terrarium.rustic.common.registry;
 import earth.terrarium.botarium.api.registry.RegistryHolder;
 import earth.terrarium.botarium.api.registry.fluid.FluidBucketItem;
 import earth.terrarium.rustic.Rustic;
-import earth.terrarium.rustic.common.blocks.PotBlock;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.*;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 
 import java.util.function.Supplier;
 
+@SuppressWarnings("unused")
 public class ModItems {
     public static final CreativeModeTab ITEM_GROUP = ModRegistryHelpers.createTab(new ResourceLocation(Rustic.MOD_ID, "main"), () -> new ItemStack(Items.BOWL));
 
@@ -44,35 +41,41 @@ public class ModItems {
     public static final Supplier<Item> ALMANAC = ITEMS.register("almanac", () -> new Item(new Item.Properties().tab(ITEM_GROUP).stacksTo(1)));
 
     public static final Supplier<Item> IRONWOOD_PLANKS = ITEMS.register("ironwood_planks", () -> new BlockItem(ModBlocks.IRONWOOD_PLANKS.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final Supplier<Item> OLIVEWOOD_PLANKS = ITEMS.register("olivewood_planks", () -> new BlockItem(ModBlocks.OLIVEWOOD_PLANKS.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final Supplier<Item> IRONWOOD_LOG = ITEMS.register("ironwood_log", () -> new BlockItem(ModBlocks.IRONWOOD_LOG.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final Supplier<Item> OLIVEWOOD_LOG = ITEMS.register("olivewood_log", () -> new BlockItem(ModBlocks.OLIVEWOOD_LOG.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final Supplier<Item> IRONWOOD_LEAVES = ITEMS.register("ironwood_leaves", () -> new BlockItem(ModBlocks.IRONWOOD_LEAVES.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final Supplier<Item> OLIVEWOOD_LEAVES = ITEMS.register("olivewood_leaves", () -> new BlockItem(ModBlocks.OLIVEWOOD_LEAVES.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final Supplier<Item> IRONWOOD_SAPLING = ITEMS.register("ironwood_sapling", () -> new BlockItem(ModBlocks.IRONWOOD_SAPLING.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final Supplier<Item> OLIVEWOOD_SAPLING = ITEMS.register("olivewood_sapling", () -> new BlockItem(ModBlocks.OLIVEWOOD_SAPLING.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final Supplier<Item> IRONWOOD_STAIRS = ITEMS.register("ironwood_stairs", () -> new BlockItem(ModBlocks.IRONWOOD_STAIRS.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final Supplier<Item> OLIVEWOOD_STAIRS = ITEMS.register("olivewood_stairs", () -> new BlockItem(ModBlocks.OLIVEWOOD_STAIRS.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final Supplier<Item> IRONWOOD_SLAB = ITEMS.register("ironwood_slab", () -> new BlockItem(ModBlocks.IRONWOOD_SLAB.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final Supplier<Item> OLIVEWOOD_SLAB = ITEMS.register("olivewood_slab", () -> new BlockItem(ModBlocks.OLIVEWOOD_SLAB.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final Supplier<Item> IRONWOOD_FENCE = ITEMS.register("ironwood_fence", () -> new BlockItem(ModBlocks.IRONWOOD_FENCE.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final Supplier<Item> OLIVEWOOD_FENCE = ITEMS.register("olivewood_fence", () -> new BlockItem(ModBlocks.OLIVEWOOD_FENCE.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final Supplier<Item> IRONWOOD_FENCE_GATE = ITEMS.register("ironwood_fence_gate", () -> new BlockItem(ModBlocks.IRONWOOD_FENCE_GATE.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final Supplier<Item> OLIVEWOOD_FENCE_GATE = ITEMS.register("olivewood_fence_gate", () -> new BlockItem(ModBlocks.OLIVEWOOD_FENCE_GATE.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final Supplier<Item> IRONWOOD_BUTTON = ITEMS.register("ironwood_button", () -> new BlockItem(ModBlocks.IRONWOOD_BUTTON.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final Supplier<Item> OLIVEWOOD_BUTTON = ITEMS.register("olivewood_button", () -> new BlockItem(ModBlocks.OLIVEWOOD_BUTTON.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final Supplier<Item> IRONWOOD_PRESSURE_PLATE = ITEMS.register("ironwood_pressure_plate", () -> new BlockItem(ModBlocks.IRONWOOD_PRESSURE_PLATE.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final Supplier<Item> OLIVEWOOD_PRESSURE_PLATE = ITEMS.register("olivewood_pressure_plate", () -> new BlockItem(ModBlocks.OLIVEWOOD_PRESSURE_PLATE.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final Supplier<Item> IRONWOOD_DOOR = ITEMS.register("ironwood_door", () -> new BlockItem(ModBlocks.IRONWOOD_DOOR.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final Supplier<Item> OLIVEWOOD_DOOR = ITEMS.register("olivewood_door", () -> new BlockItem(ModBlocks.OLIVEWOOD_DOOR.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final Supplier<Item> IRONWOOD_TRAPDOOR = ITEMS.register("ironwood_trapdoor", () -> new BlockItem(ModBlocks.IRONWOOD_TRAPDOOR.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final Supplier<Item> OLIVEWOOD_TRAPDOOR = ITEMS.register("olivewood_trapdoor", () -> new BlockItem(ModBlocks.OLIVEWOOD_TRAPDOOR.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final Supplier<Item> IRONWOOD_SIGN = ITEMS.register("ironwood_sign", () -> new SignItem(new Item.Properties().tab(ITEM_GROUP), ModBlocks.IRONWOOD_SIGN.get(), ModBlocks.IRONWOOD_WALL_SIGN.get()));
-    public static final Supplier<Item> OLIVEWOOD_SIGN = ITEMS.register("olivewood_sign", () -> new SignItem(new Item.Properties().tab(ITEM_GROUP), ModBlocks.OLIVEWOOD_SIGN.get(), ModBlocks.OLIVEWOOD_WALL_SIGN.get()));
-    public static final Supplier<Item> IRONWOOD_WOOD = ITEMS.register("ironwood_wood", () -> new BlockItem(ModBlocks.IRONWOOD_WOOD.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final Supplier<Item> OLIVEWOOD_WOOD = ITEMS.register("olivewood_wood", () -> new BlockItem(ModBlocks.OLIVEWOOD_WOOD.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final Supplier<Item> IRONWOOD_STRIPPED_LOG = ITEMS.register("ironwood_stripped_log", () -> new BlockItem(ModBlocks.IRONWOOD_STRIPPED_LOG.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> IRONWOOD_WOOD = ITEMS.register("ironwood_wood", () -> new BlockItem(ModBlocks.IRONWOOD_WOOD.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> IRONWOOD_LEAVES = ITEMS.register("ironwood_leaves", () -> new BlockItem(ModBlocks.IRONWOOD_LEAVES.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> IRONWOOD_SAPLING = ITEMS.register("ironwood_sapling", () -> new BlockItem(ModBlocks.IRONWOOD_SAPLING.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> IRONWOOD_STAIRS = ITEMS.register("ironwood_stairs", () -> new BlockItem(ModBlocks.IRONWOOD_STAIRS.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> IRONWOOD_SLAB = ITEMS.register("ironwood_slab", () -> new BlockItem(ModBlocks.IRONWOOD_SLAB.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> IRONWOOD_FENCE = ITEMS.register("ironwood_fence", () -> new BlockItem(ModBlocks.IRONWOOD_FENCE.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> IRONWOOD_FENCE_GATE = ITEMS.register("ironwood_fence_gate", () -> new BlockItem(ModBlocks.IRONWOOD_FENCE_GATE.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> IRONWOOD_BUTTON = ITEMS.register("ironwood_button", () -> new BlockItem(ModBlocks.IRONWOOD_BUTTON.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> IRONWOOD_PRESSURE_PLATE = ITEMS.register("ironwood_pressure_plate", () -> new BlockItem(ModBlocks.IRONWOOD_PRESSURE_PLATE.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> IRONWOOD_DOOR = ITEMS.register("ironwood_door", () -> new BlockItem(ModBlocks.IRONWOOD_DOOR.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> IRONWOOD_TRAPDOOR = ITEMS.register("ironwood_trapdoor", () -> new BlockItem(ModBlocks.IRONWOOD_TRAPDOOR.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> IRONWOOD_SIGN = ITEMS.register("ironwood_sign", () -> new SignItem(new Item.Properties().tab(ITEM_GROUP), ModBlocks.IRONWOOD_SIGN.get(), ModBlocks.IRONWOOD_WALL_SIGN.get()));
+
+    public static final Supplier<Item> OLIVEWOOD_PLANKS = ITEMS.register("olivewood_planks", () -> new BlockItem(ModBlocks.OLIVEWOOD_PLANKS.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> OLIVEWOOD_LOG = ITEMS.register("olivewood_log", () -> new BlockItem(ModBlocks.OLIVEWOOD_LOG.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final Supplier<Item> OLIVEWOOD_STRIPPED_LOG = ITEMS.register("olivewood_stripped_log", () -> new BlockItem(ModBlocks.OLIVEWOOD_STRIPPED_LOG.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> OLIVEWOOD_WOOD = ITEMS.register("olivewood_wood", () -> new BlockItem(ModBlocks.OLIVEWOOD_WOOD.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> OLIVEWOOD_LEAVES = ITEMS.register("olivewood_leaves", () -> new BlockItem(ModBlocks.OLIVEWOOD_LEAVES.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> OLIVEWOOD_SAPLING = ITEMS.register("olivewood_sapling", () -> new BlockItem(ModBlocks.OLIVEWOOD_SAPLING.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> OLIVEWOOD_STAIRS = ITEMS.register("olivewood_stairs", () -> new BlockItem(ModBlocks.OLIVEWOOD_STAIRS.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> OLIVEWOOD_SLAB = ITEMS.register("olivewood_slab", () -> new BlockItem(ModBlocks.OLIVEWOOD_SLAB.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> OLIVEWOOD_FENCE = ITEMS.register("olivewood_fence", () -> new BlockItem(ModBlocks.OLIVEWOOD_FENCE.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> OLIVEWOOD_FENCE_GATE = ITEMS.register("olivewood_fence_gate", () -> new BlockItem(ModBlocks.OLIVEWOOD_FENCE_GATE.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> OLIVEWOOD_BUTTON = ITEMS.register("olivewood_button", () -> new BlockItem(ModBlocks.OLIVEWOOD_BUTTON.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> OLIVEWOOD_PRESSURE_PLATE = ITEMS.register("olivewood_pressure_plate", () -> new BlockItem(ModBlocks.OLIVEWOOD_PRESSURE_PLATE.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> OLIVEWOOD_DOOR = ITEMS.register("olivewood_door", () -> new BlockItem(ModBlocks.OLIVEWOOD_DOOR.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> OLIVEWOOD_TRAPDOOR = ITEMS.register("olivewood_trapdoor", () -> new BlockItem(ModBlocks.OLIVEWOOD_TRAPDOOR.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> OLIVEWOOD_SIGN = ITEMS.register("olivewood_sign", () -> new SignItem(new Item.Properties().tab(ITEM_GROUP), ModBlocks.OLIVEWOOD_SIGN.get(), ModBlocks.OLIVEWOOD_WALL_SIGN.get()));
+
+    public static final Supplier<Item> GOLD_CHAIN = ITEMS.register("gold_chain", () -> new BlockItem(ModBlocks.GOLD_CHAIN.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> COPPER_CHAIN = ITEMS.register("copper_chain", () -> new BlockItem(ModBlocks.COPPER_CHAIN.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> GOLD_LANTERN = ITEMS.register("gold_lantern", () -> new BlockItem(ModBlocks.GOLD_LANTERN.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> COPPER_LANTERN = ITEMS.register("copper_lantern", () -> new BlockItem(ModBlocks.COPPER_LANTERN.get(), new Item.Properties().tab(ITEM_GROUP)));
 
     public static final Supplier<Item> STONE_PILLAR = ITEMS.register("stone_pillar", () -> new BlockItem(ModBlocks.STONE_PILLAR.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final Supplier<Item> ANDESITE_PILLAR = ITEMS.register("andesite_pillar", () -> new BlockItem(ModBlocks.ANDESITE_PILLAR.get(), new Item.Properties().tab(ITEM_GROUP)));
@@ -123,8 +126,4 @@ public class ModItems {
     public static final Supplier<FluidBucketItem> VODKA_BUCKET = ITEMS.register("vodka_bucket", () -> new FluidBucketItem(ModFluidProperties.VODKA, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
     public static final Supplier<FluidBucketItem> WHISKEY_BUCKET = ITEMS.register("whiskey_bucket", () -> new FluidBucketItem(ModFluidProperties.WHISKEY, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
     public static final Supplier<FluidBucketItem> TOMATO_JUICE_BUCKET = ITEMS.register("tomato_juice_bucket", () -> new FluidBucketItem(ModFluidProperties.TOMATO_JUICE, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
-
-    public static void init() {
-        ITEMS.initialize();
-    }
 }

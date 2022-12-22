@@ -27,8 +27,4 @@ public class ModBlockEntities {
         signBlocks.addAll(List.of(ModBlocks.IRONWOOD_SIGN.get(), ModBlocks.IRONWOOD_WALL_SIGN.get(), ModBlocks.OLIVEWOOD_SIGN.get(), ModBlocks.OLIVEWOOD_WALL_SIGN.get()));
         signRegistry.setValidBlocks(signBlocks);
     }
-
-    public static void init() {
-        BLOCK_ENTITIES.initialize();
-    }
 }
