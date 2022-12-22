@@ -1,6 +1,7 @@
 package earth.terrarium.rustic.common.registry;
 
 import earth.terrarium.botarium.api.registry.RegistryHolder;
+import earth.terrarium.botarium.api.registry.fluid.FluidBucketItem;
 import earth.terrarium.rustic.Rustic;
 import earth.terrarium.rustic.common.blocks.PotBlock;
 import net.minecraft.core.Registry;
@@ -103,6 +104,25 @@ public class ModItems {
     public static final Supplier<Item> GREEN_TERRACOTTA_POT = ITEMS.register("green_terracotta_pot", () -> new BlockItem(ModBlocks.GREEN_TERRACOTTA_POT.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final Supplier<Item> BLUE_TERRACOTTA_POT = ITEMS.register("blue_terracotta_pot", () -> new BlockItem(ModBlocks.BLUE_TERRACOTTA_POT.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final Supplier<Item> BLACK_TERRACOTTA_POT = ITEMS.register("black_terracotta_pot", () -> new BlockItem(ModBlocks.BLACK_TERRACOTTA_POT.get(), new Item.Properties().tab(ITEM_GROUP)));
+
+    public static final Supplier<FluidBucketItem> SWEET_BERRY_JUICE_BUCKET = ITEMS.register("sweet_berry_juice_bucket", () -> new FluidBucketItem(ModFluidProperties.SWEET_BERRY_JUICE, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
+    public static final Supplier<FluidBucketItem> SWEET_BERRY_WINE_BUCKET = ITEMS.register("sweet_berry_wine_bucket", () -> new FluidBucketItem(ModFluidProperties.SWEET_BERRY_WINE, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
+    public static final Supplier<FluidBucketItem> SUGAR_WATER_BUCKET = ITEMS.register("sugar_water_bucket", () -> new FluidBucketItem(ModFluidProperties.SUGAR_WATER, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
+    public static final Supplier<FluidBucketItem> IRON_BERRY_JUICE_BUCKET = ITEMS.register("iron_berry_juice_bucket", () -> new FluidBucketItem(ModFluidProperties.IRON_BERRY_JUICE, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
+    public static final Supplier<FluidBucketItem> IRON_BERRY_WINE_BUCKET = ITEMS.register("iron_berry_wine_bucket", () -> new FluidBucketItem(ModFluidProperties.IRON_BERRY_WINE, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
+    public static final Supplier<FluidBucketItem> GRAPE_JUICE_BUCKET = ITEMS.register("grape_juice_bucket", () -> new FluidBucketItem(ModFluidProperties.GRAPE_JUICE, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
+    public static final Supplier<FluidBucketItem> RED_WINE_BUCKET = ITEMS.register("red_wine_bucket", () -> new FluidBucketItem(ModFluidProperties.RED_WINE, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
+    public static final Supplier<FluidBucketItem> APPLE_JUICE_BUCKET = ITEMS.register("apple_juice_bucket", () -> new FluidBucketItem(ModFluidProperties.APPLE_JUICE, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
+    public static final Supplier<FluidBucketItem> OLIVE_OIL_BUCKET = ITEMS.register("olive_oil_bucket", () -> new FluidBucketItem(ModFluidProperties.OLIVE_OIL, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
+    public static final Supplier<FluidBucketItem> HONEY_BUCKET = ITEMS.register("honey_bucket", () -> new FluidBucketItem(ModFluidProperties.HONEY, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
+    public static final Supplier<FluidBucketItem> CIDER_BUCKET = ITEMS.register("cider_bucket", () -> new FluidBucketItem(ModFluidProperties.CIDER, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
+    public static final Supplier<FluidBucketItem> RUM_BUCKET = ITEMS.register("rum_bucket", () -> new FluidBucketItem(ModFluidProperties.RUM, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
+    public static final Supplier<FluidBucketItem> STARCHY_WATER_BUCKET = ITEMS.register("starchy_water_bucket", () -> new FluidBucketItem(ModFluidProperties.STARCHY_WATER, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
+    public static final Supplier<FluidBucketItem> ALE_BUCKET = ITEMS.register("ale_bucket", () -> new FluidBucketItem(ModFluidProperties.ALE, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
+    public static final Supplier<FluidBucketItem> MEAD_BUCKET = ITEMS.register("mead_bucket", () -> new FluidBucketItem(ModFluidProperties.MEAD, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
+    public static final Supplier<FluidBucketItem> VODKA_BUCKET = ITEMS.register("vodka_bucket", () -> new FluidBucketItem(ModFluidProperties.VODKA, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
+    public static final Supplier<FluidBucketItem> WHISKEY_BUCKET = ITEMS.register("whiskey_bucket", () -> new FluidBucketItem(ModFluidProperties.WHISKEY, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
+    public static final Supplier<FluidBucketItem> TOMATO_JUICE_BUCKET = ITEMS.register("tomato_juice_bucket", () -> new FluidBucketItem(ModFluidProperties.TOMATO_JUICE, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
 
     public static void init() {
         ITEMS.initialize();

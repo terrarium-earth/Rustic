@@ -2,6 +2,7 @@ package earth.terrarium.rustic.common.registry;
 
 import dev.architectury.injectables.targets.ArchitecturyTarget;
 import earth.terrarium.botarium.api.registry.RegistryHolder;
+import earth.terrarium.botarium.api.registry.fluid.BotariumLiquidBlock;
 import earth.terrarium.rustic.Rustic;
 import earth.terrarium.rustic.common.blocks.CrushingTubBlock;
 import earth.terrarium.rustic.common.blocks.FluidBarrelBlock;
@@ -9,6 +10,8 @@ import earth.terrarium.rustic.common.blocks.PotBlock;
 import earth.terrarium.rustic.common.world.level.block.grower.ModTreeGrower;
 import earth.terrarium.rustic.mixin.WoodTypeInvoker;
 import net.minecraft.core.Registry;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.WoodType;
@@ -113,6 +116,25 @@ public class ModBlocks {
     public static final Supplier<Block> GREEN_TERRACOTTA_POT = BLOCKS.register("green_terracotta_pot", () -> new PotBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_TERRACOTTA)));
     public static final Supplier<Block> BLUE_TERRACOTTA_POT = BLOCKS.register("blue_terracotta_pot", () -> new PotBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_TERRACOTTA)));
     public static final Supplier<Block> BLACK_TERRACOTTA_POT = BLOCKS.register("black_terracotta_pot", () -> new PotBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_TERRACOTTA)));
+
+    public static final Supplier<Block> SWEET_BERRY_JUICE = BLOCKS.register("sweet_berry_juice", () -> new BotariumLiquidBlock(ModFluidProperties.SWEET_BERRY_JUICE, BlockBehaviour.Properties.copy(Blocks.WATER)));
+    public static final Supplier<Block> SWEET_BERRY_WINE = BLOCKS.register("sweet_berry_wine", () -> new BotariumLiquidBlock(ModFluidProperties.SWEET_BERRY_WINE, BlockBehaviour.Properties.copy(Blocks.WATER)));
+    public static final Supplier<Block> SUGAR_WATER = BLOCKS.register("sugar_water", () -> new BotariumLiquidBlock(ModFluidProperties.SUGAR_WATER, BlockBehaviour.Properties.copy(Blocks.WATER)));
+    public static final Supplier<Block> IRON_BERRY_JUICE = BLOCKS.register("iron_berry_juice", () -> new BotariumLiquidBlock(ModFluidProperties.IRON_BERRY_JUICE, BlockBehaviour.Properties.copy(Blocks.WATER)));
+    public static final Supplier<Block> IRON_BERRY_WINE = BLOCKS.register("iron_berry_wine", () -> new BotariumLiquidBlock(ModFluidProperties.IRON_BERRY_WINE, BlockBehaviour.Properties.copy(Blocks.WATER)));
+    public static final Supplier<Block> GRAPE_JUICE = BLOCKS.register("grape_juice", () -> new BotariumLiquidBlock(ModFluidProperties.GRAPE_JUICE, BlockBehaviour.Properties.copy(Blocks.WATER)));
+    public static final Supplier<Block> RED_WINE = BLOCKS.register("red_wine", () -> new BotariumLiquidBlock(ModFluidProperties.RED_WINE, BlockBehaviour.Properties.copy(Blocks.WATER)));
+    public static final Supplier<Block> APPLE_JUICE = BLOCKS.register("apple_juice", () -> new BotariumLiquidBlock(ModFluidProperties.APPLE_JUICE, BlockBehaviour.Properties.copy(Blocks.WATER)));
+    public static final Supplier<Block> OLIVE_OIL = BLOCKS.register("olive_oil", () -> new BotariumLiquidBlock(ModFluidProperties.OLIVE_OIL, BlockBehaviour.Properties.copy(Blocks.WATER)));
+    public static final Supplier<Block> HONEY = BLOCKS.register("honey", () -> new BotariumLiquidBlock(ModFluidProperties.HONEY, BlockBehaviour.Properties.copy(Blocks.WATER)));
+    public static final Supplier<Block> CIDER = BLOCKS.register("cider", () -> new BotariumLiquidBlock(ModFluidProperties.CIDER, BlockBehaviour.Properties.copy(Blocks.WATER)));
+    public static final Supplier<Block> RUM = BLOCKS.register("rum", () -> new BotariumLiquidBlock(ModFluidProperties.RUM, BlockBehaviour.Properties.copy(Blocks.WATER)));
+    public static final Supplier<Block> STARCHY_WATER = BLOCKS.register("starchy_water", () -> new BotariumLiquidBlock(ModFluidProperties.STARCHY_WATER, BlockBehaviour.Properties.copy(Blocks.WATER)));
+    public static final Supplier<Block> ALE = BLOCKS.register("ale", () -> new BotariumLiquidBlock(ModFluidProperties.ALE, BlockBehaviour.Properties.copy(Blocks.WATER)));
+    public static final Supplier<Block> MEAD = BLOCKS.register("mead", () -> new BotariumLiquidBlock(ModFluidProperties.MEAD, BlockBehaviour.Properties.copy(Blocks.WATER)));
+    public static final Supplier<Block> VODKA = BLOCKS.register("vodka", () -> new BotariumLiquidBlock(ModFluidProperties.VODKA, BlockBehaviour.Properties.copy(Blocks.WATER)));
+    public static final Supplier<Block> WHISKEY = BLOCKS.register("whiskey", () -> new BotariumLiquidBlock(ModFluidProperties.WHISKEY, BlockBehaviour.Properties.copy(Blocks.WATER)));
+    public static final Supplier<Block> TOMATO_JUICE = BLOCKS.register("tomato_juice", () -> new BotariumLiquidBlock(ModFluidProperties.TOMATO_JUICE, BlockBehaviour.Properties.copy(Blocks.WATER)));
 
     public static void init() {
         BLOCKS.initialize();

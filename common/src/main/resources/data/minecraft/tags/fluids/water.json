@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "rustic:sweet_berry_juice",
+    "rustic:sweet_berry_wine",
+    "rustic:sugar_water",
+    "rustic:iron_berry_juice",
+    "rustic:iron_berry_wine",
+    "rustic:grape_juice",
+    "rustic:red_wine",
+    "rustic:apple_juice",
+    "rustic:olive_oil",
+    "rustic:honey",
+    "rustic:cider",
+    "rustic:rum",
+    "rustic:starchy_water",
+    "rustic:ale",
+    "rustic:mead",
+    "rustic:vodka",
+    "rustic:whiskey",
+    "rustic:tomato_juice"
+  ]
+}

@@ -6,14 +6,14 @@
       "item": "rustic:ironwood_planks"
     },
     "/": {
-      "tag": "minecraft:slabs"
+      "tag": "minecraft:wooden_slabs"
     },
     "@": {
       "item": "minecraft:iron_ingot"
     }
   },
   "pattern": [
-    "#/#",
+    "# #",
     "@ @",
     "#/#"
   ],

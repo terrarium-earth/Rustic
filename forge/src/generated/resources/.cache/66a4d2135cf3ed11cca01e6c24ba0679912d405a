@@ -1,13 +1,31 @@
-// 1.19.2	2022-12-21T15:30:15.577483	Item Models: rustic
+// 1.19.2	2022-12-21T18:02:07.172369	Item Models: rustic
+c4788fbcbd701b6f00820c5f99c517c6999611d1 assets/rustic/models/item/ale_bucket.json
 9a19a3c5d27b45b4c30c187a223da7202f9a40b0 assets/rustic/models/item/almanac.json
+c74cee53f4f0ec54079fcf561cd15b89058cb083 assets/rustic/models/item/apple_juice_bucket.json
 feafa7838cf006c38f3e68e69028b3fff451100b assets/rustic/models/item/chili_pepper.json
+8a655e4c135d2af3a9286d3c958bff03bda6f4bd assets/rustic/models/item/cider_bucket.json
+afb4f87ebfdd8f1d4c0f55c37af3ed4a8aab01f4 assets/rustic/models/item/grape_juice_bucket.json
 f091c5c7925d321d83642cf28d41cb22ca59ac71 assets/rustic/models/item/grapes.json
+73686fb5e7ee68ff1407707810100f3b89921cb3 assets/rustic/models/item/honey_bucket.json
+158dab11dc569478283e5dc1970ca76ba3827d2f assets/rustic/models/item/iron_berry_juice_bucket.json
+7cb6ff654e10bf1363e8c51e611487b41b81139b assets/rustic/models/item/iron_berry_wine_bucket.json
 10de9aa77f37188b7039af05ec261782dadbbeb1 assets/rustic/models/item/ironberries.json
 56ab98826ce4a73d6c5f8299f267607b02410e05 assets/rustic/models/item/ironwood_door.json
 22f646e69c1ccb4f6203ccc6829a199f9912dcf9 assets/rustic/models/item/ironwood_sapling.json
 52841e89c95c09c0898f6dcfbd9ef0c14cc3c061 assets/rustic/models/item/ironwood_sign.json
+405ddfdfd96478a855f7213b309f645a9ec4824a assets/rustic/models/item/mead_bucket.json
+cd588ec7ceaaab31ed50027215251b2b62f497db assets/rustic/models/item/olive_oil_bucket.json
 51c072d75da9bf70b01898697c06a8ed185e31a6 assets/rustic/models/item/olives.json
 9c2194475d607c57efc06fd13a6ab576e912c682 assets/rustic/models/item/olivewood_door.json
 d483b8a4457c56cc75ed710d599e491512bcfa5d assets/rustic/models/item/olivewood_sapling.json
 787f43467979690d1b57c687d3fc24cec8492a09 assets/rustic/models/item/olivewood_sign.json
+4665936156a1a7db213cc18a64386c602ba15133 assets/rustic/models/item/red_wine_bucket.json
+a89de225ccb431466a83947714b2843e369b7552 assets/rustic/models/item/rum_bucket.json
+e3b09132fd86b84f020e3c21c2787ae0fa52b3a2 assets/rustic/models/item/starchy_water_bucket.json
+a0a22f256ce3331b1336cc51b891f13006f01133 assets/rustic/models/item/sugar_water_bucket.json
+bfca39a341df9cc9eaf75927fcfdaba91da2ec0f assets/rustic/models/item/sweet_berry_juice_bucket.json
+c04b0464e7de28e88fe67d34aff78f5e5d9be55d assets/rustic/models/item/sweet_berry_wine_bucket.json
 cb423d9ffab11c466c2f8dcf4f435de7ebdf220e assets/rustic/models/item/tomato.json
+631fbae3464dd26846fe5e53edc25e521900f64a assets/rustic/models/item/tomato_juice_bucket.json
+775054698590089f0ba9ed32db4238c603edf7cc assets/rustic/models/item/vodka_bucket.json
+9cf0e2f1a71b4d6b23065bb7f32c3b627f5640ba assets/rustic/models/item/whiskey_bucket.json

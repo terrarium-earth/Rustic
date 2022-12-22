@@ -102,6 +102,25 @@ public class ModBlockStateProvider extends BlockStateProvider {
         block(ModBlocks.BLUE_TERRACOTTA_POT.get(), TERRACOTTA_POT, "all");
         block(ModBlocks.BLACK_TERRACOTTA_POT.get(), TERRACOTTA_POT, "all");
 
+        block(ModBlocks.SWEET_BERRY_JUICE.get(), "particle", "minecraft:block/water_still");
+        block(ModBlocks.SWEET_BERRY_WINE.get(), "particle", "minecraft:block/water_still");
+        block(ModBlocks.SUGAR_WATER.get(), "particle", "minecraft:block/water_still");
+        block(ModBlocks.IRON_BERRY_JUICE.get(), "particle", "minecraft:block/water_still");
+        block(ModBlocks.IRON_BERRY_WINE.get(), "particle", "minecraft:block/water_still");
+        block(ModBlocks.GRAPE_JUICE.get(), "particle", "minecraft:block/water_still");
+        block(ModBlocks.RED_WINE.get(), "particle", "minecraft:block/water_still");
+        block(ModBlocks.APPLE_JUICE.get(), "particle", "minecraft:block/water_still");
+        block(ModBlocks.OLIVE_OIL.get(), "particle", "minecraft:block/water_still");
+        block(ModBlocks.HONEY.get(), "particle", "minecraft:block/water_still");
+        block(ModBlocks.CIDER.get(), "particle", "minecraft:block/water_still");
+        block(ModBlocks.RUM.get(), "particle", "minecraft:block/water_still");
+        block(ModBlocks.STARCHY_WATER.get(), "particle", "minecraft:block/water_still");
+        block(ModBlocks.ALE.get(), "particle", "minecraft:block/water_still");
+        block(ModBlocks.MEAD.get(), "particle", "minecraft:block/water_still");
+        block(ModBlocks.VODKA.get(), "particle", "minecraft:block/water_still");
+        block(ModBlocks.WHISKEY.get(), "particle", "minecraft:block/water_still");
+        block(ModBlocks.TOMATO_JUICE.get(), "particle", "minecraft:block/water_still");
+
         ModItems.ITEMS.getRegistries().forEach(item -> {
             if (item.get() instanceof BlockItem blockItem) {
                 Block block = ForgeRegistries.BLOCKS.getValue(ForgeRegistries.ITEMS.getKey(blockItem));
@@ -139,6 +158,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
     // references a parent model with a texture
     private void block(Block block, ResourceLocation parent, String texture) {
         simpleBlock(block, models().getBuilder(name(block)).texture(texture, blockTexture(block)).parent(models().getExistingFile(parent)));
+    }
+
+    // creates a model with a texture and no parent
+    private void block(Block block, String texture, String loc) {
+        simpleBlock(block, models().getBuilder(name(block)).texture(texture, loc));
     }
 
     private ResourceLocation key(Block block) {

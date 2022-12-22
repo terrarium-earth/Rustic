@@ -108,9 +108,9 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("/  "));
 
         createWoodSetRecipe(consumer, "fluid_barrel", 1, r -> r
-                .define('/', ItemTags.SLABS)
+                .define('/', ItemTags.WOODEN_SLABS)
                 .define('@', Items.IRON_INGOT)
-                .pattern("#/#")
+                .pattern("# #")
                 .pattern("@ @")
                 .pattern("#/#"));
 
@@ -156,27 +156,27 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("# #")
                 .pattern("###"));
 
-        createSimpleShapeless(consumer, ModItems.WHITE_TERRACOTTA_POT, 6, r -> r
+        createSimpleShapeless(consumer, ModItems.WHITE_TERRACOTTA_POT, 1, r -> r
                 .unlockedBy("has_terracotta_pot", has(ModItems.TERRACOTTA_POT.get()))
                 .requires(ModItems.TERRACOTTA_POT.get())
                 .requires(Items.WHITE_DYE));
 
-        createSimpleShapeless(consumer, ModItems.RED_TERRACOTTA_POT, 6, r -> r
+        createSimpleShapeless(consumer, ModItems.RED_TERRACOTTA_POT, 1, r -> r
                 .unlockedBy("has_terracotta_pot", has(ModItems.TERRACOTTA_POT.get()))
                 .requires(ModItems.TERRACOTTA_POT.get())
                 .requires(Items.RED_DYE));
 
-        createSimpleShapeless(consumer, ModItems.GREEN_TERRACOTTA_POT, 6, r -> r
+        createSimpleShapeless(consumer, ModItems.GREEN_TERRACOTTA_POT, 1, r -> r
                 .unlockedBy("has_terracotta_pot", has(ModItems.TERRACOTTA_POT.get()))
                 .requires(ModItems.TERRACOTTA_POT.get())
                 .requires(Items.GREEN_DYE));
 
-        createSimpleShapeless(consumer, ModItems.BLUE_TERRACOTTA_POT, 6, r -> r
+        createSimpleShapeless(consumer, ModItems.BLUE_TERRACOTTA_POT, 1, r -> r
                 .unlockedBy("has_terracotta_pot", has(ModItems.TERRACOTTA_POT.get()))
                 .requires(ModItems.TERRACOTTA_POT.get())
                 .requires(Items.BLUE_DYE));
 
-        createSimpleShapeless(consumer, ModItems.BLACK_TERRACOTTA_POT, 6, r -> r
+        createSimpleShapeless(consumer, ModItems.BLACK_TERRACOTTA_POT, 1, r -> r
                 .unlockedBy("has_terracotta_pot", has(ModItems.TERRACOTTA_POT.get()))
                 .requires(ModItems.TERRACOTTA_POT.get())
                 .requires(Items.BLACK_DYE));

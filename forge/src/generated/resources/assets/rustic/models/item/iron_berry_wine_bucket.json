@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "rustic:item/iron_berry_wine_bucket"
+  }
+}
