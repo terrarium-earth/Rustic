@@ -5,6 +5,7 @@ import earth.terrarium.botarium.api.registry.RegistryHolder;
 import earth.terrarium.botarium.api.registry.fluid.BotariumLiquidBlock;
 import earth.terrarium.rustic.Rustic;
 import earth.terrarium.rustic.common.blocks.CrushingTubBlock;
+import earth.terrarium.rustic.common.blocks.FertileSoilBlock;
 import earth.terrarium.rustic.common.blocks.FluidBarrelBlock;
 import earth.terrarium.rustic.common.blocks.PotBlock;
 import earth.terrarium.rustic.common.world.level.block.grower.ModTreeGrower;
@@ -42,7 +43,7 @@ public class ModBlocks {
 
     public static final Supplier<Block> IRONWOOD_PLANKS = BLOCKS.register("ironwood_planks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     public static final Supplier<Block> IRONWOOD_LOG = BLOCKS.register("ironwood_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
-    public static final Supplier<Block> IRONWOOD_STRIPPED_LOG = BLOCKS.register("ironwood_stripped_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final Supplier<Block> STRIPPED_IRONWOOD_LOG = BLOCKS.register("stripped_ironwood_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
     public static final Supplier<Block> IRONWOOD_WOOD = BLOCKS.register("ironwood_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
     public static final Supplier<Block> IRONWOOD_LEAVES = BLOCKS.register("ironwood_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final Supplier<Block> IRONWOOD_SAPLING = BLOCKS.register("ironwood_sapling", () -> new SaplingBlock(new ModTreeGrower(ModFeatures.IRONWOOD_KEY), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)) {});
@@ -59,7 +60,7 @@ public class ModBlocks {
 
     public static final Supplier<Block> OLIVEWOOD_PLANKS = BLOCKS.register("olivewood_planks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     public static final Supplier<Block> OLIVEWOOD_LOG = BLOCKS.register("olivewood_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
-    public static final Supplier<Block> OLIVEWOOD_STRIPPED_LOG = BLOCKS.register("olivewood_stripped_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final Supplier<Block> STRIPPED_OLIVEWOOD_LOG = BLOCKS.register("stripped_olivewood_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
     public static final Supplier<Block> OLIVEWOOD_WOOD = BLOCKS.register("olivewood_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
     public static final Supplier<Block> OLIVEWOOD_LEAVES = BLOCKS.register("olivewood_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final Supplier<Block> OLIVEWOOD_SAPLING = BLOCKS.register("olivewood_sapling", () -> new SaplingBlock(new ModTreeGrower(ModFeatures.OLIVEWOOD_KEY), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)) {});
@@ -78,6 +79,8 @@ public class ModBlocks {
     public static final Supplier<Block> COPPER_CHAIN = BLOCKS.register("copper_chain", () -> new ChainBlock(BlockBehaviour.Properties.copy(Blocks.CHAIN)));
     public static final Supplier<Block> GOLD_LANTERN = BLOCKS.register("gold_lantern", () -> new LanternBlock(BlockBehaviour.Properties.copy(Blocks.LANTERN)));
     public static final Supplier<Block> COPPER_LANTERN = BLOCKS.register("copper_lantern", () -> new LanternBlock(BlockBehaviour.Properties.copy(Blocks.LANTERN)));
+    public static final Supplier<Block> GOLD_SOUL_LANTERN = BLOCKS.register("gold_soul_lantern", () -> new LanternBlock(BlockBehaviour.Properties.copy(Blocks.SOUL_LANTERN)));
+    public static final Supplier<Block> COPPER_SOUL_LANTERN = BLOCKS.register("copper_soul_lantern", () -> new LanternBlock(BlockBehaviour.Properties.copy(Blocks.SOUL_LANTERN)));
 
     public static final Supplier<Block> STONE_PILLAR = BLOCKS.register("stone_pillar", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
     public static final Supplier<Block> ANDESITE_PILLAR = BLOCKS.register("andesite_pillar", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.ANDESITE)));
@@ -109,6 +112,8 @@ public class ModBlocks {
     public static final Supplier<Block> GREEN_TERRACOTTA_POT = BLOCKS.register("green_terracotta_pot", () -> new PotBlock(BlockBehaviour.Properties.copy(Blocks.BONE_BLOCK)));
     public static final Supplier<Block> BLUE_TERRACOTTA_POT = BLOCKS.register("blue_terracotta_pot", () -> new PotBlock(BlockBehaviour.Properties.copy(Blocks.BONE_BLOCK)));
     public static final Supplier<Block> BLACK_TERRACOTTA_POT = BLOCKS.register("black_terracotta_pot", () -> new PotBlock(BlockBehaviour.Properties.copy(Blocks.BONE_BLOCK)));
+
+    public static final Supplier<Block> FERTILE_SOIL = BLOCKS.register("fertile_soil", () -> new FertileSoilBlock(BlockBehaviour.Properties.copy(Blocks.FARMLAND)));
 
     public static final Supplier<Block> SWEET_BERRY_JUICE = BLOCKS.register("sweet_berry_juice", () -> new BotariumLiquidBlock(ModFluidProperties.SWEET_BERRY_JUICE, BlockBehaviour.Properties.copy(Blocks.WATER)));
     public static final Supplier<Block> SWEET_BERRY_WINE = BLOCKS.register("sweet_berry_wine", () -> new BotariumLiquidBlock(ModFluidProperties.SWEET_BERRY_WINE, BlockBehaviour.Properties.copy(Blocks.WATER)));

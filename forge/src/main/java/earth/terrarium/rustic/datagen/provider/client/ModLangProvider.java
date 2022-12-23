@@ -24,19 +24,15 @@ public class ModLangProvider extends LanguageProvider {
         add("itemGroup.rustic.main", "Rustic");
 
         for (Supplier<Block> block : ModBlocks.BLOCKS.getRegistries()) {
-            ResourceLocation blockId = ForgeRegistries.BLOCKS.getKey(block.get());
+            ResourceLocation id = ForgeRegistries.BLOCKS.getKey(block.get());
             if (block.get() instanceof WallSignBlock) continue;
-            if (blockId.getNamespace().equals(Rustic.MOD_ID)) {
-                addBlock(block, StringUtils.capitaliseAllWords(blockId.getPath().replace("_", " ")));
-            }
+            addBlock(block, StringUtils.capitaliseAllWords(id.getPath().replace("_", " ")));
         }
 
-        ModItems.ITEMS.getRegistries().forEach(item -> {
-            if (!(item.get() instanceof BlockItem)) {
-                ResourceLocation blockId = ForgeRegistries.ITEMS.getKey(item.get());
-                if (blockId.getNamespace().equals(Rustic.MOD_ID)) {
-                    addItem(item, StringUtils.capitaliseAllWords(blockId.getPath().replace("_", " ")));
-                }
+        ModItems.ITEMS.getRegistries().forEach(reg -> {
+            if (!(reg.get() instanceof BlockItem)) {
+                ResourceLocation id = ForgeRegistries.ITEMS.getKey(reg.get());
+                addItem(reg, StringUtils.capitaliseAllWords(id.getPath().replace("_", " ")));
             }
         });
     }

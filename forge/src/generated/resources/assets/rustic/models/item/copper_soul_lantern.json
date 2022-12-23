@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "rustic:item/almanac"
+    "layer0": "rustic:item/copper_soul_lantern"
   }
 }

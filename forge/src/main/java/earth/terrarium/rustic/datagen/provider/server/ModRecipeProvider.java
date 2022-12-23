@@ -201,6 +201,21 @@ public class ModRecipeProvider extends RecipeProvider {
                 .requires(Items.LANTERN)
                 .requires(Items.COPPER_INGOT));
 
+        createSimpleShapeless(consumer, ModItems.GOLD_SOUL_LANTERN, 1, r -> r
+                .unlockedBy("has_soul_lantern", has(Items.SOUL_LANTERN))
+                .requires(Items.SOUL_LANTERN)
+                .requires(Items.GOLD_INGOT));
+
+        createSimpleShapeless(consumer, ModItems.COPPER_SOUL_LANTERN, 1, r -> r
+                .unlockedBy("has_soul_lantern", has(Items.SOUL_LANTERN))
+                .requires(Items.SOUL_LANTERN)
+                .requires(Items.COPPER_INGOT));
+
+        createSimpleShapeless(consumer, ModItems.FERTILE_SOIL, 1, r -> r
+                .unlockedBy("has_bone_meal", has(Items.BONE_MEAL))
+                .requires(Items.DIRT)
+                .requires(Items.BONE_MEAL));
+
         stonecutterResultFromBase(consumer, ModItems.STONE_PILLAR.get(), Items.STONE);
         stonecutterResultFromBase(consumer, ModItems.ANDESITE_PILLAR.get(), Items.ANDESITE);
         stonecutterResultFromBase(consumer, ModItems.DIORITE_PILLAR.get(), Items.DIORITE);

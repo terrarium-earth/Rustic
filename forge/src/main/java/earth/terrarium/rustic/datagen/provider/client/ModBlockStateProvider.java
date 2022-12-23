@@ -46,8 +46,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlock(ModBlocks.OLIVEWOOD_PLANKS.get());
         logBlock((RotatedPillarBlock) ModBlocks.IRONWOOD_LOG.get());
         logBlock((RotatedPillarBlock) ModBlocks.OLIVEWOOD_LOG.get());
-        logBlock((RotatedPillarBlock) ModBlocks.IRONWOOD_STRIPPED_LOG.get());
-        logBlock((RotatedPillarBlock) ModBlocks.OLIVEWOOD_STRIPPED_LOG.get());
+        logBlock((RotatedPillarBlock) ModBlocks.STRIPPED_IRONWOOD_LOG.get());
+        logBlock((RotatedPillarBlock) ModBlocks.STRIPPED_OLIVEWOOD_LOG.get());
         axisBlock((RotatedPillarBlock) ModBlocks.IRONWOOD_WOOD.get(), blockTexture(ModBlocks.IRONWOOD_LOG.get()), blockTexture(ModBlocks.IRONWOOD_LOG.get()));
         axisBlock((RotatedPillarBlock) ModBlocks.OLIVEWOOD_WOOD.get(), blockTexture(ModBlocks.OLIVEWOOD_LOG.get()), blockTexture(ModBlocks.OLIVEWOOD_LOG.get()));
         stairsBlock((StairBlock) ModBlocks.IRONWOOD_STAIRS.get(), blockTexture(ModBlocks.IRONWOOD_PLANKS.get()));
@@ -124,6 +124,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         block(ModBlocks.WHISKEY.get(), "particle", WATER_STILL.toString());
         block(ModBlocks.TOMATO_JUICE.get(), "particle", WATER_STILL.toString());
 
+        farmland(ModBlocks.FERTILE_SOIL.get());
+
         ModItems.ITEMS.getRegistries().forEach(item -> {
             if (item.get() instanceof BlockItem blockItem) {
                 Block block = ForgeRegistries.BLOCKS.getValue(ForgeRegistries.ITEMS.getKey(blockItem));
@@ -160,6 +162,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
     // references a parent model with a texture
     private void block(Block block, ResourceLocation parent, String texture) {
         simpleBlock(block, models().getBuilder(name(block)).texture(texture, blockTexture(block)).texture("particle", blockTexture(block)).parent(models().getExistingFile(parent)));
+    }
+
+    private void farmland(Block block) {
+        simpleBlock(block, models().getBuilder(name(block)).texture("dirt", blockTexture(block)).texture("top", "minecraft:block/farmland_moist").parent(models().getExistingFile(new ResourceLocation("block/template_farmland"))));
     }
 
     // creates a model with a texture and no parent

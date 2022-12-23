@@ -34,6 +34,8 @@ public class RusticClient {
         ClientHooks.setRenderLayer(ModBlocks.COPPER_CHAIN.get(), RenderType.cutout());
         ClientHooks.setRenderLayer(ModBlocks.GOLD_LANTERN.get(), RenderType.cutout());
         ClientHooks.setRenderLayer(ModBlocks.COPPER_LANTERN.get(), RenderType.cutout());
+        ClientHooks.setRenderLayer(ModBlocks.GOLD_SOUL_LANTERN.get(), RenderType.cutout());
+        ClientHooks.setRenderLayer(ModBlocks.COPPER_SOUL_LANTERN.get(), RenderType.cutout());
 
         Sheets.SIGN_MATERIALS.put(ModBlocks.IRONWOOD_SIGN_TYPE, new Material(Sheets.SIGN_SHEET, new ResourceLocation(Rustic.MOD_ID, "entity/signs/ironwood")));
         Sheets.SIGN_MATERIALS.put(ModBlocks.OLIVEWOOD_SIGN_TYPE, new Material(Sheets.SIGN_SHEET, new ResourceLocation(Rustic.MOD_ID, "entity/signs/olivewood")));

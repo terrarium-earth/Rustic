@@ -2,6 +2,7 @@ package earth.terrarium.rustic;
 
 import com.mojang.logging.LogUtils;
 import earth.terrarium.rustic.common.registry.*;
+import earth.terrarium.rustic.common.util.PlatformUtils;
 import org.slf4j.Logger;
 
 public class Rustic {
@@ -20,6 +21,8 @@ public class Rustic {
     }
 
     public static void postInit() {
+        PlatformUtils.registerStrippedLog(ModBlocks.IRONWOOD_LOG.get(), ModBlocks.STRIPPED_IRONWOOD_LOG.get());
+        PlatformUtils.registerStrippedLog(ModBlocks.OLIVEWOOD_LOG.get(), ModBlocks.STRIPPED_OLIVEWOOD_LOG.get());
         ModBlockEntities.postInit();
     }
 }

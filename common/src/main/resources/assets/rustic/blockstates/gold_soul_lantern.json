@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "rustic:block/gold_soul_lantern"
+    },
+    "hanging=true": {
+      "model": "rustic:block/gold_soul_lantern_hanging"
+    }
+  }
+}

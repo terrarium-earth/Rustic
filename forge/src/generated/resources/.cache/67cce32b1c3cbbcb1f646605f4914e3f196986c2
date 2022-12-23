@@ -1,4 +1,4 @@
-// 1.19.2	2022-12-21T22:04:45.790347	LootTables
+// 1.19.2	2022-12-23T15:16:26.534165	LootTables
 8ffda52433eac658f557014abee6f286775c14cd data/rustic/loot_tables/blocks/acacia_fluid_barrel.json
 2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/rustic/loot_tables/blocks/ale.json
 4fe5701a3b190dff2168cc7adc704295616c09ea data/rustic/loot_tables/blocks/andesite_pillar.json
@@ -16,14 +16,17 @@ a5c953e4431a53282965ea955a32ddf63e02045c data/rustic/loot_tables/blocks/clay_cro
 c1fdff0b1dfb63b9faa3fa2792cbc170ebbd8ffb data/rustic/loot_tables/blocks/clay_wall.json
 52f793aa0d44f0f0ca0c0a7f5763ceac42b7c8b8 data/rustic/loot_tables/blocks/copper_chain.json
 dae45e36a5e79953fe0504f73ad256ebb4e5cf28 data/rustic/loot_tables/blocks/copper_lantern.json
+39c8061356555fa5a5f1dbf3ee210e1da0a5c67b data/rustic/loot_tables/blocks/copper_soul_lantern.json
 9c8d55f0aa0634730a8b836caf9281827f819e1a data/rustic/loot_tables/blocks/crimson_fluid_barrel.json
 339c45c74b5e58e9f90c281e7ab90f7a803b02cb data/rustic/loot_tables/blocks/crushing_tub.json
 e360255cf556787537bd04fe6498dcc646108f92 data/rustic/loot_tables/blocks/cyan_painted_wood.json
 f11b2dbced7a5e2c2ae772c8dce85edae4c0d497 data/rustic/loot_tables/blocks/dark_oak_fluid_barrel.json
 9fb30952a522cb175cb9a4a50bede1f8b370d68f data/rustic/loot_tables/blocks/deepslate_pillar.json
 63961bfa847f6e4a182bc4f8aaeeb307ad6bbcd6 data/rustic/loot_tables/blocks/diorite_pillar.json
+69a99b1479dcedb608eac52a1dba556e785c9bc9 data/rustic/loot_tables/blocks/fertile_soil.json
 2c832ddaff0e78816c026f59555afe7865d5ec2e data/rustic/loot_tables/blocks/gold_chain.json
 f77069e46b8b052162c4bbf1445fcdef64b9f95f data/rustic/loot_tables/blocks/gold_lantern.json
+70f6a59216fe46e81609319c1a260284f4315e30 data/rustic/loot_tables/blocks/gold_soul_lantern.json
 2597a6ca54f73448b06ff5b6d9c2b5b22c48ef73 data/rustic/loot_tables/blocks/granite_pillar.json
 2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/rustic/loot_tables/blocks/grape_juice.json
 887015facb278b606a1eab189fc8cb86f1e83304 data/rustic/loot_tables/blocks/gray_painted_wood.json
@@ -45,7 +48,6 @@ f738a76ddb1467256b3eb83412ec0d83c4a5b7a6 data/rustic/loot_tables/blocks/ironwood
 855dfac81937938bd60381ddea56c5b7f90c7158 data/rustic/loot_tables/blocks/ironwood_sign.json
 023d653602c579ebd7fc50e367bfb74044e666ad data/rustic/loot_tables/blocks/ironwood_slab.json
 d904857a063dfb6fdc6de52ccf17d0340ed863c6 data/rustic/loot_tables/blocks/ironwood_stairs.json
-4a02377b9dd81cc8730971883ddbe8bad673f78b data/rustic/loot_tables/blocks/ironwood_stripped_log.json
 69768f2ff45c31255e78055d041626ed24d888b5 data/rustic/loot_tables/blocks/ironwood_trapdoor.json
 855dfac81937938bd60381ddea56c5b7f90c7158 data/rustic/loot_tables/blocks/ironwood_wall_sign.json
 da102c13190ee71141d92fb1db6afa28a4fc9f4d data/rustic/loot_tables/blocks/ironwood_wood.json
@@ -71,7 +73,6 @@ a8e11572f3e60d168efc932084d2683c03a06621 data/rustic/loot_tables/blocks/olivewoo
 da640fc1fb2821bc4c42aa0a0d7521e835965d06 data/rustic/loot_tables/blocks/olivewood_sign.json
 fc7a302f1c7041005eaf5d0bdb9dbe5c7a9a12d4 data/rustic/loot_tables/blocks/olivewood_slab.json
 403906231243f23b6ef8cbe9ed9838e3da480464 data/rustic/loot_tables/blocks/olivewood_stairs.json
-b4101e247192952bb516ed4d330389fd7f843a78 data/rustic/loot_tables/blocks/olivewood_stripped_log.json
 0fcab4fd1a2c47831f1659b94f98a6a95458a2d5 data/rustic/loot_tables/blocks/olivewood_trapdoor.json
 da640fc1fb2821bc4c42aa0a0d7521e835965d06 data/rustic/loot_tables/blocks/olivewood_wall_sign.json
 fa22ca850b6c6778f1e02389a1e21c4bea0814b1 data/rustic/loot_tables/blocks/olivewood_wood.json
@@ -85,6 +86,8 @@ ef283b93e101390fb89ac32062aca4c308c9b0f0 data/rustic/loot_tables/blocks/red_pain
 2e6312df6825da9210b42be2211c3270f20b7b3d data/rustic/loot_tables/blocks/spruce_fluid_barrel.json
 2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/rustic/loot_tables/blocks/starchy_water.json
 2414d72fcde94055957df7d30dd1057f1329136c data/rustic/loot_tables/blocks/stone_pillar.json
+04b17144a541395c2e3ba2e1ebc4934b71b3bf0a data/rustic/loot_tables/blocks/stripped_ironwood_log.json
+f1d30dbc31e137f1a213a4ddcc5f68b74916b5ef data/rustic/loot_tables/blocks/stripped_olivewood_log.json
 2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/rustic/loot_tables/blocks/sugar_water.json
 2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/rustic/loot_tables/blocks/sweet_berry_juice.json
 2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/rustic/loot_tables/blocks/sweet_berry_wine.json
