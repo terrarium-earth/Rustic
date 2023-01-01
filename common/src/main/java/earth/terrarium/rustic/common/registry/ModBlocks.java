@@ -8,7 +8,7 @@ import earth.terrarium.rustic.common.blocks.CrushingTubBlock;
 import earth.terrarium.rustic.common.blocks.FertileSoilBlock;
 import earth.terrarium.rustic.common.blocks.FluidBarrelBlock;
 import earth.terrarium.rustic.common.blocks.PotBlock;
-import earth.terrarium.rustic.common.world.level.block.grower.ModTreeGrower;
+import earth.terrarium.rustic.common.world.grower.ModTreeGrower;
 import earth.terrarium.rustic.mixin.WoodTypeInvoker;
 import net.minecraft.core.Registry;
 import net.minecraft.world.level.block.*;

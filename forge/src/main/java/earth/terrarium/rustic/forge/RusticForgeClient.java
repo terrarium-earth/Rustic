@@ -17,7 +17,6 @@ public class RusticForgeClient {
         bus.addListener(RusticForgeClient::onRegisterRenderers);
         bus.addListener(RusticForgeClient::onRegisterBlockColorHandlers);
         bus.addListener(RusticForgeClient::onRegisterItemColorHandlers);
-
     }
 
     public static void postInit() {

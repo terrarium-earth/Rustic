@@ -13,6 +13,7 @@ import net.minecraft.world.level.material.Fluid;
 public class RusticFabricClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
+        RusticClient.init();
         RusticClient.registerBlockEntityRenderers();
         RusticClient.onRegisterFluidRenderTypes(RusticFabricClient::registerFluidRenderTypes);
         RusticClient.onRegisterTints(RusticFabricClient::onRegisterTints);

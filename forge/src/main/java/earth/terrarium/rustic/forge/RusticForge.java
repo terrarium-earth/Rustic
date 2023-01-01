@@ -1,6 +1,7 @@
 package earth.terrarium.rustic.forge;
 
 import earth.terrarium.rustic.Rustic;
+import earth.terrarium.rustic.client.RusticClient;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
@@ -24,6 +25,7 @@ public class RusticForge {
     }
 
     public static void onClientSetup(FMLClientSetupEvent event) {
+        RusticClient.init();
         RusticForgeClient.postInit();
     }
 }

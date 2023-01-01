@@ -2,7 +2,9 @@ package earth.terrarium.rustic.datagen.provider.client;
 
 import earth.terrarium.rustic.Rustic;
 import earth.terrarium.rustic.common.registry.ModBlocks;
+import earth.terrarium.rustic.common.registry.ModEntityTypes;
 import earth.terrarium.rustic.common.registry.ModItems;
+import earth.terrarium.rustic.common.registry.ModMobEffects;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
@@ -34,6 +36,18 @@ public class ModLangProvider extends LanguageProvider {
                 ResourceLocation id = ForgeRegistries.ITEMS.getKey(reg.get());
                 addItem(reg, StringUtils.capitaliseAllWords(id.getPath().replace("_", " ")));
             }
+        });
+
+        ModEntityTypes.ENTITY_TYPES.getRegistries().forEach(entity -> {
+            ResourceLocation id = ForgeRegistries.ENTITY_TYPES.getKey(entity.get());
+            assert id != null;
+            addEntityType(entity, StringUtils.capitaliseAllWords(id.getPath().replace("_", " ")));
+        });
+
+        ModMobEffects.MOB_EFFECTS.getRegistries().forEach(effect -> {
+            ResourceLocation id = ForgeRegistries.MOB_EFFECTS.getKey(effect.get());
+            assert id != null;
+            addEffect(effect, StringUtils.capitaliseAllWords(id.getPath().replace("_", " ")));
         });
     }
 }

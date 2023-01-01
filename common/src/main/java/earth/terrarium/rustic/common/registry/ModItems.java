@@ -3,6 +3,7 @@ package earth.terrarium.rustic.common.registry;
 import earth.terrarium.botarium.api.registry.RegistryHolder;
 import earth.terrarium.botarium.api.registry.fluid.FluidBucketItem;
 import earth.terrarium.rustic.Rustic;
+import earth.terrarium.rustic.common.item.TomatoItem;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.food.Foods;
@@ -35,7 +36,7 @@ public class ModItems {
 
     public static final Supplier<Item> IRONBERRIES = ITEMS.register("ironberries", () -> new Item(new Item.Properties().tab(ITEM_GROUP).food(Foods.SWEET_BERRIES)));
     public static final Supplier<Item> OLIVES = ITEMS.register("olives", () -> new Item(new Item.Properties().tab(ITEM_GROUP).food(Foods.SWEET_BERRIES)));
-    public static final Supplier<Item> TOMATO = ITEMS.register("tomato", () -> new Item(new Item.Properties().tab(ITEM_GROUP).food(Foods.SWEET_BERRIES)));
+    public static final Supplier<Item> TOMATO = ITEMS.register("tomato", () -> new TomatoItem(new Item.Properties().tab(ITEM_GROUP).food(Foods.SWEET_BERRIES)));
     public static final Supplier<Item> CHILI_PEPPER = ITEMS.register("chili_pepper", () -> new Item(new Item.Properties().tab(ITEM_GROUP).food(Foods.SWEET_BERRIES)));
     public static final Supplier<Item> GRAPES = ITEMS.register("grapes", () -> new Item(new Item.Properties().tab(ITEM_GROUP).food(Foods.SWEET_BERRIES)));
 
@@ -77,7 +78,6 @@ public class ModItems {
     public static final Supplier<Item> COPPER_LANTERN = ITEMS.register("copper_lantern", () -> new BlockItem(ModBlocks.COPPER_LANTERN.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final Supplier<Item> GOLD_SOUL_LANTERN = ITEMS.register("gold_soul_lantern", () -> new BlockItem(ModBlocks.GOLD_SOUL_LANTERN.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final Supplier<Item> COPPER_SOUL_LANTERN = ITEMS.register("copper_soul_lantern", () -> new BlockItem(ModBlocks.COPPER_SOUL_LANTERN.get(), new Item.Properties().tab(ITEM_GROUP)));
-
 
     public static final Supplier<Item> STONE_PILLAR = ITEMS.register("stone_pillar", () -> new BlockItem(ModBlocks.STONE_PILLAR.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final Supplier<Item> ANDESITE_PILLAR = ITEMS.register("andesite_pillar", () -> new BlockItem(ModBlocks.ANDESITE_PILLAR.get(), new Item.Properties().tab(ITEM_GROUP)));

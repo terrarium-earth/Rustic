@@ -18,6 +18,8 @@ public class Rustic {
         ModRecipeTypes.RECIPES.initialize();
         ModRecipeSerializers.SERIALIZERS.initialize();
         ModFeatures.FEATURES.initialize();
+        ModEntityTypes.ENTITY_TYPES.initialize();
+        ModMobEffects.MOB_EFFECTS.initialize();
     }
 
     public static void postInit() {

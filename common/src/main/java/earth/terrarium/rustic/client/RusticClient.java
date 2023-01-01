@@ -6,9 +6,11 @@ import earth.terrarium.rustic.client.renderers.CrushingTubRenderer;
 import earth.terrarium.rustic.client.renderers.FluidBarrelRenderer;
 import earth.terrarium.rustic.common.registry.ModBlockEntities;
 import earth.terrarium.rustic.common.registry.ModBlocks;
+import earth.terrarium.rustic.common.registry.ModEntityTypes;
 import earth.terrarium.rustic.common.registry.ModFluids;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.client.resources.model.Material;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
@@ -18,6 +20,10 @@ import org.apache.logging.log4j.util.TriConsumer;
 import java.util.function.Consumer;
 
 public class RusticClient {
+
+    public static void init() {
+        ClientHooks.registerEntityRenderer(ModEntityTypes.TOMATO, ThrownItemRenderer::new);
+    }
 
     public static void registerBlockEntityRenderers() {
         ClientHooks.registerBlockEntityRenderers(ModBlockEntities.CRUSHING_TUB.get(), CrushingTubRenderer::new);
