@@ -1,4 +1,4 @@
-package earth.terrarium.rustic.fabric;
+package earth.terrarium.rustic.client.fabric;
 
 import earth.terrarium.rustic.client.RusticClient;
 import net.fabricmc.api.ClientModInitializer;
@@ -10,13 +10,13 @@ import net.minecraft.world.level.FoliageColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.material.Fluid;
 
-public class RusticFabricClient implements ClientModInitializer {
+public class RusticClientFabric implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         RusticClient.init();
         RusticClient.registerBlockEntityRenderers();
-        RusticClient.onRegisterFluidRenderTypes(RusticFabricClient::registerFluidRenderTypes);
-        RusticClient.onRegisterTints(RusticFabricClient::onRegisterTints);
+        RusticClient.onRegisterFluidRenderTypes(RusticClientFabric::registerFluidRenderTypes);
+        RusticClient.onRegisterTints(RusticClientFabric::onRegisterTints);
     }
 
     private static void registerFluidRenderTypes(RenderType type, Fluid fluid1, Fluid fluid2) {

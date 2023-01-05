@@ -1,6 +1,7 @@
-package earth.terrarium.rustic.forge;
+package earth.terrarium.rustic.client.forge;
 
 import earth.terrarium.rustic.client.RusticClient;
+import earth.terrarium.rustic.common.config.forge.ForgeMenuConfig;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -11,16 +12,17 @@ import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-public class RusticForgeClient {
+public class RusticClientForge {
     public static void init() {
+        ForgeMenuConfig.register();
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-        bus.addListener(RusticForgeClient::onRegisterRenderers);
-        bus.addListener(RusticForgeClient::onRegisterBlockColorHandlers);
-        bus.addListener(RusticForgeClient::onRegisterItemColorHandlers);
+        bus.addListener(RusticClientForge::onRegisterRenderers);
+        bus.addListener(RusticClientForge::onRegisterBlockColorHandlers);
+        bus.addListener(RusticClientForge::onRegisterItemColorHandlers);
     }
 
     public static void postInit() {
-        RusticClient.onRegisterFluidRenderTypes(RusticForgeClient::onRegisterFluidRenderTypes);
+        RusticClient.onRegisterFluidRenderTypes(RusticClientForge::onRegisterFluidRenderTypes);
     }
 
     private static void onRegisterFluidRenderTypes(RenderType type, Fluid fluid1, Fluid fluid2) {

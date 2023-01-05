@@ -2,6 +2,7 @@ package earth.terrarium.rustic.forge;
 
 import earth.terrarium.rustic.Rustic;
 import earth.terrarium.rustic.client.RusticClient;
+import earth.terrarium.rustic.client.forge.RusticClientForge;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
@@ -14,7 +15,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 public class RusticForge {
     public RusticForge() {
         Rustic.init();
-        DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> RusticForgeClient::init);
+        DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> RusticClientForge::init);
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         bus.addListener(RusticForge::onClientSetup);
         bus.addListener(RusticForge::commonSetup);
@@ -26,6 +27,6 @@ public class RusticForge {
 
     public static void onClientSetup(FMLClientSetupEvent event) {
         RusticClient.init();
-        RusticForgeClient.postInit();
+        RusticClientForge.postInit();
     }
 }

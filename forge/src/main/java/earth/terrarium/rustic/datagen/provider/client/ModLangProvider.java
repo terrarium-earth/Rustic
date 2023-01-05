@@ -6,15 +6,12 @@ import earth.terrarium.rustic.common.registry.ModEntityTypes;
 import earth.terrarium.rustic.common.registry.ModItems;
 import earth.terrarium.rustic.common.registry.ModMobEffects;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.WallSignBlock;
 import net.minecraftforge.common.data.LanguageProvider;
-import net.minecraftforge.registries.ForgeRegistries;
 import org.codehaus.plexus.util.StringUtils;
 
-import java.util.function.Supplier;
+import java.util.Objects;
 
 public class ModLangProvider extends LanguageProvider {
     public ModLangProvider(DataGenerator pGenerator) {
@@ -25,29 +22,9 @@ public class ModLangProvider extends LanguageProvider {
     protected void addTranslations() {
         add("itemGroup.rustic.main", "Rustic");
 
-        for (Supplier<Block> block : ModBlocks.BLOCKS.getRegistries()) {
-            ResourceLocation id = ForgeRegistries.BLOCKS.getKey(block.get());
-            if (block.get() instanceof WallSignBlock) continue;
-            addBlock(block, StringUtils.capitaliseAllWords(id.getPath().replace("_", " ")));
-        }
-
-        ModItems.ITEMS.getRegistries().forEach(reg -> {
-            if (!(reg.get() instanceof BlockItem)) {
-                ResourceLocation id = ForgeRegistries.ITEMS.getKey(reg.get());
-                addItem(reg, StringUtils.capitaliseAllWords(id.getPath().replace("_", " ")));
-            }
-        });
-
-        ModEntityTypes.ENTITY_TYPES.getRegistries().forEach(entity -> {
-            ResourceLocation id = ForgeRegistries.ENTITY_TYPES.getKey(entity.get());
-            assert id != null;
-            addEntityType(entity, StringUtils.capitaliseAllWords(id.getPath().replace("_", " ")));
-        });
-
-        ModMobEffects.MOB_EFFECTS.getRegistries().forEach(effect -> {
-            ResourceLocation id = ForgeRegistries.MOB_EFFECTS.getKey(effect.get());
-            assert id != null;
-            addEffect(effect, StringUtils.capitaliseAllWords(id.getPath().replace("_", " ")));
-        });
+        ModBlocks.BLOCKS.stream().filter(e -> !(e instanceof WallSignBlock)).forEach(entry -> addBlock(entry, StringUtils.capitaliseAllWords(entry.getId().getPath().replace("_", " "))));
+        ModItems.ITEMS.stream().filter(e -> !(e instanceof BlockItem)).forEach(entry -> addItem(entry, StringUtils.capitaliseAllWords(Objects.requireNonNull(entry.getId()).getPath().replace("_", " "))));
+        ModEntityTypes.ENTITY_TYPES.stream().forEach(entry -> addEntityType(entry, StringUtils.capitaliseAllWords(Objects.requireNonNull(entry.getId()).getPath().replace("_", " "))));
+        ModMobEffects.MOB_EFFECTS.stream().forEach(entry -> addEffect(entry, StringUtils.capitaliseAllWords(Objects.requireNonNull(entry.getId()).getPath().replace("_", " "))));
     }
 }
