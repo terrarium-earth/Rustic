@@ -23,9 +23,9 @@ public class RusticClientFabric implements ClientModInitializer {
         RusticClient.registerBlockEntityRenderers();
         RusticClient.onRegisterFluidRenderTypes(RusticClientFabric::registerFluidRenderTypes);
         RusticClient.onRegisterTints(RusticClientFabric::onRegisterTints);
-        RusticClient.onRegisterFluidRenderTypes(RusticFabricClient::registerFluidRenderTypes);
-        RusticClient.onRegisterTints(RusticFabricClient::onRegisterTints);
-        RusticClient.onRegisterMenuScreens(RusticFabricClient::menuBridge);
+        RusticClient.onRegisterFluidRenderTypes(RusticClientFabric::registerFluidRenderTypes);
+        RusticClient.onRegisterTints(RusticClientFabric::onRegisterTints);
+        RusticClient.onRegisterMenuScreens(RusticClientFabric::menuBridge);
     }
 
     // This is a bridge method because you cant use a lambda with a generic type

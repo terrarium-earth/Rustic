@@ -17,8 +17,13 @@ import net.minecraft.world.level.material.MaterialColor;
 
 public class ModBlocks {
     public static final ResourcefulRegistry<Block> BLOCKS = ResourcefulRegistries.create(Registry.BLOCK, Rustic.MOD_ID);
-
+    public static final ResourcefulRegistry<Block> CLAY_WALLS = ResourcefulRegistries.create(BLOCKS);
+    public static final ResourcefulRegistry<Block> BARRELS = ResourcefulRegistries.create(BLOCKS);
+    public static final ResourcefulRegistry<Block> POTS = ResourcefulRegistries.create(BLOCKS);
+    public static final ResourcefulRegistry<Block> FLUIDS = ResourcefulRegistries.create(BLOCKS);
+    public static final ResourcefulRegistry<Block> PILLARS = ResourcefulRegistries.create(BLOCKS);
     public static final ResourcefulRegistry<Block> PAINTED_WOOD = ResourcefulRegistries.create(BLOCKS);
+
     public static final RegistryEntry<Block> BLACK_PAINTED_WOOD = PAINTED_WOOD.register("black_painted_wood", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).color(MaterialColor.COLOR_BLACK)));
     public static final RegistryEntry<Block> BLUE_PAINTED_WOOD = PAINTED_WOOD.register("blue_painted_wood", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).color(MaterialColor.COLOR_BLUE)));
     public static final RegistryEntry<Block> BROWN_PAINTED_WOOD = PAINTED_WOOD.register("brown_painted_wood", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).color(MaterialColor.COLOR_BROWN)));
@@ -40,22 +45,16 @@ public class ModBlocks {
     public static final RegistryEntry<Block> WHITE_PAINTED_WOOD = PAINTED_WOOD.register("white_painted_wood", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     public static final RegistryEntry<Block> YELLOW_PAINTED_WOOD = PAINTED_WOOD.register("yellow_painted_wood", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).color(MaterialColor.COLOR_YELLOW)));
 
-    public static final ResourcefulRegistry<Block> PILLARS = ResourcefulRegistries.create(BLOCKS);
-
     public static final RegistryEntry<Block> STONE_PILLAR = PILLARS.register("stone_pillar", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
     public static final RegistryEntry<Block> ANDESITE_PILLAR = PILLARS.register("andesite_pillar", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.ANDESITE)));
     public static final RegistryEntry<Block> DIORITE_PILLAR = PILLARS.register("diorite_pillar", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.DIORITE)));
     public static final RegistryEntry<Block> GRANITE_PILLAR = PILLARS.register("granite_pillar", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.GRANITE)));
     public static final RegistryEntry<Block> DEEPSLATE_PILLAR = PILLARS.register("deepslate_pillar", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)));
 
-    public static final ResourcefulRegistry<Block> CLAY_WALLS = ResourcefulRegistries.create(BLOCKS);
-
     public static final RegistryEntry<Block> CLAY_WALL = CLAY_WALLS.register("clay_wall", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CLAY)));
     public static final RegistryEntry<Block> CLAY_CROSS_WALL = CLAY_WALLS.register("clay_cross_wall", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CLAY)));
     public static final RegistryEntry<Block> CLAY_DIAGONAL_LEFT_CROSS_WALL = CLAY_WALLS.register("clay_diagonal_left_cross_wall", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CLAY)));
     public static final RegistryEntry<Block> CLAY_DIAGONAL_RIGHT_CROSS_WALL = CLAY_WALLS.register("clay_diagonal_right_cross_wall", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CLAY)));
-
-    public static final ResourcefulRegistry<Block> BARRELS = ResourcefulRegistries.create(BLOCKS);
 
     public static final RegistryEntry<Block> ACACIA_BARREL = BARRELS.register("acacia_fluid_barrel", () -> new FluidBarrelBlock(BlockBehaviour.Properties.copy(Blocks.ACACIA_PLANKS)));
     public static final RegistryEntry<Block> BIRCH_BARREL = BARRELS.register("birch_fluid_barrel", () -> new FluidBarrelBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_PLANKS)));
@@ -69,16 +68,12 @@ public class ModBlocks {
     public static final RegistryEntry<Block> SPRUCE_BARREL = BARRELS.register("spruce_fluid_barrel", () -> new FluidBarrelBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_PLANKS)));
     public static final RegistryEntry<Block> WARPED_BARREL = BARRELS.register("warped_fluid_barrel", () -> new FluidBarrelBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_PLANKS)));
 
-    public static final ResourcefulRegistry<Block> POTS = ResourcefulRegistries.create(BLOCKS);
-
     public static final RegistryEntry<Block> TERRACOTTA_POT = POTS.register("terracotta_pot", () -> new PotBlock(BlockBehaviour.Properties.copy(Blocks.BONE_BLOCK)));
     public static final RegistryEntry<Block> WHITE_TERRACOTTA_POT = POTS.register("white_terracotta_pot", () -> new PotBlock(BlockBehaviour.Properties.copy(Blocks.BONE_BLOCK)));
     public static final RegistryEntry<Block> RED_TERRACOTTA_POT = POTS.register("red_terracotta_pot", () -> new PotBlock(BlockBehaviour.Properties.copy(Blocks.BONE_BLOCK)));
     public static final RegistryEntry<Block> GREEN_TERRACOTTA_POT = POTS.register("green_terracotta_pot", () -> new PotBlock(BlockBehaviour.Properties.copy(Blocks.BONE_BLOCK)));
     public static final RegistryEntry<Block> BLUE_TERRACOTTA_POT = POTS.register("blue_terracotta_pot", () -> new PotBlock(BlockBehaviour.Properties.copy(Blocks.BONE_BLOCK)));
     public static final RegistryEntry<Block> BLACK_TERRACOTTA_POT = POTS.register("black_terracotta_pot", () -> new PotBlock(BlockBehaviour.Properties.copy(Blocks.BONE_BLOCK)));
-
-    public static final ResourcefulRegistry<Block> FLUIDS = ResourcefulRegistries.create(BLOCKS);
 
     public static final RegistryEntry<Block> SWEET_BERRY_JUICE = FLUIDS.register("sweet_berry_juice", () -> new BotariumLiquidBlock(ModFluidProperties.SWEET_BERRY_JUICE, BlockBehaviour.Properties.copy(Blocks.WATER)));
     public static final RegistryEntry<Block> SWEET_BERRY_WINE = FLUIDS.register("sweet_berry_wine", () -> new BotariumLiquidBlock(ModFluidProperties.SWEET_BERRY_WINE, BlockBehaviour.Properties.copy(Blocks.WATER)));

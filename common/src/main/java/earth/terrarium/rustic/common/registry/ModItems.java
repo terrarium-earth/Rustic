@@ -18,6 +18,12 @@ public class ModItems {
     public static final ResourcefulRegistry<Item> ITEMS = ResourcefulRegistries.create(Registry.ITEM, Rustic.MOD_ID);
 
     public static final ResourcefulRegistry<Item> PAINTED_WOOD = ResourcefulRegistries.create(ITEMS);
+    public static final ResourcefulRegistry<Item> PILLARS = ResourcefulRegistries.create(ITEMS);
+    public static final ResourcefulRegistry<Item> CLAY_WALLS = ResourcefulRegistries.create(ITEMS);
+    public static final ResourcefulRegistry<Item> BARRELS = ResourcefulRegistries.create(ITEMS);
+    public static final ResourcefulRegistry<Item> POTS = ResourcefulRegistries.create(ITEMS);
+    public static final ResourcefulRegistry<Item> BUCKETS = ResourcefulRegistries.create(ITEMS);
+
     public static final RegistryEntry<Item> BLACK_PAINTED_WOOD = PAINTED_WOOD.register("black_painted_wood", () -> new BlockItem(ModBlocks.BLACK_PAINTED_WOOD.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> BLUE_PAINTED_WOOD = PAINTED_WOOD.register("blue_painted_wood", () -> new BlockItem(ModBlocks.BLUE_PAINTED_WOOD.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> BROWN_PAINTED_WOOD = PAINTED_WOOD.register("brown_painted_wood", () -> new BlockItem(ModBlocks.BROWN_PAINTED_WOOD.get(), new Item.Properties().tab(ITEM_GROUP)));
@@ -34,18 +40,18 @@ public class ModItems {
     public static final RegistryEntry<Item> RED_PAINTED_WOOD = PAINTED_WOOD.register("red_painted_wood", () -> new BlockItem(ModBlocks.RED_PAINTED_WOOD.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> WHITE_PAINTED_WOOD = PAINTED_WOOD.register("white_painted_wood", () -> new BlockItem(ModBlocks.WHITE_PAINTED_WOOD.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> YELLOW_PAINTED_WOOD = PAINTED_WOOD.register("yellow_painted_wood", () -> new BlockItem(ModBlocks.YELLOW_PAINTED_WOOD.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final ResourcefulRegistry<Item> PILLARS = ResourcefulRegistries.create(ITEMS);
+
     public static final RegistryEntry<Item> STONE_PILLAR = PILLARS.register("stone_pillar", () -> new BlockItem(ModBlocks.STONE_PILLAR.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> ANDESITE_PILLAR = PILLARS.register("andesite_pillar", () -> new BlockItem(ModBlocks.ANDESITE_PILLAR.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> DIORITE_PILLAR = PILLARS.register("diorite_pillar", () -> new BlockItem(ModBlocks.DIORITE_PILLAR.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> GRANITE_PILLAR = PILLARS.register("granite_pillar", () -> new BlockItem(ModBlocks.GRANITE_PILLAR.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> DEEPSLATE_PILLAR = PILLARS.register("deepslate_pillar", () -> new BlockItem(ModBlocks.DEEPSLATE_PILLAR.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final ResourcefulRegistry<Item> CLAY_WALLS = ResourcefulRegistries.create(ITEMS);
+
     public static final RegistryEntry<Item> CLAY_WALL = CLAY_WALLS.register("clay_wall", () -> new BlockItem(ModBlocks.CLAY_WALL.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> CLAY_CROSS_WALL = CLAY_WALLS.register("clay_cross_wall", () -> new BlockItem(ModBlocks.CLAY_CROSS_WALL.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> CLAY_DIAGONAL_LEFT_CROSS_WALL = CLAY_WALLS.register("clay_diagonal_left_cross_wall", () -> new BlockItem(ModBlocks.CLAY_DIAGONAL_LEFT_CROSS_WALL.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> CLAY_DIAGONAL_RIGHT_CROSS_WALL = CLAY_WALLS.register("clay_diagonal_right_cross_wall", () -> new BlockItem(ModBlocks.CLAY_DIAGONAL_RIGHT_CROSS_WALL.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final ResourcefulRegistry<Item> BARRELS = ResourcefulRegistries.create(ITEMS);
+
     public static final RegistryEntry<Item> ACACIA_BARREL = BARRELS.register("acacia_fluid_barrel", () -> new BlockItem(ModBlocks.ACACIA_BARREL.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> BIRCH_BARREL = BARRELS.register("birch_fluid_barrel", () -> new BlockItem(ModBlocks.BIRCH_BARREL.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> CRIMSON_BARREL = BARRELS.register("crimson_fluid_barrel", () -> new BlockItem(ModBlocks.CRIMSON_BARREL.get(), new Item.Properties().tab(ITEM_GROUP)));
@@ -57,14 +63,14 @@ public class ModItems {
     public static final RegistryEntry<Item> OLIVEWOOD_BARREL = BARRELS.register("olivewood_fluid_barrel", () -> new BlockItem(ModBlocks.OLIVEWOOD_BARREL.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> SPRUCE_BARREL = BARRELS.register("spruce_fluid_barrel", () -> new BlockItem(ModBlocks.SPRUCE_BARREL.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> WARPED_BARREL = BARRELS.register("warped_fluid_barrel", () -> new BlockItem(ModBlocks.WARPED_BARREL.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final ResourcefulRegistry<Item> POTS = ResourcefulRegistries.create(ITEMS);
+
     public static final RegistryEntry<Item> TERRACOTTA_POT = POTS.register("terracotta_pot", () -> new BlockItem(ModBlocks.TERRACOTTA_POT.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> WHITE_TERRACOTTA_POT = POTS.register("white_terracotta_pot", () -> new BlockItem(ModBlocks.WHITE_TERRACOTTA_POT.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> RED_TERRACOTTA_POT = POTS.register("red_terracotta_pot", () -> new BlockItem(ModBlocks.RED_TERRACOTTA_POT.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> GREEN_TERRACOTTA_POT = POTS.register("green_terracotta_pot", () -> new BlockItem(ModBlocks.GREEN_TERRACOTTA_POT.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> BLUE_TERRACOTTA_POT = POTS.register("blue_terracotta_pot", () -> new BlockItem(ModBlocks.BLUE_TERRACOTTA_POT.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> BLACK_TERRACOTTA_POT = POTS.register("black_terracotta_pot", () -> new BlockItem(ModBlocks.BLACK_TERRACOTTA_POT.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final ResourcefulRegistry<Item> BUCKETS = ResourcefulRegistries.create(ITEMS);
+
     public static final RegistryEntry<Item> SWEET_BERRY_JUICE_BUCKET = BUCKETS.register("sweet_berry_juice_bucket", () -> new FluidBucketItem(ModFluidProperties.SWEET_BERRY_JUICE, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
     public static final RegistryEntry<Item> SWEET_BERRY_WINE_BUCKET = BUCKETS.register("sweet_berry_wine_bucket", () -> new FluidBucketItem(ModFluidProperties.SWEET_BERRY_WINE, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
     public static final RegistryEntry<Item> SUGAR_WATER_BUCKET = BUCKETS.register("sugar_water_bucket", () -> new FluidBucketItem(ModFluidProperties.SUGAR_WATER, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
@@ -125,5 +131,6 @@ public class ModItems {
     public static final RegistryEntry<Item> GOLD_SOUL_LANTERN = ITEMS.register("gold_soul_lantern", () -> new BlockItem(ModBlocks.GOLD_SOUL_LANTERN.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> COPPER_SOUL_LANTERN = ITEMS.register("copper_soul_lantern", () -> new BlockItem(ModBlocks.COPPER_SOUL_LANTERN.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> CRUSHING_TUB = ITEMS.register("crushing_tub", () -> new BlockItem(ModBlocks.CRUSHING_TUB.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final RegistryEntry<Item> ALCHEMIC_CONDENSER = ITEMS.register("alchemic_condenser", () -> new BlockItem(ModBlocks.ALCHEMIC_CONDENSER.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> FERTILE_SOIL = ITEMS.register("fertile_soil", () -> new BlockItem(ModBlocks.FERTILE_SOIL.get(), new Item.Properties().tab(ITEM_GROUP)));
 }
