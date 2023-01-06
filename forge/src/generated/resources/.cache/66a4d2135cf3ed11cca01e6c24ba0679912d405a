@@ -1,4 +1,4 @@
-// 1.19.2	2022-12-23T15:16:26.530236	Item Models: rustic
+// 1.19.2	2023-01-06T07:07:53.9763511	Item Models: rustic
 c4788fbcbd701b6f00820c5f99c517c6999611d1 assets/rustic/models/item/ale_bucket.json
 c74cee53f4f0ec54079fcf561cd15b89058cb083 assets/rustic/models/item/apple_juice_bucket.json
 feafa7838cf006c38f3e68e69028b3fff451100b assets/rustic/models/item/chili_pepper.json
@@ -6,24 +6,26 @@ feafa7838cf006c38f3e68e69028b3fff451100b assets/rustic/models/item/chili_pepper.
 fffd9dcf976da976ff3e3911fb1974dcfc7de8af assets/rustic/models/item/copper_chain.json
 9eaeff85832a0ee6a4f1a1da3b3e7d536ac50376 assets/rustic/models/item/copper_lantern.json
 434efc0373dbd1432f732993b7f7e2aa8f5dffcc assets/rustic/models/item/copper_soul_lantern.json
+5a1af61cbf1911e98ffb6b06ba6f3beaf60e2866 assets/rustic/models/item/flask.json
+6590641f15d5e38c8a860ce8fe800bec4567def0 assets/rustic/models/item/flask_empty.json
 39c4db645a8fb3a1c1c8baf95d9eff96143de907 assets/rustic/models/item/gold_chain.json
 69b5c1205e4c7202fa5852eafb906c7eecdb41dd assets/rustic/models/item/gold_lantern.json
 01272e4b16c74c1e1881bf1e30351cecd274927a assets/rustic/models/item/gold_soul_lantern.json
-afb4f87ebfdd8f1d4c0f55c37af3ed4a8aab01f4 assets/rustic/models/item/grape_juice_bucket.json
 f091c5c7925d321d83642cf28d41cb22ca59ac71 assets/rustic/models/item/grapes.json
+afb4f87ebfdd8f1d4c0f55c37af3ed4a8aab01f4 assets/rustic/models/item/grape_juice_bucket.json
 73686fb5e7ee68ff1407707810100f3b89921cb3 assets/rustic/models/item/honey_bucket.json
-158dab11dc569478283e5dc1970ca76ba3827d2f assets/rustic/models/item/iron_berry_juice_bucket.json
-7cb6ff654e10bf1363e8c51e611487b41b81139b assets/rustic/models/item/iron_berry_wine_bucket.json
 10de9aa77f37188b7039af05ec261782dadbbeb1 assets/rustic/models/item/ironberries.json
 56ab98826ce4a73d6c5f8299f267607b02410e05 assets/rustic/models/item/ironwood_door.json
 22f646e69c1ccb4f6203ccc6829a199f9912dcf9 assets/rustic/models/item/ironwood_sapling.json
 52841e89c95c09c0898f6dcfbd9ef0c14cc3c061 assets/rustic/models/item/ironwood_sign.json
+158dab11dc569478283e5dc1970ca76ba3827d2f assets/rustic/models/item/iron_berry_juice_bucket.json
+7cb6ff654e10bf1363e8c51e611487b41b81139b assets/rustic/models/item/iron_berry_wine_bucket.json
 405ddfdfd96478a855f7213b309f645a9ec4824a assets/rustic/models/item/mead_bucket.json
-cd588ec7ceaaab31ed50027215251b2b62f497db assets/rustic/models/item/olive_oil_bucket.json
 51c072d75da9bf70b01898697c06a8ed185e31a6 assets/rustic/models/item/olives.json
 9c2194475d607c57efc06fd13a6ab576e912c682 assets/rustic/models/item/olivewood_door.json
 d483b8a4457c56cc75ed710d599e491512bcfa5d assets/rustic/models/item/olivewood_sapling.json
 787f43467979690d1b57c687d3fc24cec8492a09 assets/rustic/models/item/olivewood_sign.json
+cd588ec7ceaaab31ed50027215251b2b62f497db assets/rustic/models/item/olive_oil_bucket.json
 4665936156a1a7db213cc18a64386c602ba15133 assets/rustic/models/item/red_wine_bucket.json
 a89de225ccb431466a83947714b2843e369b7552 assets/rustic/models/item/rum_bucket.json
 e3b09132fd86b84f020e3c21c2787ae0fa52b3a2 assets/rustic/models/item/starchy_water_bucket.json

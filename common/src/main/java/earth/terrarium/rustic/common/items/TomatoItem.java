@@ -1,6 +1,6 @@
-package earth.terrarium.rustic.common.item;
+package earth.terrarium.rustic.common.items;
 
-import earth.terrarium.rustic.common.entity.projectile.Tomato;
+import earth.terrarium.rustic.common.entities.projectile.Tomato;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;

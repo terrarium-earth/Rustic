@@ -8,12 +8,11 @@ import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.inventory.MenuAccess;
-import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
-import net.minecraft.world.level.FoliageColor;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.material.Fluid;
 
 public class RusticClientFabric implements ClientModInitializer {
@@ -22,10 +21,15 @@ public class RusticClientFabric implements ClientModInitializer {
         RusticClient.init();
         RusticClient.registerBlockEntityRenderers();
         RusticClient.onRegisterFluidRenderTypes(RusticClientFabric::registerFluidRenderTypes);
-        RusticClient.onRegisterTints(RusticClientFabric::onRegisterTints);
         RusticClient.onRegisterFluidRenderTypes(RusticClientFabric::registerFluidRenderTypes);
-        RusticClient.onRegisterTints(RusticClientFabric::onRegisterTints);
         RusticClient.onRegisterMenuScreens(RusticClientFabric::menuBridge);
+        RusticClient.onAddItemColors(ColorProviderRegistry.ITEM::register);
+        RusticClient.onAddBlockColors(ColorProviderRegistry.BLOCK::register);
+        RusticClient.onRegisterItemProperties((items, id, property) -> {
+            for (ItemLike item : items) {
+                ItemProperties.register(item.asItem(), id, property);
+            }
+        });
     }
 
     // This is a bridge method because you cant use a lambda with a generic type
@@ -35,10 +39,5 @@ public class RusticClientFabric implements ClientModInitializer {
 
     private static void registerFluidRenderTypes(RenderType type, Fluid fluid1, Fluid fluid2) {
         BlockRenderLayerMap.INSTANCE.putFluids(type, fluid1, fluid2);
-    }
-
-    private static void onRegisterTints(Block block) {
-        ColorProviderRegistry.BLOCK.register((blockState, blockAndTintGetter, blockPos, i) -> blockAndTintGetter != null && blockPos != null ? BiomeColors.getAverageFoliageColor(blockAndTintGetter, blockPos) : FoliageColor.getDefaultColor(), block);
-        ColorProviderRegistry.ITEM.register((itemStack, i) -> FoliageColor.getDefaultColor(), block);
     }
 }

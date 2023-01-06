@@ -1,5 +1,6 @@
 {
   "block.rustic.acacia_fluid_barrel": "Acacia Fluid Barrel",
+  "block.rustic.alchemic_condenser": "Alchemic Condenser",
   "block.rustic.ale": "Ale",
   "block.rustic.andesite_pillar": "Andesite Pillar",
   "block.rustic.apple_juice": "Apple Juice",
@@ -103,6 +104,7 @@
   "item.rustic.apple_juice_bucket": "Apple Juice Bucket",
   "item.rustic.chili_pepper": "Chili Pepper",
   "item.rustic.cider_bucket": "Cider Bucket",
+  "item.rustic.flask": "Flask",
   "item.rustic.grape_juice_bucket": "Grape Juice Bucket",
   "item.rustic.grapes": "Grapes",
   "item.rustic.honey_bucket": "Honey Bucket",

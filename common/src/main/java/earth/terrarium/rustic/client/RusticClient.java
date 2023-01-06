@@ -6,21 +6,26 @@ import earth.terrarium.rustic.client.renderers.CrushingTubRenderer;
 import earth.terrarium.rustic.client.renderers.FluidBarrelRenderer;
 import earth.terrarium.rustic.client.screens.AlchemicCondenserScreen;
 import earth.terrarium.rustic.client.utils.ClientRegistrars;
-import earth.terrarium.rustic.common.registry.ModBlockEntities;
-import earth.terrarium.rustic.common.registry.ModBlocks;
-import earth.terrarium.rustic.common.registry.ModEntityTypes;
-import earth.terrarium.rustic.common.registry.ModFluids;
-import earth.terrarium.rustic.common.registry.ModMenuTypes;
+import earth.terrarium.rustic.common.config.AlchemyConfig;
+import earth.terrarium.rustic.common.items.PotionFlaskItem;
+import earth.terrarium.rustic.common.registry.*;
+import net.minecraft.client.color.block.BlockColor;
+import net.minecraft.client.color.item.ItemColor;
+import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
+import net.minecraft.client.renderer.item.ClampedItemPropertyFunction;
 import net.minecraft.client.resources.model.Material;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.alchemy.PotionUtils;
+import net.minecraft.world.level.FoliageColor;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.material.Fluid;
 import org.apache.logging.log4j.util.TriConsumer;
 
-import java.util.function.Consumer;
+import java.util.function.BiConsumer;
 
 public class RusticClient {
 
@@ -71,12 +76,27 @@ public class RusticClient {
         register.accept(RenderType.translucent(), ModFluids.TOMATO_JUICE.get(), ModFluids.FLOWING_TOMATO_JUICE.get());
     }
 
-    public static void onRegisterTints(Consumer<Block> register) {
-        register.accept(ModBlocks.IRONWOOD_LEAVES.get());
-        register.accept(ModBlocks.OLIVEWOOD_LEAVES.get());
-    }
-
     public static void onRegisterMenuScreens(ClientRegistrars.MenuScreenRegistrar registrar) {
         registrar.register(ModMenuTypes.ALCHEMIC_CONDENSER.get(), AlchemicCondenserScreen::new);
+    }
+
+    public static void onAddItemColors(BiConsumer<ItemColor, ItemLike[]> register) {
+        register.accept((stack, index) -> index == 1 ? PotionUtils.getColor(stack) : -1, new ItemLike[] { ModItems.FLASK.get() });
+        register.accept((itemStack, i) -> FoliageColor.getDefaultColor(), new ItemLike[] { ModBlocks.IRONWOOD_LEAVES.get(), ModBlocks.OLIVEWOOD_LEAVES.get() });
+    }
+
+    public static void onAddBlockColors(BiConsumer<BlockColor, Block[]> register) {
+        register.accept(
+                (blockState, blockAndTintGetter, blockPos, i) -> blockAndTintGetter != null && blockPos != null ? BiomeColors.getAverageFoliageColor(blockAndTintGetter, blockPos) : FoliageColor.getDefaultColor(),
+                new Block[] { ModBlocks.IRONWOOD_LEAVES.get(), ModBlocks.OLIVEWOOD_LEAVES.get() }
+        );
+    }
+
+    public static void onRegisterItemProperties(TriConsumer<ItemLike[], ResourceLocation, ClampedItemPropertyFunction> register) {
+        register.accept(
+                new ItemLike[] { ModItems.FLASK.get() },
+                new ResourceLocation("filled"),
+                (stack, level, entity, i) -> (float)PotionFlaskItem.getPotion(stack).getSecond() / AlchemyConfig.FLASK_MAX_AMOUNT
+        );
     }
 }

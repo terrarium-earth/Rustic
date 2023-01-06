@@ -4,7 +4,7 @@ import com.teamresourceful.resourcefullib.common.registry.RegistryEntry;
 import com.teamresourceful.resourcefullib.common.registry.ResourcefulRegistries;
 import com.teamresourceful.resourcefullib.common.registry.ResourcefulRegistry;
 import earth.terrarium.rustic.Rustic;
-import earth.terrarium.rustic.common.entity.projectile.Tomato;
+import earth.terrarium.rustic.common.entities.projectile.Tomato;
 import net.minecraft.core.Registry;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;

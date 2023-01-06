@@ -1,6 +1,7 @@
 package earth.terrarium.rustic.datagen.provider.client;
 
 import earth.terrarium.rustic.Rustic;
+import earth.terrarium.rustic.common.items.PotionFlaskItem;
 import earth.terrarium.rustic.common.registry.ModItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
@@ -36,6 +37,8 @@ public class ModItemModelProvider extends ItemModelProvider {
                 } else if (blockItem.getBlock() instanceof SignBlock) {
                     basicItem(item.get());
                 }
+            } else if (item.get() instanceof PotionFlaskItem) {
+                flaskItem(item.get());
             } else if (!(item.get() instanceof SignItem)) {
                 basicItem(item.get());
             }
@@ -50,5 +53,21 @@ public class ModItemModelProvider extends ItemModelProvider {
         return getBuilder(item.toString())
                 .parent(new ModelFile.UncheckedModelFile("item/generated"))
                 .texture("layer0", new ResourceLocation(item.getNamespace(), "block/" + item.getPath()));
+    }
+
+    public ItemModelBuilder flaskItem(Item item) {
+        ResourceLocation id = Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item));
+
+        return getBuilder(id.toString())
+            .override()
+                .model(getBuilder(id + "_empty")
+                        .parent(new ModelFile.UncheckedModelFile("item/generated"))
+                        .texture("layer0", new ResourceLocation(id.getNamespace(), "item/" + id.getPath() + "_empty"))
+                )
+                .predicate(new ResourceLocation(Rustic.MOD_ID, "filled"), 0)
+                .end()
+            .parent(new ModelFile.UncheckedModelFile("item/generated"))
+            .texture("layer0", new ResourceLocation(id.getNamespace(), "item/" + id.getPath()))
+            .texture("layer1", new ResourceLocation(id.getNamespace(), "item/" + id.getPath() + "_overlay"));
     }
 }

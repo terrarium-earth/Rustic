@@ -6,7 +6,7 @@ import earth.terrarium.botarium.api.fluid.FluidHooks;
 import earth.terrarium.botarium.api.fluid.SimpleUpdatingFluidContainer;
 import earth.terrarium.botarium.api.menu.ExtraDataMenuProvider;
 import earth.terrarium.rustic.common.config.AlchemyConfig;
-import earth.terrarium.rustic.common.items.PotionFlask;
+import earth.terrarium.rustic.common.items.PotionFlaskItem;
 import earth.terrarium.rustic.common.menus.AlchemicCondenserMenu;
 import earth.terrarium.rustic.common.recipes.AlchemicCondenserRecipe;
 import earth.terrarium.rustic.common.registry.ModBlockEntities;
@@ -119,7 +119,7 @@ public class AlchemicCondenserBlockEntity extends BlockEntity implements BasicCo
     }
 
     private boolean canCraft() {
-        return recipe != null && PotionFlask.canSetPotion(getItem(4), recipe.output());
+        return recipe != null && PotionFlaskItem.canSetPotion(getItem(4), recipe.output());
     }
 
     private boolean checkAndConsumeFuel() {
@@ -140,8 +140,8 @@ public class AlchemicCondenserBlockEntity extends BlockEntity implements BasicCo
             return;
         }
         ItemStack flaskSlot = getItem(4);
-        if (PotionFlask.canSetPotion(flaskSlot, recipe.output())) {
-            PotionFlask.setPotion(flaskSlot, recipe.output(), PotionFlask.getPotion(flaskSlot).getSecond() + 1);
+        if (PotionFlaskItem.canSetPotion(flaskSlot, recipe.output())) {
+            PotionFlaskItem.setPotion(flaskSlot, recipe.output(), PotionFlaskItem.getPotion(flaskSlot).getSecond() + 1);
         }
         for (int i = 0; i < recipe.inputs().size(); i++) {
             getItem(i).shrink(1);
@@ -226,7 +226,7 @@ public class AlchemicCondenserBlockEntity extends BlockEntity implements BasicCo
             return itemStack.is(Items.BLAZE_POWDER);
         }
         if (index == 4) {
-            return itemStack.getItem() instanceof PotionFlask;
+            return itemStack.getItem() instanceof PotionFlaskItem;
         }
         return true;
     }

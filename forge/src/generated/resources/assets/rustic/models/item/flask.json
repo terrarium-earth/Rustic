@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:item/generated",
+  "overrides": [
+    {
+      "model": "rustic:item/flask_empty",
+      "predicate": {
+        "rustic:filled": 0.0
+      }
+    }
+  ],
+  "textures": {
+    "layer0": "rustic:item/flask",
+    "layer1": "rustic:item/flask_overlay"
+  }
+}

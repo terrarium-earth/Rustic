@@ -83,6 +83,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlock(ModBlocks.CLAY_DIAGONAL_LEFT_CROSS_WALL.get());
         simpleBlock(ModBlocks.CLAY_DIAGONAL_RIGHT_CROSS_WALL.get());
 
+        simpleBlock(ModBlocks.ALCHEMIC_CONDENSER.get());
+
         block(ModBlocks.ACACIA_BARREL.get(), BARREL, "all");
         block(ModBlocks.BIRCH_BARREL.get(), BARREL, "all");
         block(ModBlocks.CRIMSON_BARREL.get(), BARREL, "all");

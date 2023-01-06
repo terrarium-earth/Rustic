@@ -1,5 +1,6 @@
-// 1.19.2	2022-12-23T15:16:26.534165	LootTables
+// 1.19.2	2023-01-06T07:07:53.9573953	LootTables
 8ffda52433eac658f557014abee6f286775c14cd data/rustic/loot_tables/blocks/acacia_fluid_barrel.json
+69c980051e7117d2b66940dadb39599bbdef4212 data/rustic/loot_tables/blocks/alchemic_condenser.json
 2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/rustic/loot_tables/blocks/ale.json
 4fe5701a3b190dff2168cc7adc704295616c09ea data/rustic/loot_tables/blocks/andesite_pillar.json
 2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/rustic/loot_tables/blocks/apple_juice.json
@@ -33,8 +34,6 @@ f77069e46b8b052162c4bbf1445fcdef64b9f95f data/rustic/loot_tables/blocks/gold_lan
 a4bb46c06a928dcadfbac919f6394666bffad74f data/rustic/loot_tables/blocks/green_painted_wood.json
 9464a8e85c734fa373d02f6205261ab0fb03dd40 data/rustic/loot_tables/blocks/green_terracotta_pot.json
 2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/rustic/loot_tables/blocks/honey.json
-2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/rustic/loot_tables/blocks/iron_berry_juice.json
-2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/rustic/loot_tables/blocks/iron_berry_wine.json
 f3b34868228adab875904a40b710883c0960cc89 data/rustic/loot_tables/blocks/ironwood_button.json
 9e101b2977df091f4266e9be28451c2c1129201c data/rustic/loot_tables/blocks/ironwood_door.json
 6bb5d0f701f2669add002b1d5b3ba803ce1335fe data/rustic/loot_tables/blocks/ironwood_fence.json
@@ -51,6 +50,8 @@ d904857a063dfb6fdc6de52ccf17d0340ed863c6 data/rustic/loot_tables/blocks/ironwood
 69768f2ff45c31255e78055d041626ed24d888b5 data/rustic/loot_tables/blocks/ironwood_trapdoor.json
 855dfac81937938bd60381ddea56c5b7f90c7158 data/rustic/loot_tables/blocks/ironwood_wall_sign.json
 da102c13190ee71141d92fb1db6afa28a4fc9f4d data/rustic/loot_tables/blocks/ironwood_wood.json
+2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/rustic/loot_tables/blocks/iron_berry_juice.json
+2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/rustic/loot_tables/blocks/iron_berry_wine.json
 d0d174336cc009ae756031452a22215fe0bb864a data/rustic/loot_tables/blocks/jungle_fluid_barrel.json
 18c46f67dc143ce3ee2fab56be23a01f7ae5169e data/rustic/loot_tables/blocks/light_blue_painted_wood.json
 b1fd7fdaf0b7c0733e45ac200d4e15fd07b55154 data/rustic/loot_tables/blocks/light_gray_painted_wood.json
@@ -59,7 +60,6 @@ ba995611a4c3ec22091e44d5d1260d54d9eef2b2 data/rustic/loot_tables/blocks/magenta_
 acce248d39f329718b9e25de5d23fb0410ee5066 data/rustic/loot_tables/blocks/mangrove_fluid_barrel.json
 2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/rustic/loot_tables/blocks/mead.json
 7aad405850bf3599ba8f48e819860e2deefa0afd data/rustic/loot_tables/blocks/oak_fluid_barrel.json
-2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/rustic/loot_tables/blocks/olive_oil.json
 54d5f89c10ac1694786507c6ab9c28908f263add data/rustic/loot_tables/blocks/olivewood_button.json
 f3f94a714bfffabf06090e9028a2f02f7b55acd6 data/rustic/loot_tables/blocks/olivewood_door.json
 c799077eda183714884ec811027a3162c621edbb data/rustic/loot_tables/blocks/olivewood_fence.json
@@ -76,6 +76,7 @@ fc7a302f1c7041005eaf5d0bdb9dbe5c7a9a12d4 data/rustic/loot_tables/blocks/olivewoo
 0fcab4fd1a2c47831f1659b94f98a6a95458a2d5 data/rustic/loot_tables/blocks/olivewood_trapdoor.json
 da640fc1fb2821bc4c42aa0a0d7521e835965d06 data/rustic/loot_tables/blocks/olivewood_wall_sign.json
 fa22ca850b6c6778f1e02389a1e21c4bea0814b1 data/rustic/loot_tables/blocks/olivewood_wood.json
+2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/rustic/loot_tables/blocks/olive_oil.json
 9127d1ab836fed828233da26c914c1f862968d89 data/rustic/loot_tables/blocks/orange_painted_wood.json
 06fe845b1881d2f486e7a2a348e7a4099f856ad4 data/rustic/loot_tables/blocks/pink_painted_wood.json
 e7dd19f832f2b1ba7ecdaf9d1e021b53baaf2c9d data/rustic/loot_tables/blocks/purple_painted_wood.json

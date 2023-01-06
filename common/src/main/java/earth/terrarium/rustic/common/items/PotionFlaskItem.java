@@ -22,13 +22,14 @@ import net.minecraft.world.level.gameevent.GameEvent;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
+import java.util.Objects;
 
-public class PotionFlask extends Item {
+public class PotionFlaskItem extends Item {
 
-    private static final String TAG_AMOUNT = "Amount";
+    private static final String TAG_USES = "Uses";
     private static final String TAG_COLOR = "Color";
 
-    public PotionFlask(Properties properties) {
+    public PotionFlaskItem(Properties properties) {
         super(properties);
     }
 
@@ -61,8 +62,8 @@ public class PotionFlask extends Item {
         if (player != null) {
             player.awardStat(Stats.ITEM_USED.get(this));
             if (!player.getAbilities().instabuild) {
-                var potion = PotionFlask.getPotion(stack);
-                PotionFlask.setPotion(stack, potion.getFirst(), potion.getSecond() - 1);
+                var potion = PotionFlaskItem.getPotion(stack);
+                PotionFlaskItem.setPotion(stack, potion.getFirst(), potion.getSecond() - 1);
             }
         }
 
@@ -90,25 +91,25 @@ public class PotionFlask extends Item {
 
     @Override
     public int getBarWidth(ItemStack stack) {
-        int amount = stack.getOrCreateTag().getInt(TAG_AMOUNT);
+        int amount = stack.getOrCreateTag().getInt(TAG_USES);
         return Math.round(((float)amount / (float)AlchemyConfig.FLASK_MAX_AMOUNT) * 13.0F);
     }
 
     @Override
     public boolean isBarVisible(ItemStack stack) {
-        return true;
+        return false;
     }
 
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltipComponents, TooltipFlag isAdvanced) {
         PotionUtils.addPotionTooltip(stack, tooltipComponents, 1.0F);
         tooltipComponents.add(CommonComponents.EMPTY);
-        tooltipComponents.add(Component.literal("Amount: " + stack.getOrCreateTag().getInt(TAG_AMOUNT)).withStyle(ChatFormatting.GRAY));
+        tooltipComponents.add(Component.literal("Uses: " + stack.getOrCreateTag().getInt(TAG_USES)).withStyle(ChatFormatting.GRAY));
     }
 
     public static boolean canSetPotion(ItemStack stack, Potion potion) {
-        if (stack.getItem() instanceof PotionFlask) {
-            var value = PotionFlask.getPotion(stack);
+        if (stack.getItem() instanceof PotionFlaskItem) {
+            var value = PotionFlaskItem.getPotion(stack);
             return Potions.EMPTY.equals(value.getFirst()) || (potion.equals(value.getFirst()) && value.getSecond() < AlchemyConfig.FLASK_MAX_AMOUNT);
         }
         return false;
@@ -116,7 +117,7 @@ public class PotionFlask extends Item {
 
     public static Pair<Potion, Integer> getPotion(ItemStack stack) {
         Potion potion = PotionUtils.getPotion(stack);
-        int amount = stack.getOrCreateTag().getInt(TAG_AMOUNT);
+        int amount = stack.hasTag() ? Objects.requireNonNull(stack.getTag()).getInt(TAG_USES) : 0;
         return Pair.of(potion, amount);
     }
 
@@ -127,9 +128,9 @@ public class PotionFlask extends Item {
         } else {
             PotionUtils.setPotion(stack, potion);
             if (Potions.EMPTY.equals(potion)) {
-                stack.removeTagKey(TAG_AMOUNT);
+                stack.removeTagKey(TAG_USES);
             } else {
-                stack.getOrCreateTag().putInt(TAG_AMOUNT, amount);
+                stack.getOrCreateTag().putInt(TAG_USES, amount);
             }
             stack.getOrCreateTag().putInt(TAG_COLOR, potion.getEffects().isEmpty() ? 0 : potion.getEffects().get(0).getEffect().getColor());
         }

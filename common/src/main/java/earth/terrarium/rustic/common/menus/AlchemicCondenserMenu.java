@@ -1,7 +1,7 @@
 package earth.terrarium.rustic.common.menus;
 
 import earth.terrarium.rustic.common.blockentities.AlchemicCondenserBlockEntity;
-import earth.terrarium.rustic.common.items.PotionFlask;
+import earth.terrarium.rustic.common.items.PotionFlaskItem;
 import earth.terrarium.rustic.common.menus.slots.CustomSlot;
 import earth.terrarium.rustic.common.menus.slots.ResultSlot;
 import earth.terrarium.rustic.common.registry.ModBlockEntities;
@@ -38,7 +38,7 @@ public class AlchemicCondenserMenu extends AbstractContainerMenu {
             this.addSlot(new Slot(container, slot, 25, 17 + (slot * 18)));
         }
         this.addSlot(new CustomSlot(container, AlchemicCondenserBlockEntity.FUEL_SLOT[0], 80, 53, item -> item.is(Items.BLAZE_POWDER)));
-        this.addSlot(new CustomSlot(container, AlchemicCondenserBlockEntity.FLASK_SLOT[0], 80, 35, item -> item.getItem() instanceof PotionFlask));
+        this.addSlot(new CustomSlot(container, AlchemicCondenserBlockEntity.FLASK_SLOT[0], 80, 35, item -> item.getItem() instanceof PotionFlaskItem));
 
         this.addSlot(new ResultSlot(container, AlchemicCondenserBlockEntity.BY_PRODUCT_SLOT[0], 110, 35));
 

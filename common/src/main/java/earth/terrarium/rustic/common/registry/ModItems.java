@@ -5,7 +5,8 @@ import com.teamresourceful.resourcefullib.common.registry.ResourcefulRegistries;
 import com.teamresourceful.resourcefullib.common.registry.ResourcefulRegistry;
 import earth.terrarium.botarium.api.registry.fluid.FluidBucketItem;
 import earth.terrarium.rustic.Rustic;
-import earth.terrarium.rustic.common.item.TomatoItem;
+import earth.terrarium.rustic.common.items.TomatoItem;
+import earth.terrarium.rustic.common.items.PotionFlaskItem;
 import earth.terrarium.rustic.common.util.PlatformUtils;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
@@ -89,11 +90,14 @@ public class ModItems {
     public static final RegistryEntry<Item> VODKA_BUCKET = BUCKETS.register("vodka_bucket", () -> new FluidBucketItem(ModFluidProperties.VODKA, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
     public static final RegistryEntry<Item> WHISKEY_BUCKET = BUCKETS.register("whiskey_bucket", () -> new FluidBucketItem(ModFluidProperties.WHISKEY, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
     public static final RegistryEntry<Item> TOMATO_JUICE_BUCKET = BUCKETS.register("tomato_juice_bucket", () -> new FluidBucketItem(ModFluidProperties.TOMATO_JUICE, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
+
     public static final RegistryEntry<Item> IRONBERRIES = ITEMS.register("ironberries", () -> new Item(new Item.Properties().tab(ITEM_GROUP).food(Foods.SWEET_BERRIES)));
     public static final RegistryEntry<Item> OLIVES = ITEMS.register("olives", () -> new Item(new Item.Properties().tab(ITEM_GROUP).food(Foods.SWEET_BERRIES)));
     public static final RegistryEntry<Item> TOMATO = ITEMS.register("tomato", () -> new TomatoItem(new Item.Properties().tab(ITEM_GROUP).food(Foods.SWEET_BERRIES)));
     public static final RegistryEntry<Item> CHILI_PEPPER = ITEMS.register("chili_pepper", () -> new Item(new Item.Properties().tab(ITEM_GROUP).food(Foods.SWEET_BERRIES)));
     public static final RegistryEntry<Item> GRAPES = ITEMS.register("grapes", () -> new Item(new Item.Properties().tab(ITEM_GROUP).food(Foods.SWEET_BERRIES)));
+    public static final RegistryEntry<Item> FLASK = ITEMS.register("flask", () -> new PotionFlaskItem(new Item.Properties().tab(ITEM_GROUP)));
+
     public static final RegistryEntry<Item> IRONWOOD_PLANKS = ITEMS.register("ironwood_planks", () -> new BlockItem(ModBlocks.IRONWOOD_PLANKS.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> IRONWOOD_LOG = ITEMS.register("ironwood_log", () -> new BlockItem(ModBlocks.IRONWOOD_LOG.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> STRIPPED_IRONWOOD_LOG = ITEMS.register("stripped_ironwood_log", () -> new BlockItem(ModBlocks.STRIPPED_IRONWOOD_LOG.get(), new Item.Properties().tab(ITEM_GROUP)));
@@ -124,12 +128,14 @@ public class ModItems {
     public static final RegistryEntry<Item> OLIVEWOOD_DOOR = ITEMS.register("olivewood_door", () -> new BlockItem(ModBlocks.OLIVEWOOD_DOOR.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> OLIVEWOOD_TRAPDOOR = ITEMS.register("olivewood_trapdoor", () -> new BlockItem(ModBlocks.OLIVEWOOD_TRAPDOOR.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> OLIVEWOOD_SIGN = ITEMS.register("olivewood_sign", () -> new SignItem(new Item.Properties().tab(ITEM_GROUP), ModBlocks.OLIVEWOOD_SIGN.get(), ModBlocks.OLIVEWOOD_WALL_SIGN.get()));
+
     public static final RegistryEntry<Item> GOLD_CHAIN = ITEMS.register("gold_chain", () -> new BlockItem(ModBlocks.GOLD_CHAIN.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> COPPER_CHAIN = ITEMS.register("copper_chain", () -> new BlockItem(ModBlocks.COPPER_CHAIN.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> GOLD_LANTERN = ITEMS.register("gold_lantern", () -> new BlockItem(ModBlocks.GOLD_LANTERN.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> COPPER_LANTERN = ITEMS.register("copper_lantern", () -> new BlockItem(ModBlocks.COPPER_LANTERN.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> GOLD_SOUL_LANTERN = ITEMS.register("gold_soul_lantern", () -> new BlockItem(ModBlocks.GOLD_SOUL_LANTERN.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> COPPER_SOUL_LANTERN = ITEMS.register("copper_soul_lantern", () -> new BlockItem(ModBlocks.COPPER_SOUL_LANTERN.get(), new Item.Properties().tab(ITEM_GROUP)));
+
     public static final RegistryEntry<Item> CRUSHING_TUB = ITEMS.register("crushing_tub", () -> new BlockItem(ModBlocks.CRUSHING_TUB.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> ALCHEMIC_CONDENSER = ITEMS.register("alchemic_condenser", () -> new BlockItem(ModBlocks.ALCHEMIC_CONDENSER.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> FERTILE_SOIL = ITEMS.register("fertile_soil", () -> new BlockItem(ModBlocks.FERTILE_SOIL.get(), new Item.Properties().tab(ITEM_GROUP)));

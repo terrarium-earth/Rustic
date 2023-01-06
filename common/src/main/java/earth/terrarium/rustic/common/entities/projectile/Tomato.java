@@ -1,4 +1,4 @@
-package earth.terrarium.rustic.common.entity.projectile;
+package earth.terrarium.rustic.common.entities.projectile;
 
 import earth.terrarium.rustic.common.registry.ModEntityTypes;
 import earth.terrarium.rustic.common.registry.ModItems;

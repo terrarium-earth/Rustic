@@ -1,17 +1,17 @@
 package earth.terrarium.rustic.client.forge;
 
 import earth.terrarium.rustic.client.RusticClient;
-import earth.terrarium.rustic.common.config.forge.ForgeMenuConfig;
 import earth.terrarium.rustic.client.utils.ClientRegistrars;
+import earth.terrarium.rustic.common.config.forge.ForgeMenuConfig;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.inventory.MenuAccess;
-import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
-import net.minecraft.world.level.FoliageColor;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.RegisterColorHandlersEvent;
@@ -24,9 +24,9 @@ public class RusticClientForge {
         ForgeMenuConfig.register();
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         bus.addListener(RusticClientForge::onRegisterRenderers);
-        bus.addListener(RusticClientForge::onRegisterBlockColorHandlers);
-        bus.addListener(RusticClientForge::onRegisterItemColorHandlers);
         bus.addListener(RusticClientForge::onClientSetup);
+        bus.addListener(RusticClientForge::onSetupItemColors);
+        bus.addListener(RusticClientForge::onSetupBlockColors);
     }
 
     public static void postInit() {
@@ -42,16 +42,21 @@ public class RusticClientForge {
         RusticClient.registerBlockEntityRenderers();
     }
 
-    public static void onRegisterBlockColorHandlers(RegisterColorHandlersEvent.Block event) {
-        RusticClient.onRegisterTints(block -> event.register((blockState, blockAndTintGetter, blockPos, i) -> blockAndTintGetter != null && blockPos != null ? BiomeColors.getAverageFoliageColor(blockAndTintGetter, blockPos) : FoliageColor.getDefaultColor(), block));
-    }
-
-    public static void onRegisterItemColorHandlers(RegisterColorHandlersEvent.Item event) {
-        RusticClient.onRegisterTints(block -> event.register((itemStack, i) -> FoliageColor.getDefaultColor(), block));
-    }
-
     public static void onClientSetup(FMLClientSetupEvent event) {
         RusticClient.onRegisterMenuScreens(RusticClientForge::menuBridge);
+        RusticClient.onRegisterItemProperties((items, id, properties) -> {
+            for (ItemLike item : items) {
+                ItemProperties.register(item.asItem(), id, properties);
+            }
+        });
+    }
+
+    public static void onSetupItemColors(RegisterColorHandlersEvent.Item event) {
+        RusticClient.onAddItemColors(event::register);
+    }
+
+    public static void onSetupBlockColors(RegisterColorHandlersEvent.Block event) {
+        RusticClient.onAddBlockColors(event::register);
     }
 
     // This is a bridge method because you cant use a lambda with a generic type
