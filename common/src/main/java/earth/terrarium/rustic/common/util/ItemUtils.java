@@ -4,6 +4,7 @@ import earth.terrarium.botarium.api.fluid.FluidHolder;
 import earth.terrarium.botarium.api.fluid.FluidHooks;
 import earth.terrarium.botarium.api.fluid.PlatformFluidHandler;
 import earth.terrarium.botarium.api.item.ItemStackHolder;
+import net.minecraft.world.Container;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -20,6 +21,20 @@ public class ItemUtils {
         ItemStack copy = stack.copy();
         copy.setCount(count);
         return copy;
+    }
+
+    public static boolean addItem(Container container, int slot, ItemStack stack) {
+        if (!stack.isEmpty()) {
+            ItemStack item = container.getItem(slot);
+            if (item.isEmpty()) {
+                container.setItem(slot, stack);
+                return true;
+            } else if (ItemStack.isSameItemSameTags(item, stack) && item.getCount() + stack.getCount() <= item.getMaxStackSize()) {
+                item.grow(Math.min(stack.getCount(), item.getMaxStackSize() - item.getCount()));
+                return true;
+            }
+        }
+        return false;
     }
 
     public static InteractionResult pickupFluid(BlockEntity block, Player player, InteractionHand hand) {

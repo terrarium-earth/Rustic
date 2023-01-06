@@ -4,10 +4,7 @@ import dev.architectury.injectables.targets.ArchitecturyTarget;
 import earth.terrarium.botarium.api.registry.RegistryHolder;
 import earth.terrarium.botarium.api.registry.fluid.BotariumLiquidBlock;
 import earth.terrarium.rustic.Rustic;
-import earth.terrarium.rustic.common.blocks.CrushingTubBlock;
-import earth.terrarium.rustic.common.blocks.FertileSoilBlock;
-import earth.terrarium.rustic.common.blocks.FluidBarrelBlock;
-import earth.terrarium.rustic.common.blocks.PotBlock;
+import earth.terrarium.rustic.common.blocks.*;
 import earth.terrarium.rustic.common.world.level.block.grower.ModTreeGrower;
 import earth.terrarium.rustic.mixin.WoodTypeInvoker;
 import net.minecraft.core.Registry;
@@ -94,6 +91,8 @@ public class ModBlocks {
     public static final Supplier<Block> CLAY_DIAGONAL_RIGHT_CROSS_WALL = BLOCKS.register("clay_diagonal_right_cross_wall", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CLAY)));
 
     public static final Supplier<Block> CRUSHING_TUB = BLOCKS.register("crushing_tub", () -> new CrushingTubBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+    public static final Supplier<Block> ALCHEMIC_CONDENSER = BLOCKS.register("alchemic_condenser", () -> new AlchemicCondenserBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
+
     public static final Supplier<Block> ACACIA_BARREL = BLOCKS.register("acacia_fluid_barrel", () -> new FluidBarrelBlock(BlockBehaviour.Properties.copy(Blocks.ACACIA_PLANKS)));
     public static final Supplier<Block> BIRCH_BARREL = BLOCKS.register("birch_fluid_barrel", () -> new FluidBarrelBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_PLANKS)));
     public static final Supplier<Block> CRIMSON_BARREL = BLOCKS.register("crimson_fluid_barrel", () -> new FluidBarrelBlock(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)));

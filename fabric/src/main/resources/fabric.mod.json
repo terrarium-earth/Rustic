@@ -28,8 +28,10 @@
       "earth.terrarium.rustic.fabric.RusticFabricClient"
     ]
   },
+  "accessWidener": "rustic.accesswidener",
   "mixins": [
-    "rustic-common.mixins.json"
+    "rustic-common.mixins.json",
+    "rustic.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.14.11",

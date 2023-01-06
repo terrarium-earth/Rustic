@@ -3,6 +3,7 @@ package earth.terrarium.rustic.common.registry;
 import earth.terrarium.botarium.api.registry.RegistryHolder;
 import earth.terrarium.botarium.api.registry.fluid.FluidBucketItem;
 import earth.terrarium.rustic.Rustic;
+import earth.terrarium.rustic.common.items.PotionFlask;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.food.Foods;
@@ -91,6 +92,8 @@ public class ModItems {
     public static final Supplier<Item> CLAY_DIAGONAL_RIGHT_CROSS_WALL = ITEMS.register("clay_diagonal_right_cross_wall", () -> new BlockItem(ModBlocks.CLAY_DIAGONAL_RIGHT_CROSS_WALL.get(), new Item.Properties().tab(ITEM_GROUP)));
 
     public static final Supplier<Item> CRUSHING_TUB = ITEMS.register("crushing_tub", () -> new BlockItem(ModBlocks.CRUSHING_TUB.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final Supplier<Item> ALCHEMIC_CONDENSER = ITEMS.register("alchemic_condenser", () -> new BlockItem(ModBlocks.ALCHEMIC_CONDENSER.get(), new Item.Properties().tab(ITEM_GROUP)));
+
     public static final Supplier<Item> ACACIA_BARREL = ITEMS.register("acacia_fluid_barrel", () -> new BlockItem(ModBlocks.ACACIA_BARREL.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final Supplier<Item> BIRCH_BARREL = ITEMS.register("birch_fluid_barrel", () -> new BlockItem(ModBlocks.BIRCH_BARREL.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final Supplier<Item> CRIMSON_BARREL = ITEMS.register("crimson_fluid_barrel", () -> new BlockItem(ModBlocks.CRIMSON_BARREL.get(), new Item.Properties().tab(ITEM_GROUP)));
@@ -130,4 +133,6 @@ public class ModItems {
     public static final Supplier<Item> VODKA_BUCKET = ITEMS.register("vodka_bucket", () -> new FluidBucketItem(ModFluidProperties.VODKA, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
     public static final Supplier<Item> WHISKEY_BUCKET = ITEMS.register("whiskey_bucket", () -> new FluidBucketItem(ModFluidProperties.WHISKEY, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
     public static final Supplier<Item> TOMATO_JUICE_BUCKET = ITEMS.register("tomato_juice_bucket", () -> new FluidBucketItem(ModFluidProperties.TOMATO_JUICE, new Item.Properties().tab(ITEM_GROUP).craftRemainder(Items.BUCKET).stacksTo(1)));
+
+    public static final Supplier<Item> POTION_FLASK = ITEMS.register("potion_flask", () -> new PotionFlask(new Item.Properties().tab(ITEM_GROUP).stacksTo(1)));
 }

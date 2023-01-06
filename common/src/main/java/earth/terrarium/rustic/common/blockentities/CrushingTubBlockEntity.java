@@ -172,7 +172,7 @@ public class CrushingTubBlockEntity extends BlockEntity implements Container, Fl
     @Override
     public ExtractOnlyUpdatingFluidContainer getFluidContainer() {
         if (this.fluidContainer == null) {
-            this.fluidContainer = new ExtractOnlyUpdatingFluidContainer(this, i -> FluidHooks.buckets(2), 1, (a, b) -> true);
+            this.fluidContainer = new ExtractOnlyUpdatingFluidContainer(this, i -> FluidHooks.buckets(4.0), 1, (a, b) -> true);
         }
         return this.fluidContainer;
     }

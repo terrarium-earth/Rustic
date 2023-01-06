@@ -3,6 +3,7 @@ package earth.terrarium.rustic.common.registry;
 import earth.terrarium.botarium.api.registry.RegistryHelpers;
 import earth.terrarium.botarium.api.registry.RegistryHolder;
 import earth.terrarium.rustic.Rustic;
+import earth.terrarium.rustic.common.blockentities.AlchemicCondenserBlockEntity;
 import earth.terrarium.rustic.common.blockentities.CrushingTubBlockEntity;
 import earth.terrarium.rustic.common.blockentities.FluidBarrelBlockEntity;
 import earth.terrarium.rustic.mixin.BlockEntityTypeAccessor;
@@ -20,6 +21,7 @@ public class ModBlockEntities {
 
     public static final Supplier<BlockEntityType<CrushingTubBlockEntity>> CRUSHING_TUB = BLOCK_ENTITIES.register("crushing_tub", () -> RegistryHelpers.createBlockEntityType(CrushingTubBlockEntity::new, ModBlocks.CRUSHING_TUB.get()));
     public static final Supplier<BlockEntityType<FluidBarrelBlockEntity>> FLUID_BARREL = BLOCK_ENTITIES.register("fluid_barrel", () -> RegistryHelpers.createBlockEntityType(FluidBarrelBlockEntity::new, ModBlocks.ACACIA_BARREL.get(), ModBlocks.BIRCH_BARREL.get(), ModBlocks.CRIMSON_BARREL.get(), ModBlocks.DARK_OAK_BARREL.get(), ModBlocks.IRONWOOD_BARREL.get(), ModBlocks.JUNGLE_BARREL.get(), ModBlocks.MANGROVE_BARREL.get(), ModBlocks.OAK_BARREL.get(), ModBlocks.OLIVEWOOD_BARREL.get(), ModBlocks.SPRUCE_BARREL.get(), ModBlocks.WARPED_BARREL.get()));
+    public static final Supplier<BlockEntityType<AlchemicCondenserBlockEntity>> ALCHEMIC_CONDENSER = BLOCK_ENTITIES.register("alchemic_condenser", () -> RegistryHelpers.createBlockEntityType(AlchemicCondenserBlockEntity::new, ModBlocks.ALCHEMIC_CONDENSER.get(), ModBlocks.BIRCH_BARREL.get(), ModBlocks.CRIMSON_BARREL.get(), ModBlocks.DARK_OAK_BARREL.get(), ModBlocks.IRONWOOD_BARREL.get(), ModBlocks.JUNGLE_BARREL.get(), ModBlocks.MANGROVE_BARREL.get(), ModBlocks.OAK_BARREL.get(), ModBlocks.OLIVEWOOD_BARREL.get(), ModBlocks.SPRUCE_BARREL.get(), ModBlocks.WARPED_BARREL.get()));
 
     public static void postInit() {
         BlockEntityTypeAccessor signRegistry = ((BlockEntityTypeAccessor) BlockEntityType.SIGN);

@@ -4,9 +4,12 @@ import earth.terrarium.botarium.client.ClientHooks;
 import earth.terrarium.rustic.Rustic;
 import earth.terrarium.rustic.client.renderers.CrushingTubRenderer;
 import earth.terrarium.rustic.client.renderers.FluidBarrelRenderer;
+import earth.terrarium.rustic.client.screens.AlchemicCondenserScreen;
+import earth.terrarium.rustic.client.utils.ClientRegistrars;
 import earth.terrarium.rustic.common.registry.ModBlockEntities;
 import earth.terrarium.rustic.common.registry.ModBlocks;
 import earth.terrarium.rustic.common.registry.ModFluids;
+import earth.terrarium.rustic.common.registry.ModMenuTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.resources.model.Material;
@@ -65,5 +68,9 @@ public class RusticClient {
     public static void onRegisterTints(Consumer<Block> register) {
         register.accept(ModBlocks.IRONWOOD_LEAVES.get());
         register.accept(ModBlocks.OLIVEWOOD_LEAVES.get());
+    }
+
+    public static void onRegisterMenuScreens(ClientRegistrars.MenuScreenRegistrar registrar) {
+        registrar.register(ModMenuTypes.ALCHEMIC_CONDENSER.get(), AlchemicCondenserScreen::new);
     }
 }
