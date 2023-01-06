@@ -1,6 +1,7 @@
-package earth.terrarium.rustic.forge;
+package earth.terrarium.rustic.client.forge;
 
 import earth.terrarium.rustic.client.RusticClient;
+import earth.terrarium.rustic.common.config.forge.ForgeMenuConfig;
 import earth.terrarium.rustic.client.utils.ClientRegistrars;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.gui.screens.Screen;
@@ -18,17 +19,18 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-public class RusticForgeClient {
+public class RusticClientForge {
     public static void init() {
+        ForgeMenuConfig.register();
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-        bus.addListener(RusticForgeClient::onRegisterRenderers);
-        bus.addListener(RusticForgeClient::onRegisterBlockColorHandlers);
-        bus.addListener(RusticForgeClient::onRegisterItemColorHandlers);
-        bus.addListener(RusticForgeClient::onClientSetup);
+        bus.addListener(RusticClientForge::onRegisterRenderers);
+        bus.addListener(RusticClientForge::onRegisterBlockColorHandlers);
+        bus.addListener(RusticClientForge::onRegisterItemColorHandlers);
+        bus.addListener(RusticClientForge::onClientSetup);
     }
 
     public static void postInit() {
-        RusticClient.onRegisterFluidRenderTypes(RusticForgeClient::onRegisterFluidRenderTypes);
+        RusticClient.onRegisterFluidRenderTypes(RusticClientForge::onRegisterFluidRenderTypes);
     }
 
     private static void onRegisterFluidRenderTypes(RenderType type, Fluid fluid1, Fluid fluid2) {
@@ -49,7 +51,7 @@ public class RusticForgeClient {
     }
 
     public static void onClientSetup(FMLClientSetupEvent event) {
-        RusticClient.onRegisterMenuScreens(RusticForgeClient::menuBridge);
+        RusticClient.onRegisterMenuScreens(RusticClientForge::menuBridge);
     }
 
     // This is a bridge method because you cant use a lambda with a generic type

@@ -126,7 +126,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         farmland(ModBlocks.FERTILE_SOIL.get());
 
-        ModItems.ITEMS.getRegistries().forEach(item -> {
+        ModItems.ITEMS.getEntries().forEach(item -> {
             if (item.get() instanceof BlockItem blockItem) {
                 Block block = ForgeRegistries.BLOCKS.getValue(ForgeRegistries.ITEMS.getKey(blockItem));
                 if (block instanceof TrapDoorBlock) {

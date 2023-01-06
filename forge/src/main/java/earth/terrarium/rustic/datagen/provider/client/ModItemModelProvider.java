@@ -23,7 +23,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        ModItems.ITEMS.getRegistries().forEach(item -> {
+        ModItems.ITEMS.getEntries().forEach(item -> {
             if (item.get() instanceof BlockItem blockItem) {
                 if (blockItem.getBlock() instanceof SaplingBlock) {
                     basicBlockItem(item.get());

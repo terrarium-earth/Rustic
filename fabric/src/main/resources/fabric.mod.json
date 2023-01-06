@@ -5,18 +5,17 @@
   "name": "Rustic",
   "description": "Rustic mod for the Rustic thingy in Minecraft 1.19.2",
   "authors": [
-    "Alex Nijjar",
-    "CodexAdrian",
-    "Facu",
-    "Kekie6",
-    "ThatGravyBoat"
+    "Alex Nijjar, CodexAdrian, Facu, ThatGravyBoat"
+  ],
+  "contributors": [
+    "Kekie6"
   ],
   "contact": {
     "website": "https://www.curseforge.com/minecraft/mc-mods/rustic",
     "repo": "https://github.com/terrarium-earth/Rustic",
     "issues": "https://github.com/terrarium-earth/Rustic/issues"
   },
-  "license": "MIT",
+  "license": "Terrarium Licence",
   "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
@@ -25,7 +24,10 @@
       "earth.terrarium.rustic.Rustic::postInit"
     ],
     "client": [
-      "earth.terrarium.rustic.fabric.RusticFabricClient"
+      "earth.terrarium.rustic.client.fabric.RusticClientFabric"
+    ],
+    "modmenu": [
+      "earth.terrarium.rustic.common.config.fabric.ModMenuConfig"
     ]
   },
   "accessWidener": "rustic.accesswidener",
@@ -34,9 +36,10 @@
     "rustic.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.14.11",
-    "minecraft": ">=1.19.2",
-    "botarium": ">=1.8.1",
-    "resourcefullib": ">=1.1.18"
+    "fabricloader": ">=${fabric_loader_version}",
+    "minecraft": ">=1.19",
+    "resourcefullib": ">=${resourcefullib_version}",
+    "resourcefulconfig": ">=${resourcefulconfig_version}",
+    "botarium": ">=${botarium_version}"
   }
 }

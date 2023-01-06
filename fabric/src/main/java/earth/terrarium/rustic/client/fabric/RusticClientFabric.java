@@ -1,4 +1,4 @@
-package earth.terrarium.rustic.fabric;
+package earth.terrarium.rustic.client.fabric;
 
 import earth.terrarium.rustic.client.RusticClient;
 import earth.terrarium.rustic.client.utils.ClientRegistrars;
@@ -16,10 +16,13 @@ import net.minecraft.world.level.FoliageColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.material.Fluid;
 
-public class RusticFabricClient implements ClientModInitializer {
+public class RusticClientFabric implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
+        RusticClient.init();
         RusticClient.registerBlockEntityRenderers();
+        RusticClient.onRegisterFluidRenderTypes(RusticClientFabric::registerFluidRenderTypes);
+        RusticClient.onRegisterTints(RusticClientFabric::onRegisterTints);
         RusticClient.onRegisterFluidRenderTypes(RusticFabricClient::registerFluidRenderTypes);
         RusticClient.onRegisterTints(RusticFabricClient::onRegisterTints);
         RusticClient.onRegisterMenuScreens(RusticFabricClient::menuBridge);

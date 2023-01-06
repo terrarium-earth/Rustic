@@ -50,7 +50,7 @@ public class ModLootTableProvider extends LootTableProvider {
     public static class BlockLootTables extends BlockLoot {
         @Override
         protected void addTables() {
-            for (Supplier<Block> b : ModBlocks.BLOCKS.getRegistries()) {
+            for (Supplier<Block> b : ModBlocks.BLOCKS.getEntries()) {
                 if (b.get() instanceof LeavesBlock) {
                 } else if (b.get() instanceof SlabBlock) {
                     this.add(b.get(), createSlabItemTable(b.get()));

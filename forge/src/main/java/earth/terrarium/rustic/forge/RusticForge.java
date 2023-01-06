@@ -2,6 +2,8 @@ package earth.terrarium.rustic.forge;
 
 import earth.terrarium.rustic.Rustic;
 import earth.terrarium.rustic.common.recipes.InternalRecipeBuilder;
+import earth.terrarium.rustic.client.RusticClient;
+import earth.terrarium.rustic.client.forge.RusticClientForge;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.AddReloadListenerEvent;
@@ -17,7 +19,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 public class RusticForge {
     public RusticForge() {
         Rustic.init();
-        DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> RusticForgeClient::init);
+        DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> RusticClientForge::init);
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         bus.addListener(RusticForge::onClientSetup);
         bus.addListener(RusticForge::commonSetup);
@@ -29,7 +31,8 @@ public class RusticForge {
     }
 
     public static void onClientSetup(FMLClientSetupEvent event) {
-        RusticForgeClient.postInit();
+        RusticClient.init();
+        RusticClientForge.postInit();
     }
 
     public static void onAddReloadListeners(AddReloadListenerEvent event) {

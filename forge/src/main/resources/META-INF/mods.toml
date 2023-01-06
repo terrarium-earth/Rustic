@@ -1,18 +1,17 @@
-
 modLoader = "javafml"
 loaderVersion = "[43,)"
-license = "MIT"
+license = "Terrarium Licence"
 issueTrackerURL = "https://github.com/terrarium-earth/Rustic/issues"
+
 [[mods]]
 modId = "rustic"
 version = "${version}"
 displayName = "Rustic"
-displayURL = "https://github.com/terrarium-earth/Rustic"
+displayURL = "https://www.curseforge.com/minecraft/mc-mods/rustic"
 logoFile = "icon.png"
-authors = "Alex Nijjar, CodexAdrian, Facu, Kekie6, ThatGravyBoat"
-description = '''
-Rustic mod for the Rustic thingy in Minecraft 1.19.2
-'''
+authors = "Alex Nijjar, CodexAdrian, Facu, ThatGravyBoat"
+credits = "Kekie6"
+description = "Rustic mod for the Rustic thingy in Minecraft 1.19.2"
 
 [[dependencies.rustic]]
 modId = "forge"
@@ -24,20 +23,27 @@ side = "BOTH"
 [[dependencies.rustic]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.19.2,1.20)"
-ordering = "NONE"
-side = "BOTH"
-
-[[dependencies.rustic]]
-modId = "botarium"
-mandatory = true
-versionRange = "[1.8.1,)"
+versionRange = "[1.19,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.rustic]]
 modId = "resourcefullib"
 mandatory = true
-versionRange = "[1.1.18,)"
+versionRange = "[${resourcefullib_version},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.rustic]]
+modId = "resourcefulconfig"
+mandatory = true
+versionRange = "[${resourcefulconfig_version},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.rustic]]
+modId = "botarium"
+mandatory = true
+versionRange = "[${botarium_version},)"
 ordering = "NONE"
 side = "BOTH"
