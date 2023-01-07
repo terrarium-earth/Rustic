@@ -1,9 +1,9 @@
 package earth.terrarium.rustic;
 
 import com.mojang.logging.LogUtils;
-import earth.terrarium.rustic.common.recipes.InternalRecipeBuilder;
 import com.teamresourceful.resourcefulconfig.common.config.Configurator;
 import earth.terrarium.rustic.common.config.RusticConfig;
+import earth.terrarium.rustic.common.recipes.InternalRecipeBuilder;
 import earth.terrarium.rustic.common.registry.*;
 import earth.terrarium.rustic.common.util.PlatformUtils;
 import net.minecraft.resources.ResourceLocation;
@@ -27,6 +27,7 @@ public class Rustic {
         ModItems.ITEMS.init();
         ModRecipeTypes.RECIPE_TYPES.init();
         ModRecipeSerializers.RECIPE_SERIALIZERS.init();
+        ModMenuTypes.MENU_TYPES.init();
         ModFeatures.FEATURES.init();
         ModEntityTypes.ENTITY_TYPES.init();
         ModMobEffects.MOB_EFFECTS.init();
@@ -35,7 +36,6 @@ public class Rustic {
     public static void postInit() {
         PlatformUtils.registerStrippedLog(ModBlocks.IRONWOOD_LOG.get(), ModBlocks.STRIPPED_IRONWOOD_LOG.get());
         PlatformUtils.registerStrippedLog(ModBlocks.OLIVEWOOD_LOG.get(), ModBlocks.STRIPPED_OLIVEWOOD_LOG.get());
-        ModBlockEntities.postInit();
     }
 
     public static void onRegisterReloadListener(BiConsumer<ResourceLocation, ResourceManagerReloadListener> consumer) {

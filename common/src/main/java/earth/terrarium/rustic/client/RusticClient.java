@@ -14,6 +14,7 @@ import net.minecraft.client.color.item.ItemColor;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
+import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.client.renderer.item.ClampedItemPropertyFunction;
 import net.minecraft.client.resources.model.Material;
@@ -34,6 +35,7 @@ public class RusticClient {
     }
 
     public static void registerBlockEntityRenderers() {
+        ClientHooks.registerBlockEntityRenderers(ModBlockEntities.SIGN.get(), SignRenderer::new);
         ClientHooks.registerBlockEntityRenderers(ModBlockEntities.CRUSHING_TUB.get(), CrushingTubRenderer::new);
         ClientHooks.registerBlockEntityRenderers(ModBlockEntities.FLUID_BARREL.get(), FluidBarrelRenderer::new);
         ClientHooks.setRenderLayer(ModBlocks.IRONWOOD_LEAVES.get(), RenderType.translucent());
