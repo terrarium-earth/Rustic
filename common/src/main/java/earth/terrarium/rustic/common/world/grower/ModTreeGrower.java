@@ -14,6 +14,7 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 
 public class ModTreeGrower extends AbstractTreeGrower {
     private final ResourceKey<ConfiguredFeature<?, ?>> key;
+
     public ModTreeGrower(ResourceKey<ConfiguredFeature<?, ?>> key) {
         this.key = key;
     }

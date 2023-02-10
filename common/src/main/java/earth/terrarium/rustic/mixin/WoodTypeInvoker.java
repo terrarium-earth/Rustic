@@ -7,11 +7,6 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 @Mixin(WoodType.class)
 public interface WoodTypeInvoker {
 
-    @Invoker("<init>")
-    static WoodType init(String name) {
-        throw new UnsupportedOperationException();
-    }
-
     @Invoker("register")
     static WoodType invokeRegister(WoodType value) {
         throw new UnsupportedOperationException();

@@ -27,6 +27,10 @@ public class ModBlocks {
     public static final ResourcefulRegistry<Block> PAINTED_WOOD = ResourcefulRegistries.create(BLOCKS);
     public static final ResourcefulRegistry<Block> SIGNS = ResourcefulRegistries.create(BLOCKS);
     public static final ResourcefulRegistry<Block> STANDING_SIGNS = ResourcefulRegistries.create(SIGNS);
+
+    public static final WoodType IRONWOOD_SIGN_TYPE = WoodTypeInvoker.invokeRegister(new WoodType(ArchitecturyTarget.getCurrentTarget().equals("forge") ? "rustic:ironwood" : "ironwood"){});
+    public static final WoodType OLIVEWOOD_SIGN_TYPE = WoodTypeInvoker.invokeRegister(new WoodType(ArchitecturyTarget.getCurrentTarget().equals("forge") ? "rustic:olivewood" : "olive"){});
+
     public static final RegistryEntry<Block> IRONWOOD_SIGN = STANDING_SIGNS.register("ironwood_sign", () -> new CustomStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), IRONWOOD_SIGN_TYPE));
     public static final RegistryEntry<Block> OLIVEWOOD_SIGN = STANDING_SIGNS.register("olivewood_sign", () -> new CustomStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), OLIVEWOOD_SIGN_TYPE));
     public static final ResourcefulRegistry<Block> WALL_SIGNS = ResourcefulRegistries.create(SIGNS);
@@ -60,8 +64,7 @@ public class ModBlocks {
     public static final RegistryEntry<Block> CLAY_DIAGONAL_RIGHT_CROSS_WALL = CLAY_WALLS.register("clay_diagonal_right_cross_wall", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CLAY)));
     public static final RegistryEntry<Block> IRONWOOD_WALL_SIGN = WALL_SIGNS.register("ironwood_wall_sign", () -> new CustomWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), IRONWOOD_SIGN_TYPE));
     public static final RegistryEntry<Block> OLIVEWOOD_WALL_SIGN = WALL_SIGNS.register("olivewood_wall_sign", () -> new CustomWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), OLIVEWOOD_SIGN_TYPE));
-    public static final WoodType IRONWOOD_SIGN_TYPE = WoodTypeInvoker.invokeRegister(WoodTypeInvoker.init(ArchitecturyTarget.getCurrentTarget().equals("forge") ? "rustic:ironwood" : "ironwood"));
-    public static final WoodType OLIVEWOOD_SIGN_TYPE = WoodTypeInvoker.invokeRegister(WoodTypeInvoker.init(ArchitecturyTarget.getCurrentTarget().equals("forge") ? "rustic:olivewood" : "olive"));
+
     public static final RegistryEntry<Block> IRONWOOD_PLANKS = BLOCKS.register("ironwood_planks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     public static final RegistryEntry<Block> IRONWOOD_STAIRS = BLOCKS.register("ironwood_stairs", () -> new StairBlock(IRONWOOD_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
     public static final RegistryEntry<Block> IRONWOOD_LOG = BLOCKS.register("ironwood_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
