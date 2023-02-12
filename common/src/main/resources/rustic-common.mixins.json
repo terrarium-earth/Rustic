@@ -5,6 +5,7 @@
     "minVersion": "0.8.5",
     "mixins": [
         "CropBlockMixin",
+        "FoodDataMixin",
         "PotionBrewingAccessor",
         "RecipeManagerAccessor",
         "SugarCaneBlockMixin",

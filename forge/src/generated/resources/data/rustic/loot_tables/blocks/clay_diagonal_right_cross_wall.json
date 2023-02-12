@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "rustic:clay_diagonal_right_cross_wall"
+          "name": "minecraft:air"
         }
       ],
       "rolls": 1.0

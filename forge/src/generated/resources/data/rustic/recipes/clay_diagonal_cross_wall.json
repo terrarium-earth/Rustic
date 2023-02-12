@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "clay_diagonal_right_cross_wall",
+  "group": "clay_diagonal_cross_wall",
   "key": {
     "#": {
       "item": "rustic:clay_wall"
@@ -10,11 +10,11 @@
     }
   },
   "pattern": [
-    "  /",
+    "/  ",
     " # ",
-    "/  "
+    "  /"
   ],
   "result": {
-    "item": "rustic:clay_diagonal_right_cross_wall"
+    "item": "rustic:clay_diagonal_cross_wall"
   }
 }

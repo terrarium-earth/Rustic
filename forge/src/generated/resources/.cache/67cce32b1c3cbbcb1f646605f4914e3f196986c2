@@ -1,4 +1,4 @@
-// 1.19.2	2023-01-06T07:07:53.9573953	LootTables
+// 1.19.2	2023-02-10T16:29:44.304134	LootTables
 8ffda52433eac658f557014abee6f286775c14cd data/rustic/loot_tables/blocks/acacia_fluid_barrel.json
 69c980051e7117d2b66940dadb39599bbdef4212 data/rustic/loot_tables/blocks/alchemic_condenser.json
 2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/rustic/loot_tables/blocks/ale.json
@@ -12,8 +12,8 @@ d00e655901df886f34855d8aaff62b761ab0bbf5 data/rustic/loot_tables/blocks/blue_ter
 9aa6afe11782ee6882c8c6ee341d1366c6b4a730 data/rustic/loot_tables/blocks/brown_painted_wood.json
 2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/rustic/loot_tables/blocks/cider.json
 a5c953e4431a53282965ea955a32ddf63e02045c data/rustic/loot_tables/blocks/clay_cross_wall.json
-499f61fd346c2956cb4ea19540a880fea64e408a data/rustic/loot_tables/blocks/clay_diagonal_left_cross_wall.json
-22ecf9bdbf652e158fce9333498620d00a985c2b data/rustic/loot_tables/blocks/clay_diagonal_right_cross_wall.json
+67f406613cf97afaf00a8d1e2f181fece754733d data/rustic/loot_tables/blocks/clay_diagonal_left_cross_wall.json
+2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/rustic/loot_tables/blocks/clay_diagonal_right_cross_wall.json
 c1fdff0b1dfb63b9faa3fa2792cbc170ebbd8ffb data/rustic/loot_tables/blocks/clay_wall.json
 52f793aa0d44f0f0ca0c0a7f5763ceac42b7c8b8 data/rustic/loot_tables/blocks/copper_chain.json
 dae45e36a5e79953fe0504f73ad256ebb4e5cf28 data/rustic/loot_tables/blocks/copper_lantern.json

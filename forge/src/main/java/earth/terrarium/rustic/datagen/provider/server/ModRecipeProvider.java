@@ -4,6 +4,7 @@ import earth.terrarium.botarium.api.fluid.FluidHooks;
 import earth.terrarium.rustic.Rustic;
 import earth.terrarium.rustic.common.registry.ModBlocks;
 import earth.terrarium.rustic.common.registry.ModItems;
+import earth.terrarium.rustic.common.registry.ModRecipeSerializers;
 import earth.terrarium.rustic.common.registry.ModTags;
 import earth.terrarium.rustic.datagen.builders.CrushingTubRecipeBuilder;
 import net.minecraft.MethodsReturnNonnullByDefault;
@@ -91,21 +92,13 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern(" # ")
                 .pattern("/ /"));
 
-        createSimple(consumer, ModItems.CLAY_DIAGONAL_LEFT_CROSS_WALL, 1, r -> r
+        createSimple(consumer, ModItems.CLAY_DIAGONAL_CROSS_WALL, 1, r -> r
                 .unlockedBy("has_clay", has(Items.CLAY))
                 .define('#', ModItems.CLAY_WALL.get())
                 .define('/', ItemTags.PLANKS)
                 .pattern("/  ")
                 .pattern(" # ")
                 .pattern("  /"));
-
-        createSimple(consumer, ModItems.CLAY_DIAGONAL_RIGHT_CROSS_WALL, 1, r -> r
-                .unlockedBy("has_clay", has(Items.CLAY))
-                .define('#', ModItems.CLAY_WALL.get())
-                .define('/', ItemTags.PLANKS)
-                .pattern("  /")
-                .pattern(" # ")
-                .pattern("/  "));
 
         createWoodSetRecipe(consumer, "fluid_barrel", 1, r -> r
                 .define('/', ItemTags.WOODEN_SLABS)
@@ -223,6 +216,8 @@ public class ModRecipeProvider extends RecipeProvider {
         stonecutterResultFromBase(consumer, ModItems.DEEPSLATE_PILLAR.get(), Items.DEEPSLATE);
 
         createSimpleCrushing(consumer, Items.SUGAR_CANE, Fluids.WATER, 0.25f, new ItemStack(Items.SUGAR, 2), 2);
+
+        SpecialRecipeBuilder.special(ModRecipeSerializers.OILED_FOOD.get()).save(consumer, "oiled_food");
     }
 
     public static void createBuilder(Consumer<FinishedRecipe> consumer, Supplier<Item> output, Supplier<Item> input, BiFunction<ItemLike, Ingredient, RecipeBuilder> func) {

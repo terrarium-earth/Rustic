@@ -19,20 +19,24 @@ public class TomatoItem extends Item {
     }
 
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand usedHand) {
-        ItemStack itemStack = player.getItemInHand(usedHand);
-        level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.SNOWBALL_THROW, SoundSource.NEUTRAL, 0.5F, 0.4F / (level.getRandom().nextFloat() * 0.4F + 0.8F));
-        if (!level.isClientSide) {
-            Tomato tomato = new Tomato(level, player);
-            tomato.setItem(itemStack);
-            tomato.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 1.5F, 1.0F);
-            level.addFreshEntity(tomato);
-        }
+        if (player.isShiftKeyDown()) {
 
-        player.awardStat(Stats.ITEM_USED.get(this));
-        if (!player.getAbilities().instabuild) {
-            itemStack.shrink(1);
-        }
+            ItemStack itemStack = player.getItemInHand(usedHand);
+            level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.SNOWBALL_THROW, SoundSource.NEUTRAL, 0.5F, 0.4F / (level.getRandom().nextFloat() * 0.4F + 0.8F));
+            if (!level.isClientSide) {
+                Tomato tomato = new Tomato(level, player);
+                tomato.setItem(itemStack);
+                tomato.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 1.5F, 1.0F);
+                level.addFreshEntity(tomato);
+            }
 
-        return InteractionResultHolder.sidedSuccess(itemStack, level.isClientSide());
+            player.awardStat(Stats.ITEM_USED.get(this));
+            if (!player.getAbilities().instabuild) {
+                itemStack.shrink(1);
+            }
+
+            return InteractionResultHolder.sidedSuccess(itemStack, level.isClientSide());
+        }
+        return super.use(level, player, usedHand);
     }
 }

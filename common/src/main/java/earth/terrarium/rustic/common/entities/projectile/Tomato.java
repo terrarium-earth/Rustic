@@ -37,7 +37,7 @@ public class Tomato extends ThrowableItemProjectile {
     @Override
     protected void onHitEntity(EntityHitResult result) {
         if (result.getEntity() instanceof LivingEntity entity) {
-            MobEffectInstance effect = new MobEffectInstance(ModMobEffects.SHAME.get(), 15 * 20);
+            MobEffectInstance effect = new MobEffectInstance(ModMobEffects.SHAME.get(), 15 * 20, 0, false, false, true);
             entity.addEffect(effect);
         }
     }

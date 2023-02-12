@@ -60,8 +60,8 @@ public class ModBlocks {
 
     public static final RegistryEntry<Block> CLAY_WALL = CLAY_WALLS.register("clay_wall", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CLAY)));
     public static final RegistryEntry<Block> CLAY_CROSS_WALL = CLAY_WALLS.register("clay_cross_wall", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CLAY)));
-    public static final RegistryEntry<Block> CLAY_DIAGONAL_LEFT_CROSS_WALL = CLAY_WALLS.register("clay_diagonal_left_cross_wall", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CLAY)));
-    public static final RegistryEntry<Block> CLAY_DIAGONAL_RIGHT_CROSS_WALL = CLAY_WALLS.register("clay_diagonal_right_cross_wall", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CLAY)));
+    public static final RegistryEntry<Block> CLAY_DIAGONAL_LEFT_CROSS_WALL = CLAY_WALLS.register("clay_diagonal_left_cross_wall", () -> new CrossBlock(BlockBehaviour.Properties.copy(Blocks.CLAY)));
+    public static final RegistryEntry<Block> CLAY_DIAGONAL_RIGHT_CROSS_WALL = CLAY_WALLS.register("clay_diagonal_right_cross_wall", () -> new CrossBlock(BlockBehaviour.Properties.copy(Blocks.CLAY)));
     public static final RegistryEntry<Block> IRONWOOD_WALL_SIGN = WALL_SIGNS.register("ironwood_wall_sign", () -> new CustomWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), IRONWOOD_SIGN_TYPE));
     public static final RegistryEntry<Block> OLIVEWOOD_WALL_SIGN = WALL_SIGNS.register("olivewood_wall_sign", () -> new CustomWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), OLIVEWOOD_SIGN_TYPE));
 

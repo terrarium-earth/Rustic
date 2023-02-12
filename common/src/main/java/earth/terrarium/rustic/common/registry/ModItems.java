@@ -50,8 +50,7 @@ public class ModItems {
 
     public static final RegistryEntry<Item> CLAY_WALL = CLAY_WALLS.register("clay_wall", () -> new BlockItem(ModBlocks.CLAY_WALL.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> CLAY_CROSS_WALL = CLAY_WALLS.register("clay_cross_wall", () -> new BlockItem(ModBlocks.CLAY_CROSS_WALL.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final RegistryEntry<Item> CLAY_DIAGONAL_LEFT_CROSS_WALL = CLAY_WALLS.register("clay_diagonal_left_cross_wall", () -> new BlockItem(ModBlocks.CLAY_DIAGONAL_LEFT_CROSS_WALL.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final RegistryEntry<Item> CLAY_DIAGONAL_RIGHT_CROSS_WALL = CLAY_WALLS.register("clay_diagonal_right_cross_wall", () -> new BlockItem(ModBlocks.CLAY_DIAGONAL_RIGHT_CROSS_WALL.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final RegistryEntry<Item> CLAY_DIAGONAL_CROSS_WALL = CLAY_WALLS.register("clay_diagonal_cross_wall", () -> new BlockItem(ModBlocks.CLAY_DIAGONAL_LEFT_CROSS_WALL.get(), new Item.Properties().tab(ITEM_GROUP)));
 
     public static final RegistryEntry<Item> ACACIA_BARREL = BARRELS.register("acacia_fluid_barrel", () -> new BlockItem(ModBlocks.ACACIA_BARREL.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> BIRCH_BARREL = BARRELS.register("birch_fluid_barrel", () -> new BlockItem(ModBlocks.BIRCH_BARREL.get(), new Item.Properties().tab(ITEM_GROUP)));

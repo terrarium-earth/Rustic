@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "rustic:clay_diagonal_left_cross_wall"
+        "recipe": "rustic:clay_diagonal_cross_wall"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "rustic:clay_diagonal_left_cross_wall"
+      "rustic:clay_diagonal_cross_wall"
     ]
   }
 }

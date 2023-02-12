@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "rustic:clay_diagonal_left_cross_wall"
+          "name": "rustic:clay_diagonal_cross_wall"
         }
       ],
       "rolls": 1.0
