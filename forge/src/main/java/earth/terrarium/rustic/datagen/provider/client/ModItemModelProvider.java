@@ -2,6 +2,7 @@ package earth.terrarium.rustic.datagen.provider.client;
 
 import earth.terrarium.rustic.Rustic;
 import earth.terrarium.rustic.common.items.PotionFlaskItem;
+import earth.terrarium.rustic.common.registry.ModBlocks;
 import earth.terrarium.rustic.common.registry.ModItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
@@ -36,6 +37,8 @@ public class ModItemModelProvider extends ItemModelProvider {
                     basicItem(item.get());
                 } else if (blockItem.getBlock() instanceof SignBlock) {
                     basicItem(item.get());
+                } else if (blockItem.equals(ModItems.CLAY_DIAGONAL_CROSS_WALL.get())) {
+                    blockItem(item.get(), ModBlocks.CLAY_DIAGONAL_LEFT_CROSS_WALL.get());
                 }
             } else if (item.get() instanceof PotionFlaskItem) {
                 flaskItem(item.get());
@@ -43,6 +46,17 @@ public class ModItemModelProvider extends ItemModelProvider {
                 basicItem(item.get());
             }
         });
+    }
+
+    public ItemModelBuilder blockItem(Item block, Block parent) {
+        ResourceLocation id = Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(block));
+        return getBuilder(id.toString())
+                .parent(
+                        new ModelFile.UncheckedModelFile(
+                            new ResourceLocation(id.getNamespace(),
+                                    "block/" + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(parent)).getPath())
+                        )
+                );
     }
 
     public ItemModelBuilder basicBlockItem(Item item) {

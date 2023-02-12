@@ -1,8 +1,9 @@
-// 1.19.2	2023-01-06T07:07:53.9763511	Item Models: rustic
+// 1.19.2	2023-02-12T10:19:19.4284306	Item Models: rustic
 c4788fbcbd701b6f00820c5f99c517c6999611d1 assets/rustic/models/item/ale_bucket.json
 c74cee53f4f0ec54079fcf561cd15b89058cb083 assets/rustic/models/item/apple_juice_bucket.json
 feafa7838cf006c38f3e68e69028b3fff451100b assets/rustic/models/item/chili_pepper.json
 8a655e4c135d2af3a9286d3c958bff03bda6f4bd assets/rustic/models/item/cider_bucket.json
+8838c123330cd09b8a6e8461c46d64f99a9a6639 assets/rustic/models/item/clay_diagonal_cross_wall.json
 fffd9dcf976da976ff3e3911fb1974dcfc7de8af assets/rustic/models/item/copper_chain.json
 9eaeff85832a0ee6a4f1a1da3b3e7d536ac50376 assets/rustic/models/item/copper_lantern.json
 434efc0373dbd1432f732993b7f7e2aa8f5dffcc assets/rustic/models/item/copper_soul_lantern.json

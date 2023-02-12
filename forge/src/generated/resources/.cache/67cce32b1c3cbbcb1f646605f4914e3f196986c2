@@ -1,4 +1,4 @@
-// 1.19.2	2023-02-10T16:29:44.304134	LootTables
+// 1.19.2	2023-02-12T10:01:17.230174	LootTables
 8ffda52433eac658f557014abee6f286775c14cd data/rustic/loot_tables/blocks/acacia_fluid_barrel.json
 69c980051e7117d2b66940dadb39599bbdef4212 data/rustic/loot_tables/blocks/alchemic_condenser.json
 2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/rustic/loot_tables/blocks/ale.json
@@ -79,11 +79,17 @@ fa22ca850b6c6778f1e02389a1e21c4bea0814b1 data/rustic/loot_tables/blocks/olivewoo
 2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/rustic/loot_tables/blocks/olive_oil.json
 9127d1ab836fed828233da26c914c1f862968d89 data/rustic/loot_tables/blocks/orange_painted_wood.json
 06fe845b1881d2f486e7a2a348e7a4099f856ad4 data/rustic/loot_tables/blocks/pink_painted_wood.json
+187301c433ea4f0237ee7032c167c9c4c2045681 data/rustic/loot_tables/blocks/polished_slate.json
 e7dd19f832f2b1ba7ecdaf9d1e021b53baaf2c9d data/rustic/loot_tables/blocks/purple_painted_wood.json
 ef283b93e101390fb89ac32062aca4c308c9b0f0 data/rustic/loot_tables/blocks/red_painted_wood.json
 53bec432bf1bfe207abb68fac8d20ec20021dd1a data/rustic/loot_tables/blocks/red_terracotta_pot.json
 2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/rustic/loot_tables/blocks/red_wine.json
 2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/rustic/loot_tables/blocks/rum.json
+b04d1ea2372d60a6e4c96c84abb5a64ec52f906a data/rustic/loot_tables/blocks/slate.json
+bd67772ee8fc74cda430cf91e4ba753106927c37 data/rustic/loot_tables/blocks/slate_bricks.json
+5134452728ec89a088c75bef246e33c0e6e81dd0 data/rustic/loot_tables/blocks/slate_pillar.json
+cfd1e970025854204f7a716f712ba4a4f938e5f6 data/rustic/loot_tables/blocks/slate_roof.json
+e5898add77c508aec0568fedc42073206dbcdbf3 data/rustic/loot_tables/blocks/slate_tiles.json
 2e6312df6825da9210b42be2211c3270f20b7b3d data/rustic/loot_tables/blocks/spruce_fluid_barrel.json
 2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/rustic/loot_tables/blocks/starchy_water.json
 2414d72fcde94055957df7d30dd1057f1329136c data/rustic/loot_tables/blocks/stone_pillar.json

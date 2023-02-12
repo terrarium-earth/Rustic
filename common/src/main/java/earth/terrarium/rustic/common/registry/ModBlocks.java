@@ -52,11 +52,18 @@ public class ModBlocks {
     public static final RegistryEntry<Block> WHITE_PAINTED_WOOD = PAINTED_WOOD.register("white_painted_wood", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     public static final RegistryEntry<Block> YELLOW_PAINTED_WOOD = PAINTED_WOOD.register("yellow_painted_wood", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).color(MaterialColor.COLOR_YELLOW)));
 
+    public static final RegistryEntry<Block> SLATE = BLOCKS.register("slate", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+    public static final RegistryEntry<Block> SLATE_TILES = BLOCKS.register("slate_tiles", () -> new Block(BlockBehaviour.Properties.copy(SLATE.get())));
+    public static final RegistryEntry<Block> SLATE_BRICKS = BLOCKS.register("slate_bricks", () -> new Block(BlockBehaviour.Properties.copy(SLATE.get())));
+    public static final RegistryEntry<Block> POLISHED_SLATE = BLOCKS.register("polished_slate", () -> new Block(BlockBehaviour.Properties.copy(SLATE.get())));
+    public static final RegistryEntry<Block> SLATE_ROOF = BLOCKS.register("slate_roof", () -> new Block(BlockBehaviour.Properties.copy(SLATE.get())));
+
     public static final RegistryEntry<Block> STONE_PILLAR = PILLARS.register("stone_pillar", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
     public static final RegistryEntry<Block> ANDESITE_PILLAR = PILLARS.register("andesite_pillar", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.ANDESITE)));
     public static final RegistryEntry<Block> DIORITE_PILLAR = PILLARS.register("diorite_pillar", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.DIORITE)));
     public static final RegistryEntry<Block> GRANITE_PILLAR = PILLARS.register("granite_pillar", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.GRANITE)));
     public static final RegistryEntry<Block> DEEPSLATE_PILLAR = PILLARS.register("deepslate_pillar", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)));
+    public static final RegistryEntry<Block> SLATE_PILLAR = PILLARS.register("slate_pillar", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)));
 
     public static final RegistryEntry<Block> CLAY_WALL = CLAY_WALLS.register("clay_wall", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CLAY)));
     public static final RegistryEntry<Block> CLAY_CROSS_WALL = CLAY_WALLS.register("clay_cross_wall", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CLAY)));

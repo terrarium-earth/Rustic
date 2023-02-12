@@ -42,11 +42,18 @@ public class ModItems {
     public static final RegistryEntry<Item> WHITE_PAINTED_WOOD = PAINTED_WOOD.register("white_painted_wood", () -> new BlockItem(ModBlocks.WHITE_PAINTED_WOOD.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> YELLOW_PAINTED_WOOD = PAINTED_WOOD.register("yellow_painted_wood", () -> new BlockItem(ModBlocks.YELLOW_PAINTED_WOOD.get(), new Item.Properties().tab(ITEM_GROUP)));
 
+    public static final RegistryEntry<Item> SLATE = PILLARS.register("slate", () -> new BlockItem(ModBlocks.SLATE.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final RegistryEntry<Item> SLATE_TILES = PILLARS.register("slate_tiles", () -> new BlockItem(ModBlocks.SLATE_TILES.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final RegistryEntry<Item> SLATE_BRICKS = PILLARS.register("slate_bricks", () -> new BlockItem(ModBlocks.SLATE_BRICKS.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final RegistryEntry<Item> SLATE_POLISHED = PILLARS.register("polished_slate", () -> new BlockItem(ModBlocks.POLISHED_SLATE.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final RegistryEntry<Item> SLATE_ROOF = PILLARS.register("slate_roof", () -> new BlockItem(ModBlocks.SLATE_ROOF.get(), new Item.Properties().tab(ITEM_GROUP)));
+
     public static final RegistryEntry<Item> STONE_PILLAR = PILLARS.register("stone_pillar", () -> new BlockItem(ModBlocks.STONE_PILLAR.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> ANDESITE_PILLAR = PILLARS.register("andesite_pillar", () -> new BlockItem(ModBlocks.ANDESITE_PILLAR.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> DIORITE_PILLAR = PILLARS.register("diorite_pillar", () -> new BlockItem(ModBlocks.DIORITE_PILLAR.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> GRANITE_PILLAR = PILLARS.register("granite_pillar", () -> new BlockItem(ModBlocks.GRANITE_PILLAR.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> DEEPSLATE_PILLAR = PILLARS.register("deepslate_pillar", () -> new BlockItem(ModBlocks.DEEPSLATE_PILLAR.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final RegistryEntry<Item> SLATE_PILLAR = PILLARS.register("slate_pillar", () -> new BlockItem(ModBlocks.SLATE_PILLAR.get(), new Item.Properties().tab(ITEM_GROUP)));
 
     public static final RegistryEntry<Item> CLAY_WALL = CLAY_WALLS.register("clay_wall", () -> new BlockItem(ModBlocks.CLAY_WALL.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> CLAY_CROSS_WALL = CLAY_WALLS.register("clay_cross_wall", () -> new BlockItem(ModBlocks.CLAY_CROSS_WALL.get(), new Item.Properties().tab(ITEM_GROUP)));

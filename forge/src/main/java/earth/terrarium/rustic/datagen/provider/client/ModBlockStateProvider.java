@@ -77,6 +77,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         axisBlock((RotatedPillarBlock) ModBlocks.DIORITE_PILLAR.get(), blockTexture(ModBlocks.DIORITE_PILLAR.get()), blockTexture(Blocks.POLISHED_DIORITE));
         axisBlock((RotatedPillarBlock) ModBlocks.GRANITE_PILLAR.get(), blockTexture(ModBlocks.GRANITE_PILLAR.get()), blockTexture(Blocks.POLISHED_GRANITE));
         axisBlock((RotatedPillarBlock) ModBlocks.DEEPSLATE_PILLAR.get(), blockTexture(ModBlocks.DEEPSLATE_PILLAR.get()), blockTexture(Blocks.POLISHED_DEEPSLATE));
+        axisBlock((RotatedPillarBlock) ModBlocks.SLATE_PILLAR.get(), blockTexture(ModBlocks.SLATE_PILLAR.get()), blockTexture(ModBlocks.POLISHED_SLATE.get()));
+
+        axisBlock((RotatedPillarBlock) ModBlocks.SLATE.get(), blockTexture(ModBlocks.SLATE.get()));
+        simpleBlock(ModBlocks.POLISHED_SLATE.get());
+        simpleBlock(ModBlocks.SLATE_BRICKS.get());
+        simpleBlock(ModBlocks.SLATE_ROOF.get());
+        simpleBlock(ModBlocks.SLATE_TILES.get());
 
         simpleBlock(ModBlocks.CLAY_WALL.get());
         simpleBlock(ModBlocks.CLAY_CROSS_WALL.get());
