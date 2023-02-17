@@ -7,6 +7,7 @@ import earth.terrarium.rustic.Rustic;
 import earth.terrarium.rustic.common.blockentities.AlchemicCondenserBlockEntity;
 import earth.terrarium.rustic.common.blockentities.CrushingTubBlockEntity;
 import earth.terrarium.rustic.common.blockentities.FluidBarrelBlockEntity;
+import earth.terrarium.rustic.common.blocks.cabinet.CabinetBlockEntity;
 import earth.terrarium.rustic.common.blocks.sign.CustomSignBlockEntity;
 import net.minecraft.core.Registry;
 import net.minecraft.world.level.block.Block;
@@ -17,8 +18,10 @@ import net.minecraft.world.level.block.entity.SignBlockEntity;
 public class ModBlockEntities {
     public static final ResourcefulRegistry<BlockEntityType<?>> BLOCK_ENTITY_TYPES = ResourcefulRegistries.create(Registry.BLOCK_ENTITY_TYPE, Rustic.MOD_ID);
 
-    public static final RegistryEntry<BlockEntityType<SignBlockEntity>> SIGN = BLOCK_ENTITY_TYPES.register("sign", () -> createBlockEntityType(CustomSignBlockEntity::new, ModBlocks.SIGNS));    public static final RegistryEntry<BlockEntityType<CrushingTubBlockEntity>> CRUSHING_TUB = BLOCK_ENTITY_TYPES.register("crushing_tub", () -> createBlockEntityType(CrushingTubBlockEntity::new, ModBlocks.CRUSHING_TUB.get()));
+    public static final RegistryEntry<BlockEntityType<SignBlockEntity>> SIGN = BLOCK_ENTITY_TYPES.register("sign", () -> createBlockEntityType(CustomSignBlockEntity::new, ModBlocks.SIGNS));
+    public static final RegistryEntry<BlockEntityType<CrushingTubBlockEntity>> CRUSHING_TUB = BLOCK_ENTITY_TYPES.register("crushing_tub", () -> createBlockEntityType(CrushingTubBlockEntity::new, ModBlocks.CRUSHING_TUB.get()));
     public static final RegistryEntry<BlockEntityType<FluidBarrelBlockEntity>> FLUID_BARREL = BLOCK_ENTITY_TYPES.register("fluid_barrel", () -> createBlockEntityType(FluidBarrelBlockEntity::new, ModBlocks.BARRELS));
+    public static final RegistryEntry<BlockEntityType<CabinetBlockEntity>> CABINET = BLOCK_ENTITY_TYPES.register("cabinet", () -> createBlockEntityType(CabinetBlockEntity::new, ModBlocks.CABINET.get()));
 
     public static <E extends BlockEntity> BlockEntityType<E> createBlockEntityType(BlockEntityType.BlockEntitySupplier<E> factory, Block... blocks) {
         return BlockEntityType.Builder.of(factory, blocks).build(null);

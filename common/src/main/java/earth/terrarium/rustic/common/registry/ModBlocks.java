@@ -7,6 +7,7 @@ import dev.architectury.injectables.targets.ArchitecturyTarget;
 import earth.terrarium.botarium.api.registry.fluid.BotariumLiquidBlock;
 import earth.terrarium.rustic.Rustic;
 import earth.terrarium.rustic.common.blocks.*;
+import earth.terrarium.rustic.common.blocks.cabinet.CabinetBlock;
 import earth.terrarium.rustic.common.blocks.sign.CustomStandingSignBlock;
 import earth.terrarium.rustic.common.blocks.sign.CustomWallSignBlock;
 import earth.terrarium.rustic.common.world.grower.ModTreeGrower;
@@ -148,4 +149,6 @@ public class ModBlocks {
     public static final RegistryEntry<Block> VODKA = FLUIDS.register("vodka", () -> new BotariumLiquidBlock(ModFluidProperties.VODKA, BlockBehaviour.Properties.copy(Blocks.WATER)));
     public static final RegistryEntry<Block> WHISKEY = FLUIDS.register("whiskey", () -> new BotariumLiquidBlock(ModFluidProperties.WHISKEY, BlockBehaviour.Properties.copy(Blocks.WATER)));
     public static final RegistryEntry<Block> TOMATO_JUICE = FLUIDS.register("tomato_juice", () -> new BotariumLiquidBlock(ModFluidProperties.TOMATO_JUICE, BlockBehaviour.Properties.copy(Blocks.WATER)));
+
+    public static final RegistryEntry<Block> CABINET = BLOCKS.register("cabinet", () -> new CabinetBlock(BlockBehaviour.Properties.copy(Blocks.BARREL)));
 }

@@ -145,4 +145,6 @@ public class ModItems {
     public static final RegistryEntry<Item> CRUSHING_TUB = ITEMS.register("crushing_tub", () -> new BlockItem(ModBlocks.CRUSHING_TUB.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> ALCHEMIC_CONDENSER = ITEMS.register("alchemic_condenser", () -> new BlockItem(ModBlocks.ALCHEMIC_CONDENSER.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryEntry<Item> FERTILE_SOIL = ITEMS.register("fertile_soil", () -> new BlockItem(ModBlocks.FERTILE_SOIL.get(), new Item.Properties().tab(ITEM_GROUP)));
+
+    public static final RegistryEntry<Item> CABINET = ITEMS.register("cabinet", () -> new BlockItem(ModBlocks.CABINET.get(), new Item.Properties().tab(ITEM_GROUP)));
 }

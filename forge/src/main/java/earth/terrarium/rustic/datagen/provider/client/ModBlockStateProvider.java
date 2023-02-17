@@ -1,6 +1,8 @@
 package earth.terrarium.rustic.datagen.provider.client;
 
 import earth.terrarium.rustic.Rustic;
+import earth.terrarium.rustic.common.blocks.cabinet.CabinetBlock;
+import earth.terrarium.rustic.common.blocks.cabinet.CabinetType;
 import earth.terrarium.rustic.common.registry.ModBlocks;
 import earth.terrarium.rustic.common.registry.ModItems;
 import net.minecraft.data.DataGenerator;
@@ -134,6 +136,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
         block(ModBlocks.TOMATO_JUICE.get(), "particle", WATER_STILL.toString());
 
         farmland(ModBlocks.FERTILE_SOIL.get());
+
+        horizontalBlock(ModBlocks.CABINET.get(), state -> {
+            CabinetType type = state.getValue(CabinetBlock.TYPE);
+            return models().orientable(
+                    name(ModBlocks.CABINET.get()) + "_" + type.getSerializedName(),
+                    type.format(Rustic.MOD_ID, "block/cabinet_side"),
+                    type.format(Rustic.MOD_ID, "block/cabinet_front"),
+                    extend(blockTexture(Blocks.BARREL), "_bottom")
+            );
+        }, 0);
 
         ModItems.ITEMS.getEntries().forEach(item -> {
             if (item.get() instanceof BlockItem blockItem) {

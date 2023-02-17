@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "rustic:block/cabinet_front_single",
+    "side": "rustic:block/cabinet_side_single",
+    "top": "minecraft:block/barrel_bottom"
+  }
+}

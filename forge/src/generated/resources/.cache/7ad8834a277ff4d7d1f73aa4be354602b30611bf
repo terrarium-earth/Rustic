@@ -1,4 +1,4 @@
-// 1.19.2	2023-02-12T10:01:17.2331652	Block States: rustic
+// 1.19.2	2023-02-17T01:50:24.7013768	Block States: rustic
 43091693a414674c99e3033c287981fe825ef7f2 assets/rustic/blockstates/acacia_fluid_barrel.json
 304c6f1f12cc9ff5029c3db5cd5ece5fabcf7ef4 assets/rustic/blockstates/alchemic_condenser.json
 a7f28a042e5b275c7686b44bc01f1fa0a8f84479 assets/rustic/blockstates/ale.json
@@ -10,6 +10,7 @@ c0e6a84690d5990e8216f32e5d2288a6f0917732 assets/rustic/blockstates/birch_fluid_b
 7945a3e25570586d0467b01236a90a5262f17669 assets/rustic/blockstates/blue_painted_wood.json
 1fa0c22c8b91682f18a4a594ebc7c33bd6c982b5 assets/rustic/blockstates/blue_terracotta_pot.json
 f3537bcd71ac3fffa2f71cee3e293be463695a54 assets/rustic/blockstates/brown_painted_wood.json
+831708c76531af19d850c508069f05a81186ab95 assets/rustic/blockstates/cabinet.json
 d35d4a5ba6737f268aa6c6f8c186e575b867bb1e assets/rustic/blockstates/cider.json
 646a12d3b6cb58d09c95d921c76110cc916c97d4 assets/rustic/blockstates/clay_cross_wall.json
 95055f5e9cd8cc7a4acea2503ab72f851dee562d assets/rustic/blockstates/clay_diagonal_left_cross_wall.json
@@ -112,6 +113,9 @@ a3d563461190aa48330b0f289930797aacce8064 assets/rustic/models/block/black_painte
 eb1679fbbfc129ad48550ac44e96c06d976f6121 assets/rustic/models/block/blue_painted_wood.json
 9fac5e77481d22a30e2eb2dee7254db2bf59dc6f assets/rustic/models/block/blue_terracotta_pot.json
 40aa19c0685138dc581f4c17d5e8ae08e742f2a3 assets/rustic/models/block/brown_painted_wood.json
+57ce879afbf1e3a7f2398f1150f00f9a0bcda1fb assets/rustic/models/block/cabinet_bottom.json
+2de4f6b55602f746e2c5e7721442914ee977532f assets/rustic/models/block/cabinet_single.json
+5a8730c5aba5afd98084091ecf9bba2c3443dfe8 assets/rustic/models/block/cabinet_top.json
 50812bd51e14ec5ea223afe239c89730a63e43b1 assets/rustic/models/block/cider.json
 c08f12c47a7ec31648937be3c8a691619dbae066 assets/rustic/models/block/clay_cross_wall.json
 8d979adb66806fb88f1f54932a343ff195a51e53 assets/rustic/models/block/clay_diagonal_left_cross_wall.json
@@ -258,6 +262,7 @@ fbc047b8f6ec7a8919abf6cc913f994f780b1fce assets/rustic/models/block/yellow_paint
 5e79719c0b3866d2a9e04dca9d0f00a94ac86ae0 assets/rustic/models/item/blue_painted_wood.json
 7f046d4733d5e0e6551a567987c0fbbacd481907 assets/rustic/models/item/blue_terracotta_pot.json
 d61e4ca7db630d5544fa911debcf927a8116386e assets/rustic/models/item/brown_painted_wood.json
+2f5cd1a88d934a23a686a85e9899a018a45924b8 assets/rustic/models/item/cabinet.json
 4b7268338e3ce183845b84f63e015763fdd3ae64 assets/rustic/models/item/clay_cross_wall.json
 4bf943d40a155fa7b8ed38110b437f949dadac17 assets/rustic/models/item/clay_wall.json
 c8c00f374c75972d05722ac0953ebb9b25468343 assets/rustic/models/item/crimson_fluid_barrel.json
