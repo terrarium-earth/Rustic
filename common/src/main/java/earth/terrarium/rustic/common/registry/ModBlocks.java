@@ -8,6 +8,10 @@ import earth.terrarium.botarium.api.registry.fluid.BotariumLiquidBlock;
 import earth.terrarium.rustic.Rustic;
 import earth.terrarium.rustic.common.blocks.*;
 import earth.terrarium.rustic.common.blocks.cabinet.CabinetBlock;
+import earth.terrarium.rustic.common.blocks.candle.CandleStickHolderLeverBlock;
+import earth.terrarium.rustic.common.blocks.candle.CandleWallHolderLeverBlock;
+import earth.terrarium.rustic.common.blocks.candle.CandleStickHolderBlock;
+import earth.terrarium.rustic.common.blocks.candle.CandleWallHolderBlock;
 import earth.terrarium.rustic.common.blocks.sign.CustomStandingSignBlock;
 import earth.terrarium.rustic.common.blocks.sign.CustomWallSignBlock;
 import earth.terrarium.rustic.common.world.grower.ModTreeGrower;
@@ -16,6 +20,7 @@ import net.minecraft.core.Registry;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.WoodType;
+import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 
 public class ModBlocks {
@@ -28,6 +33,7 @@ public class ModBlocks {
     public static final ResourcefulRegistry<Block> PAINTED_WOOD = ResourcefulRegistries.create(BLOCKS);
     public static final ResourcefulRegistry<Block> SIGNS = ResourcefulRegistries.create(BLOCKS);
     public static final ResourcefulRegistry<Block> STANDING_SIGNS = ResourcefulRegistries.create(SIGNS);
+    public static final ResourcefulRegistry<Block> CANDLE_HOLDERS = ResourcefulRegistries.create(BLOCKS);
 
     public static final WoodType IRONWOOD_SIGN_TYPE = WoodTypeInvoker.invokeRegister(new WoodType(ArchitecturyTarget.getCurrentTarget().equals("forge") ? "rustic:ironwood" : "ironwood"){});
     public static final WoodType OLIVEWOOD_SIGN_TYPE = WoodTypeInvoker.invokeRegister(new WoodType(ArchitecturyTarget.getCurrentTarget().equals("forge") ? "rustic:olivewood" : "olive"){});
@@ -151,4 +157,19 @@ public class ModBlocks {
     public static final RegistryEntry<Block> TOMATO_JUICE = FLUIDS.register("tomato_juice", () -> new BotariumLiquidBlock(ModFluidProperties.TOMATO_JUICE, BlockBehaviour.Properties.copy(Blocks.WATER)));
 
     public static final RegistryEntry<Block> CABINET = BLOCKS.register("cabinet", () -> new CabinetBlock(BlockBehaviour.Properties.copy(Blocks.BARREL)));
+
+    public static final RegistryEntry<Block> IRON_CANDLE_WALL_SCONCE = CANDLE_HOLDERS.register("iron_candle_wall_sconce", () -> new CandleWallHolderBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.GOLD).noOcclusion().strength(0.5F).sound(SoundType.CANDLE)));
+    public static final RegistryEntry<Block> GOLD_CANDLE_WALL_SCONCE = CANDLE_HOLDERS.register("gold_candle_wall_sconce", () -> new CandleWallHolderBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_LIGHT_GRAY).noOcclusion().strength(0.5F).sound(SoundType.CANDLE)));
+    public static final RegistryEntry<Block> COPPER_CANDLE_WALL_SCONCE = CANDLE_HOLDERS.register("copper_candle_wall_sconce", () -> new CandleWallHolderBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE).noOcclusion().strength(0.5F).sound(SoundType.CANDLE)));
+    public static final RegistryEntry<Block> IRON_CANDLE_WALL_SCONCE_LEVER = CANDLE_HOLDERS.register("iron_candle_wall_sconce_lever", () -> new CandleWallHolderLeverBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.GOLD).noOcclusion().strength(0.5F).sound(SoundType.CANDLE)));
+    public static final RegistryEntry<Block> GOLD_CANDLE_WALL_SCONCE_LEVER = CANDLE_HOLDERS.register("gold_candle_wall_sconce_lever", () -> new CandleWallHolderLeverBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_LIGHT_GRAY).noOcclusion().strength(0.5F).sound(SoundType.CANDLE)));
+    public static final RegistryEntry<Block> COPPER_CANDLE_WALL_SCONCE_LEVER = CANDLE_HOLDERS.register("copper_candle_wall_sconce_lever", () -> new CandleWallHolderLeverBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE).noOcclusion().strength(0.5F).sound(SoundType.CANDLE)));
+
+    public static final RegistryEntry<Block> IRON_CANDLE_HOLDER = CANDLE_HOLDERS.register("iron_candle_holder", () -> new CandleStickHolderBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.GOLD).noOcclusion().strength(0.5F).sound(SoundType.CANDLE)));
+    public static final RegistryEntry<Block> GOLD_CANDLE_HOLDER = CANDLE_HOLDERS.register("gold_candle_holder", () -> new CandleStickHolderBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_LIGHT_GRAY).noOcclusion().strength(0.5F).sound(SoundType.CANDLE)));
+    public static final RegistryEntry<Block> COPPER_CANDLE_HOLDER = CANDLE_HOLDERS.register("copper_candle_holder", () -> new CandleStickHolderBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE).noOcclusion().strength(0.5F).sound(SoundType.CANDLE)));
+    public static final RegistryEntry<Block> IRON_CANDLE_HOLDER_LEVER = CANDLE_HOLDERS.register("iron_candle_holder_lever", () -> new CandleStickHolderLeverBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.GOLD).noOcclusion().strength(0.5F).sound(SoundType.CANDLE)));
+    public static final RegistryEntry<Block> GOLD_CANDLE_HOLDER_LEVER = CANDLE_HOLDERS.register("gold_candle_holder_lever", () -> new CandleStickHolderLeverBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_LIGHT_GRAY).noOcclusion().strength(0.5F).sound(SoundType.CANDLE)));
+    public static final RegistryEntry<Block> COPPER_CANDLE_HOLDER_LEVER = CANDLE_HOLDERS.register("copper_candle_holder_lever", () -> new CandleStickHolderLeverBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE).noOcclusion().strength(0.5F).sound(SoundType.CANDLE)));
+
 }

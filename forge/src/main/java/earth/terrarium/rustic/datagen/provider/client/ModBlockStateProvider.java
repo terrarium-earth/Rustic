@@ -3,16 +3,23 @@ package earth.terrarium.rustic.datagen.provider.client;
 import earth.terrarium.rustic.Rustic;
 import earth.terrarium.rustic.common.blocks.cabinet.CabinetBlock;
 import earth.terrarium.rustic.common.blocks.cabinet.CabinetType;
+import earth.terrarium.rustic.common.blocks.candle.CandleColor;
+import earth.terrarium.rustic.common.blocks.candle.CandleHolderBlock;
 import earth.terrarium.rustic.common.registry.ModBlocks;
 import earth.terrarium.rustic.common.registry.ModItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
 
@@ -147,6 +154,20 @@ public class ModBlockStateProvider extends BlockStateProvider {
             );
         }, 0);
 
+        candleHolder(ModBlocks.IRON_CANDLE_WALL_SCONCE.get(), new ResourceLocation(Rustic.MOD_ID, "block/iron_candle_holder"), "candle_wall_sconce");
+        candleHolder(ModBlocks.GOLD_CANDLE_WALL_SCONCE.get(), new ResourceLocation(Rustic.MOD_ID, "block/gold_candle_holder"), "candle_wall_sconce");
+        candleHolder(ModBlocks.COPPER_CANDLE_WALL_SCONCE.get(), new ResourceLocation(Rustic.MOD_ID, "block/copper_candle_holder"), "candle_wall_sconce");
+        candleHolder(ModBlocks.IRON_CANDLE_WALL_SCONCE_LEVER.get(), new ResourceLocation(Rustic.MOD_ID, "block/iron_candle_holder"), "candle_wall_sconce");
+        candleHolder(ModBlocks.GOLD_CANDLE_WALL_SCONCE_LEVER.get(), new ResourceLocation(Rustic.MOD_ID, "block/gold_candle_holder"), "candle_wall_sconce");
+        candleHolder(ModBlocks.COPPER_CANDLE_WALL_SCONCE_LEVER.get(), new ResourceLocation(Rustic.MOD_ID, "block/copper_candle_holder"), "candle_wall_sconce");
+
+        candleHolder(ModBlocks.IRON_CANDLE_HOLDER.get(), new ResourceLocation(Rustic.MOD_ID, "block/iron_candle_holder"), "candle_holder");
+        candleHolder(ModBlocks.GOLD_CANDLE_HOLDER.get(), new ResourceLocation(Rustic.MOD_ID, "block/gold_candle_holder"), "candle_holder");
+        candleHolder(ModBlocks.COPPER_CANDLE_HOLDER.get(), new ResourceLocation(Rustic.MOD_ID, "block/copper_candle_holder"), "candle_holder");
+        candleHolder(ModBlocks.IRON_CANDLE_HOLDER_LEVER.get(), new ResourceLocation(Rustic.MOD_ID, "block/iron_candle_holder"), "candle_holder");
+        candleHolder(ModBlocks.GOLD_CANDLE_HOLDER_LEVER.get(), new ResourceLocation(Rustic.MOD_ID, "block/gold_candle_holder"), "candle_holder");
+        candleHolder(ModBlocks.COPPER_CANDLE_HOLDER_LEVER.get(), new ResourceLocation(Rustic.MOD_ID, "block/copper_candle_holder"), "candle_holder");
+
         ModItems.ITEMS.getEntries().forEach(item -> {
             if (item.get() instanceof BlockItem blockItem) {
                 Block block = ForgeRegistries.BLOCKS.getValue(ForgeRegistries.ITEMS.getKey(blockItem));
@@ -166,8 +187,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         });
     }
 
-    private ResourceLocation prefix(Block block, String prefix) {
-        final ResourceLocation id = key(block);
+    private ResourceLocation prefix(ResourceLocation id, String prefix) {
         return new ResourceLocation(id.getNamespace(), prefix + id.getPath());
     }
 
@@ -189,6 +209,30 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlock(block, models().getBuilder(name(block)).texture("dirt", blockTexture(block)).texture("top", "minecraft:block/farmland_moist").parent(models().getExistingFile(new ResourceLocation("block/template_farmland"))));
     }
 
+    private void candleHolder(Block block, ResourceLocation texture, String parentId) {
+        forAllStates(block, state -> {
+            final CandleColor color = state.getValue(CandleHolderBlock.COLOR);
+            final boolean lit = state.getValue(CandleHolderBlock.LIT);
+            final boolean powered = state.hasProperty(BlockStateProperties.POWERED) && state.getValue(BlockStateProperties.POWERED);
+            final String id = createCandleId(state);
+            final ResourceLocation parent = new ResourceLocation(Rustic.MOD_ID, powered ? "block/" + parentId + "_powered" : "block/" + parentId);
+            return models().withExistingParent(id, parent)
+                    .texture("candle", prefix(color.format(lit ? "lit" : ""), "block/"))
+                    .texture("holder", texture);
+        });
+    }
+
+    private String createCandleId(BlockState state) {
+        final CandleColor color = state.getValue(CandleHolderBlock.COLOR);
+        final boolean lit = state.getValue(CandleHolderBlock.LIT);
+        final boolean powered = state.hasProperty(BlockStateProperties.POWERED) && state.getValue(BlockStateProperties.POWERED);
+        String id = name(state.getBlock());
+        if (color != CandleColor.NONE) id += "_" + color.getSerializedName();
+        if (lit) id += "_lit";
+        if (powered) id += "_powered";
+        return id;
+    }
+
     // creates a model with a texture and no parent
     private void block(Block block, String texture, String loc) {
         simpleBlock(block, models().getBuilder(name(block)).texture(texture, loc));
@@ -200,5 +244,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     private String name(Block block) {
         return key(block).getPath();
+    }
+
+    private void forAllStates(Block block, Function<BlockState, ModelFile> modelFunc) {
+        getVariantBuilder(block)
+                .forAllStates(state -> {
+                    var model = ConfiguredModel.builder().modelFile(modelFunc.apply(state));
+                    if (state.hasProperty(BlockStateProperties.HORIZONTAL_FACING)) {
+                        model = model.rotationY(((int) state.getValue(BlockStateProperties.HORIZONTAL_FACING).toYRot()) % 360);
+                    }
+                    return model.build();
+                });
     }
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "rustic:block/candle_wall_sconce_powered",
+  "textures": {
+    "candle": "minecraft:block/magenta_candle",
+    "holder": "rustic:block/iron_candle_holder"
+  }
+}

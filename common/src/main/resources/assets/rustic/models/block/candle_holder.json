@@ -1,0 +1,81 @@
+{
+	"textures": {
+		"particle": "#holder"
+	},
+	"elements": [
+		{
+			"from": [7, 8, 7],
+			"to": [9, 14, 9],
+			"faces": {
+				"north": {"uv": [2, 8, 0, 14], "texture": "#candle"},
+				"east": {"uv": [0, 8, 2, 14], "texture": "#candle"},
+				"south": {"uv": [2, 8, 0, 14], "texture": "#candle"},
+				"west": {"uv": [0, 8, 2, 14], "texture": "#candle"},
+				"up": {"uv": [2, 8, 0, 6], "texture": "#candle"},
+				"down": {"uv": [2, 14, 0, 16], "texture": "#candle"}
+			}
+		},
+		{
+			"from": [8, 14, 7.5],
+			"to": [8, 15, 8.5],
+			"faces": {
+				"north": {"uv": [0, 8, 0, 9], "texture": "#candle"},
+				"east": {"uv": [0, 5, 1, 6], "texture": "#candle"},
+				"south": {"uv": [0, 8, 0, 9], "texture": "#candle"},
+				"west": {"uv": [0, 5, 1, 6], "texture": "#candle"},
+				"up": {"uv": [0, 7, 0, 6], "texture": "#candle"},
+				"down": {"uv": [0, 14, 0, 15], "texture": "#candle"}
+			}
+		},
+		{
+			"from": [7, 2, 7],
+			"to": [9, 6, 9],
+			"faces": {
+				"north": {"uv": [6, 10, 8, 14], "texture": "#holder"},
+				"east": {"uv": [8, 10, 10, 14], "texture": "#holder"},
+				"south": {"uv": [10, 8, 12, 12], "texture": "#holder"},
+				"west": {"uv": [12, 4, 14, 8], "texture": "#holder"},
+				"up": {"uv": [12, 6, 10, 4], "texture": "#holder"},
+				"down": {"uv": [16, 0, 14, 2], "texture": "#holder"}
+			}
+		},
+		{
+			"from": [6, 6, 6],
+			"to": [10, 8, 10],
+			"faces": {
+				"north": {"uv": [12, 8, 16, 10], "texture": "#holder"},
+				"east": {"uv": [10, 12, 14, 14], "texture": "#holder"},
+				"south": {"uv": [12, 10, 16, 12], "texture": "#holder"},
+				"west": {"uv": [0, 14, 4, 16], "texture": "#holder"},
+				"up": {"uv": [8, 4, 4, 0], "texture": "#holder"},
+				"down": {"uv": [8, 4, 4, 8], "texture": "#holder"}
+			}
+		},
+		{
+			"from": [6, 0, 6],
+			"to": [10, 2, 10],
+			"faces": {
+				"north": {"uv": [6, 8, 10, 10], "texture": "#holder"},
+				"east": {"uv": [8, 6, 12, 8], "texture": "#holder"},
+				"south": {"uv": [10, 0, 14, 2], "texture": "#holder"},
+				"west": {"uv": [10, 2, 14, 4], "texture": "#holder"},
+				"up": {"uv": [4, 4, 0, 0], "texture": "#holder"},
+				"down": {"uv": [4, 4, 0, 8], "texture": "#holder"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "candle",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"children": [0, 1]
+		},
+		{
+			"name": "candleholder",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"children": [2, 3, 4]
+		}
+	]
+}

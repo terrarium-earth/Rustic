@@ -147,4 +147,13 @@ public class ModItems {
     public static final RegistryEntry<Item> FERTILE_SOIL = ITEMS.register("fertile_soil", () -> new BlockItem(ModBlocks.FERTILE_SOIL.get(), new Item.Properties().tab(ITEM_GROUP)));
 
     public static final RegistryEntry<Item> CABINET = ITEMS.register("cabinet", () -> new BlockItem(ModBlocks.CABINET.get(), new Item.Properties().tab(ITEM_GROUP)));
+
+    public static final RegistryEntry<Item> IRON_CANDLE_HOLDER = ITEMS.register("iron_candle_holder", () -> new StandingAndWallBlockItem(ModBlocks.IRON_CANDLE_HOLDER.get(), ModBlocks.IRON_CANDLE_WALL_SCONCE.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final RegistryEntry<Item> GOLD_CANDLE_HOLDER = ITEMS.register("gold_candle_holder", () -> new StandingAndWallBlockItem(ModBlocks.GOLD_CANDLE_HOLDER.get(), ModBlocks.GOLD_CANDLE_WALL_SCONCE.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final RegistryEntry<Item> COPPER_CANDLE_HOLDER = ITEMS.register("copper_candle_holder", () -> new StandingAndWallBlockItem(ModBlocks.COPPER_CANDLE_HOLDER.get(), ModBlocks.COPPER_CANDLE_WALL_SCONCE.get(), new Item.Properties().tab(ITEM_GROUP)));
+
+    public static final RegistryEntry<Item> IRON_CANDLE_HOLDER_LEVER = ITEMS.register("iron_candle_holder_lever", () -> new StandingAndWallBlockItem(ModBlocks.IRON_CANDLE_HOLDER_LEVER.get(), ModBlocks.IRON_CANDLE_WALL_SCONCE_LEVER.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final RegistryEntry<Item> GOLD_CANDLE_HOLDER_LEVER = ITEMS.register("gold_candle_holder_lever", () -> new StandingAndWallBlockItem(ModBlocks.GOLD_CANDLE_HOLDER_LEVER.get(), ModBlocks.GOLD_CANDLE_WALL_SCONCE_LEVER.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final RegistryEntry<Item> COPPER_CANDLE_HOLDER_LEVER = ITEMS.register("copper_candle_holder_lever", () -> new StandingAndWallBlockItem(ModBlocks.COPPER_CANDLE_HOLDER_LEVER.get(), ModBlocks.COPPER_CANDLE_WALL_SCONCE_LEVER.get(), new Item.Properties().tab(ITEM_GROUP)));
+
 }

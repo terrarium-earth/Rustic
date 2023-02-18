@@ -1,0 +1,544 @@
+{
+  "variants": {
+    "color=black,facing=east,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_black",
+      "y": 270
+    },
+    "color=black,facing=east,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_black_lit",
+      "y": 270
+    },
+    "color=black,facing=north,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_black",
+      "y": 180
+    },
+    "color=black,facing=north,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_black_lit",
+      "y": 180
+    },
+    "color=black,facing=south,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_black"
+    },
+    "color=black,facing=south,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_black_lit"
+    },
+    "color=black,facing=west,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_black",
+      "y": 90
+    },
+    "color=black,facing=west,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_black_lit",
+      "y": 90
+    },
+    "color=blue,facing=east,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_blue",
+      "y": 270
+    },
+    "color=blue,facing=east,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_blue_lit",
+      "y": 270
+    },
+    "color=blue,facing=north,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_blue",
+      "y": 180
+    },
+    "color=blue,facing=north,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_blue_lit",
+      "y": 180
+    },
+    "color=blue,facing=south,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_blue"
+    },
+    "color=blue,facing=south,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_blue_lit"
+    },
+    "color=blue,facing=west,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_blue",
+      "y": 90
+    },
+    "color=blue,facing=west,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_blue_lit",
+      "y": 90
+    },
+    "color=brown,facing=east,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_brown",
+      "y": 270
+    },
+    "color=brown,facing=east,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_brown_lit",
+      "y": 270
+    },
+    "color=brown,facing=north,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_brown",
+      "y": 180
+    },
+    "color=brown,facing=north,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_brown_lit",
+      "y": 180
+    },
+    "color=brown,facing=south,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_brown"
+    },
+    "color=brown,facing=south,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_brown_lit"
+    },
+    "color=brown,facing=west,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_brown",
+      "y": 90
+    },
+    "color=brown,facing=west,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_brown_lit",
+      "y": 90
+    },
+    "color=cyan,facing=east,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_cyan",
+      "y": 270
+    },
+    "color=cyan,facing=east,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_cyan_lit",
+      "y": 270
+    },
+    "color=cyan,facing=north,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_cyan",
+      "y": 180
+    },
+    "color=cyan,facing=north,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_cyan_lit",
+      "y": 180
+    },
+    "color=cyan,facing=south,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_cyan"
+    },
+    "color=cyan,facing=south,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_cyan_lit"
+    },
+    "color=cyan,facing=west,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_cyan",
+      "y": 90
+    },
+    "color=cyan,facing=west,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_cyan_lit",
+      "y": 90
+    },
+    "color=gray,facing=east,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_gray",
+      "y": 270
+    },
+    "color=gray,facing=east,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_gray_lit",
+      "y": 270
+    },
+    "color=gray,facing=north,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_gray",
+      "y": 180
+    },
+    "color=gray,facing=north,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_gray_lit",
+      "y": 180
+    },
+    "color=gray,facing=south,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_gray"
+    },
+    "color=gray,facing=south,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_gray_lit"
+    },
+    "color=gray,facing=west,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_gray",
+      "y": 90
+    },
+    "color=gray,facing=west,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_gray_lit",
+      "y": 90
+    },
+    "color=green,facing=east,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_green",
+      "y": 270
+    },
+    "color=green,facing=east,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_green_lit",
+      "y": 270
+    },
+    "color=green,facing=north,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_green",
+      "y": 180
+    },
+    "color=green,facing=north,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_green_lit",
+      "y": 180
+    },
+    "color=green,facing=south,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_green"
+    },
+    "color=green,facing=south,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_green_lit"
+    },
+    "color=green,facing=west,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_green",
+      "y": 90
+    },
+    "color=green,facing=west,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_green_lit",
+      "y": 90
+    },
+    "color=light_blue,facing=east,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_light_blue",
+      "y": 270
+    },
+    "color=light_blue,facing=east,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_light_blue_lit",
+      "y": 270
+    },
+    "color=light_blue,facing=north,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_light_blue",
+      "y": 180
+    },
+    "color=light_blue,facing=north,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_light_blue_lit",
+      "y": 180
+    },
+    "color=light_blue,facing=south,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_light_blue"
+    },
+    "color=light_blue,facing=south,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_light_blue_lit"
+    },
+    "color=light_blue,facing=west,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_light_blue",
+      "y": 90
+    },
+    "color=light_blue,facing=west,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_light_blue_lit",
+      "y": 90
+    },
+    "color=light_gray,facing=east,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_light_gray",
+      "y": 270
+    },
+    "color=light_gray,facing=east,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_light_gray_lit",
+      "y": 270
+    },
+    "color=light_gray,facing=north,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_light_gray",
+      "y": 180
+    },
+    "color=light_gray,facing=north,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_light_gray_lit",
+      "y": 180
+    },
+    "color=light_gray,facing=south,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_light_gray"
+    },
+    "color=light_gray,facing=south,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_light_gray_lit"
+    },
+    "color=light_gray,facing=west,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_light_gray",
+      "y": 90
+    },
+    "color=light_gray,facing=west,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_light_gray_lit",
+      "y": 90
+    },
+    "color=lime,facing=east,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_lime",
+      "y": 270
+    },
+    "color=lime,facing=east,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_lime_lit",
+      "y": 270
+    },
+    "color=lime,facing=north,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_lime",
+      "y": 180
+    },
+    "color=lime,facing=north,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_lime_lit",
+      "y": 180
+    },
+    "color=lime,facing=south,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_lime"
+    },
+    "color=lime,facing=south,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_lime_lit"
+    },
+    "color=lime,facing=west,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_lime",
+      "y": 90
+    },
+    "color=lime,facing=west,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_lime_lit",
+      "y": 90
+    },
+    "color=magenta,facing=east,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_magenta",
+      "y": 270
+    },
+    "color=magenta,facing=east,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_magenta_lit",
+      "y": 270
+    },
+    "color=magenta,facing=north,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_magenta",
+      "y": 180
+    },
+    "color=magenta,facing=north,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_magenta_lit",
+      "y": 180
+    },
+    "color=magenta,facing=south,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_magenta"
+    },
+    "color=magenta,facing=south,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_magenta_lit"
+    },
+    "color=magenta,facing=west,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_magenta",
+      "y": 90
+    },
+    "color=magenta,facing=west,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_magenta_lit",
+      "y": 90
+    },
+    "color=none,facing=east,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce",
+      "y": 270
+    },
+    "color=none,facing=east,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_lit",
+      "y": 270
+    },
+    "color=none,facing=north,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce",
+      "y": 180
+    },
+    "color=none,facing=north,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_lit",
+      "y": 180
+    },
+    "color=none,facing=south,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce"
+    },
+    "color=none,facing=south,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_lit"
+    },
+    "color=none,facing=west,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce",
+      "y": 90
+    },
+    "color=none,facing=west,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_lit",
+      "y": 90
+    },
+    "color=normal,facing=east,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_normal",
+      "y": 270
+    },
+    "color=normal,facing=east,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_normal_lit",
+      "y": 270
+    },
+    "color=normal,facing=north,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_normal",
+      "y": 180
+    },
+    "color=normal,facing=north,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_normal_lit",
+      "y": 180
+    },
+    "color=normal,facing=south,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_normal"
+    },
+    "color=normal,facing=south,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_normal_lit"
+    },
+    "color=normal,facing=west,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_normal",
+      "y": 90
+    },
+    "color=normal,facing=west,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_normal_lit",
+      "y": 90
+    },
+    "color=orange,facing=east,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_orange",
+      "y": 270
+    },
+    "color=orange,facing=east,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_orange_lit",
+      "y": 270
+    },
+    "color=orange,facing=north,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_orange",
+      "y": 180
+    },
+    "color=orange,facing=north,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_orange_lit",
+      "y": 180
+    },
+    "color=orange,facing=south,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_orange"
+    },
+    "color=orange,facing=south,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_orange_lit"
+    },
+    "color=orange,facing=west,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_orange",
+      "y": 90
+    },
+    "color=orange,facing=west,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_orange_lit",
+      "y": 90
+    },
+    "color=pink,facing=east,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_pink",
+      "y": 270
+    },
+    "color=pink,facing=east,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_pink_lit",
+      "y": 270
+    },
+    "color=pink,facing=north,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_pink",
+      "y": 180
+    },
+    "color=pink,facing=north,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_pink_lit",
+      "y": 180
+    },
+    "color=pink,facing=south,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_pink"
+    },
+    "color=pink,facing=south,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_pink_lit"
+    },
+    "color=pink,facing=west,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_pink",
+      "y": 90
+    },
+    "color=pink,facing=west,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_pink_lit",
+      "y": 90
+    },
+    "color=purple,facing=east,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_purple",
+      "y": 270
+    },
+    "color=purple,facing=east,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_purple_lit",
+      "y": 270
+    },
+    "color=purple,facing=north,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_purple",
+      "y": 180
+    },
+    "color=purple,facing=north,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_purple_lit",
+      "y": 180
+    },
+    "color=purple,facing=south,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_purple"
+    },
+    "color=purple,facing=south,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_purple_lit"
+    },
+    "color=purple,facing=west,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_purple",
+      "y": 90
+    },
+    "color=purple,facing=west,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_purple_lit",
+      "y": 90
+    },
+    "color=red,facing=east,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_red",
+      "y": 270
+    },
+    "color=red,facing=east,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_red_lit",
+      "y": 270
+    },
+    "color=red,facing=north,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_red",
+      "y": 180
+    },
+    "color=red,facing=north,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_red_lit",
+      "y": 180
+    },
+    "color=red,facing=south,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_red"
+    },
+    "color=red,facing=south,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_red_lit"
+    },
+    "color=red,facing=west,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_red",
+      "y": 90
+    },
+    "color=red,facing=west,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_red_lit",
+      "y": 90
+    },
+    "color=white,facing=east,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_white",
+      "y": 270
+    },
+    "color=white,facing=east,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_white_lit",
+      "y": 270
+    },
+    "color=white,facing=north,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_white",
+      "y": 180
+    },
+    "color=white,facing=north,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_white_lit",
+      "y": 180
+    },
+    "color=white,facing=south,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_white"
+    },
+    "color=white,facing=south,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_white_lit"
+    },
+    "color=white,facing=west,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_white",
+      "y": 90
+    },
+    "color=white,facing=west,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_white_lit",
+      "y": 90
+    },
+    "color=yellow,facing=east,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_yellow",
+      "y": 270
+    },
+    "color=yellow,facing=east,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_yellow_lit",
+      "y": 270
+    },
+    "color=yellow,facing=north,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_yellow",
+      "y": 180
+    },
+    "color=yellow,facing=north,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_yellow_lit",
+      "y": 180
+    },
+    "color=yellow,facing=south,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_yellow"
+    },
+    "color=yellow,facing=south,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_yellow_lit"
+    },
+    "color=yellow,facing=west,lit=false": {
+      "model": "rustic:block/gold_candle_wall_sconce_yellow",
+      "y": 90
+    },
+    "color=yellow,facing=west,lit=true": {
+      "model": "rustic:block/gold_candle_wall_sconce_yellow_lit",
+      "y": 90
+    }
+  }
+}
